@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
 
 namespace clu.active.learning
 {
@@ -11,6 +8,8 @@ namespace clu.active.learning
         {
             DataTypes.ShowCommonlyUsedDataTypes();
             DataTypes.CastingBetweenDataTypes();
+
+            Variables.DeclareVariables();
 
             Operators.InvokePrimaryOperators();
             Operators.InvokeUnaryOperators();
@@ -27,6 +26,20 @@ namespace clu.active.learning
             Operators.InvokeNullCoalesingOperator();
             Operators.InvokeConditionalOperator();
             Operators.InvokeAssigmentAndLambdaOperators();
+
+            Strings.ConcatenateStrings();
+            Strings.ValidateStrings();
+
+            Statements.InvokeConditionalStatements();
+
+            Arrays.CreateDifferentArrays();
+
+            Namespaces.UsingNamespaces();
+
+            Properties.UseProperties();
+            Methods.InvokeMethods();
+
+            Exceptions.HandleExceptions();
 
             Console.ReadKey();
         }

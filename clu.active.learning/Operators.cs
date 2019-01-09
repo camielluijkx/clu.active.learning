@@ -2,6 +2,23 @@
 
 namespace clu.active.learning
 {
+    /*
+    Order of operations                                     ()
+    Arithmetic                                              +, -, *, /, %
+    Increment, decrement                                    ++, --
+    Comparison                                              ==, !=, <, >, <=, >=, is, ??
+    String concatenation                                    +
+    Logical/bitwise operations                              &, !, ^, !, ~, &&, ||
+    Indexing (counting starts from element 0)               []
+    Casting                                                 (), as
+    Assignment                                              =, +=, -=, *=, /=, %=, &=, |=, ^=, <<=, >>=
+    Bit shift                                               <<, >>
+    Type information                                        sizeof, typeof
+    Delegate concatenation and removal                      +, -
+    Overflow exception control                              checked, unchecked
+    Indirection and Address (unsafe code only)              *, ->, [], &
+    Conditional (ternary operator)                          ?:
+    */
     public static class Operators
     {
         #region Private Methods

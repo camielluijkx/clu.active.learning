@@ -85,9 +85,48 @@ namespace clu.active.learning
 
         public static void CastingBetweenDataTypes()
         {
-            Console.WriteLine("* Casting Between Data Types");
+            Console.WriteLine("* Casting Between Data Types"); // aka Type Conversion
 
+            //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing
+            //Boxing is the process of converting a value type to the type object or to any interface type implemented by this value type. 
+            //When the CLR boxes a value type, it wraps the value inside a System.Object and stores it on the managed heap. 
+            //Unboxing extracts the value type from the object. Boxing is implicit; unboxing is explicit. 
+            //The concept of boxing and unboxing underlies the C# unified view of the type system in which a value of any type can be treated as an object.
 
+            {
+                Console.WriteLine("** Implicit Conversion"); // without losing information
+                int a = 4;
+                long b = 5;
+                b = a; // widening of an integer
+            }
+
+            {
+                Console.WriteLine("** Explicit Conversion"); // possibly lose information
+                int a = 4;
+                long b = 5;
+                b = a; // boxing of a
+                a = (int)b; // unboxing of b
+            }
+
+            {
+                Console.WriteLine("** Using Convert");
+                string numberString = "1234";
+                int number = Convert.ToInt32(numberString);
+            }
+
+            {
+                Console.WriteLine("** Using TryParse");
+                int number = 0;
+                string numberString = "1234";
+                if (int.TryParse(numberString, out number))
+                {
+                    // Conversion succeeded, number now equals 1234.
+                }
+                else
+                {
+                    // Conversion failed, number now equals 0.
+                }
+            }
         }
 
         #endregion
