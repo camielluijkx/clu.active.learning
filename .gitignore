@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/clu.active.learning/v15
+/clu.active.learning/bin/Debug
+/clu.active.learning/obj/Debug

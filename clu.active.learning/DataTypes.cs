@@ -1,0 +1,95 @@
+﻿using System;
+using System.Runtime.InteropServices;
+using System.Text;
+
+namespace clu.active.learning
+{
+    public static class DataTypes
+    {
+        #region Constants
+
+        /* Numeral literal syntax improvements (introduced in C# 7.0, enhanced in C# 7.2) */
+
+        //The 0b at the beginning indicates that the number is written as a binary number.
+        //Binary numbers can get very long, so it's often easier to see the bit patterns by introducing the _ as a digit separator.
+        public const int One = 0b0001;
+        public const int Two = 0b0010;
+        public const int Four = 0b0100;
+        public const int Eight = 0b1000;
+        public const int Sixteen = 0b0001_0000;
+        public const int ThirtyTwo = 0b0010_0000;
+        public const int SixtyFour = 0b0100_0000;
+        public const int OneHundredTwentyEight = 0b1000_0000;
+
+        //The digit separator can appear anywhere in the constatnt. For base 10 numbers, it would be common to use it as a thousands separator.
+        public const long BillionsAndBillions = 100_000_000_000;
+
+        //The digit separator can be used with decimal, float and double types as well.
+        public const double AvogadroConstant = 6.022_140_857_747_474e23;
+        public const decimal GoldenRatio = 1.618_033_988_749_894_848_204_586_834_365_638_117_720_309_179M;
+
+        #endregion
+
+        #region Public Methods
+
+        public static void ShowCommonlyUsedDataTypes()
+        {
+            Console.WriteLine("* Commonly Used Data Types");
+
+            int intMinValue = int.MinValue;
+            Console.WriteLine($"int min value: {intMinValue} (size: {Marshal.SizeOf(intMinValue)} bytes)");
+            int intMaxValue = int.MaxValue;
+            Console.WriteLine($"int max value: {intMaxValue} (size: {Marshal.SizeOf(intMaxValue)} bytes)");
+
+            long longMinValue = long.MinValue;
+            Console.WriteLine($"long min value: {longMinValue} (size: {Marshal.SizeOf(longMinValue)} bytes)");
+            long longMaxValue = long.MaxValue;
+            Console.WriteLine($"long max value: {longMaxValue} (size: {Marshal.SizeOf(longMaxValue)} bytes)");
+
+            float floatMinValue = float.MinValue;
+            Console.WriteLine($"float min value: {floatMinValue} (size: {Marshal.SizeOf(floatMinValue)} bytes)");
+            float floatMaxValue = float.MaxValue;
+            Console.WriteLine($"float max value: {floatMaxValue} (size: {Marshal.SizeOf(floatMaxValue)} bytes)");
+
+            double doubleMinValue = double.MinValue;
+            Console.WriteLine($"double min value: {doubleMinValue} (size: {Marshal.SizeOf(doubleMinValue)} bytes)");
+            double doubleMaxValue = double.MaxValue;
+            Console.WriteLine($"double max value: {doubleMaxValue} (size: {Marshal.SizeOf(doubleMaxValue)} bytes)");
+
+            decimal decimalMinValue = decimal.MinValue;
+            Console.WriteLine($"decimal min value: {decimalMinValue} (size: {Marshal.SizeOf(decimalMinValue)} bytes)");
+            decimal decimalMaxValue = decimal.MaxValue;
+            Console.WriteLine($"decimal max value: {decimalMaxValue} (size: {Marshal.SizeOf(decimalMaxValue)} bytes)");
+
+            char charMinValue = char.MinValue;
+            Console.WriteLine($"char min value: {charMinValue} (size: {Marshal.SizeOf(charMinValue)} bytes)");
+            char charMaxValue = char.MaxValue;
+            Console.WriteLine($"char max value: {charMaxValue} (size: {Marshal.SizeOf(charMaxValue)} bytes)");
+
+            bool boolFalseValue = false;
+            Console.WriteLine($"bool false value: {boolFalseValue} (size: {Marshal.SizeOf(boolFalseValue)} bytes)");
+            bool boolTrueValue = true;
+            Console.WriteLine($"bool true value: {boolTrueValue} (size: {Marshal.SizeOf(boolTrueValue)} bytes)");
+
+            DateTime datetimeMinValue = DateTime.MinValue;
+            //Console.WriteLine($"datetime min value: {datetimeMinValue} (size: {Marshal.SizeOf(datetimeMinValue)} bytes)");
+            Console.WriteLine($"datetime min value: {datetimeMinValue} (size: {SizeCalculator.SizeOf<DateTime>()} bytes)");
+            DateTime datetimeMaxValue = DateTime.MaxValue;
+            //Console.WriteLine($"datetime max value: {datetimeMaxValue} (size: {Marshal.SizeOf(datetimeMaxValue)} bytes)");
+            Console.WriteLine($"datetime max value: {datetimeMaxValue} (size: {SizeCalculator.SizeOf<DateTime>()} bytes)");
+
+            string stringValue = "some string";
+            //Console.WriteLine($"string value: {stringValue}, characters: {string.Join(",", stringValue.ToCharArray())}, (size: {Marshal.SizeOf(stringValue)} bytes)");
+            Console.WriteLine($"string value: {stringValue}, characters: {string.Join(",", stringValue.ToCharArray())}, (size: {ASCIIEncoding.ASCII.GetByteCount(stringValue)} bytes)");
+        }
+
+        public static void CastingBetweenDataTypes()
+        {
+            Console.WriteLine("* Casting Between Data Types");
+
+
+        }
+
+        #endregion
+    }
+}
