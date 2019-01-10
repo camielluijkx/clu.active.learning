@@ -63,6 +63,17 @@ namespace clu.active.learning
             Collections.UsingStringDictionary();
             Collections.UsingBitVector32();
 
+            Events.UsingEventHandlers();
+
+            LINQ.UsingQuerySyntax();
+            LINQ.UsingMethodSyntax();
+            LINQ.UsingMixedSyntax();
+            LINQ.UsingLINQToXML();
+            LINQ.UsingLINQToEntities();
+            LINQ.UsingLINQToObjects();
+            LINQ.UsingQueryOperators();
+            LINQ.LazyVsEagerEvaluation();
+
             Thread.Sleep(5000);
 
             //Console.ReadKey();
