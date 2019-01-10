@@ -15,36 +15,64 @@ namespace clu.active.learning
     {
         #region Public Methods
 
-        public static void HandleExceptions() // SEH = Structured Exception Handling
+        public static void UsingExceptions() // SEH = Structured Exception Handling
         {
-            Console.WriteLine("* Handle Exceptions");
-            try
+            Console.WriteLine("* Using Exceptions");
             {
+                Console.WriteLine("** Specific");
+                {
+                    try
+                    {
 
-            }
-            catch (NullReferenceException ex) // specific
-            {
-                //Catch all NullReferenceExceptions.
-            }
-            catch (Exception ex)
-            {
-                //Catch all other exceptions.
-            }
-            finally
-            {
-                //Code that always runs
-            }
+                    }
+                    catch (NullReferenceException ex) // specific
+                    {
+                        //Catch all NullReferenceExceptions.
+                    }
+                    catch (Exception ex)
+                    {
+                        //Catch all other exceptions.
+                    }
+                }
 
-            try { } finally { } //Catch is optional
-            try { } catch { } finally { } //Exception is optional
+                Console.WriteLine("** Finally");
+                {
+                    try
+                    {
+                    }
+                    //Catch is optional
+                    finally
+                    {
+                        //Code that always runs
+                    }
 
-            try
-            {
-                var ex = new ArgumentNullException("The 'Name' parameter is null.");
-            }
-            catch
-            {
-                throw; // rethrow
+                    try
+                    {
+                    }
+                    catch //Exception is optional
+                    {
+                    }
+                    finally
+                    {
+                        //Code that always runs
+                    }
+                }
+
+                Console.WriteLine("** Rethrow");
+                {
+                    try
+                    {
+                        var ex = new ArgumentNullException("The 'Name' parameter is null.");
+                    }
+                    catch
+                    {
+                        // Attempt to handle the exception
+
+                        // If this catch handler cannot resolve the exception, 
+                        // throw it to the calling code
+                        throw;
+                    }
+                }
             }
         }
 

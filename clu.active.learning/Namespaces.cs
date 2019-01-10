@@ -16,9 +16,10 @@ namespace clu.active.learning
         public static void UsingNamespaces()
         {
             Console.WriteLine("* Using Namespaces");
-
-            Tasks.Task.Factory.StartNew(() => { Console.WriteLine("do something"); });
-            System.Threading.Tasks.Task.Factory.StartNew(() => { Console.WriteLine("do something else"); });
+            {
+                Tasks.Task.Factory.StartNew(() => { Console.WriteLine("do something"); });
+                System.Threading.Tasks.Task.Factory.StartNew(() => { Console.WriteLine("do something else"); });
+            }
         }
 
         #endregion

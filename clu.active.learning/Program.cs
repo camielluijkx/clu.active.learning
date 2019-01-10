@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Threading;
 
 namespace clu.active.learning
 {
@@ -6,42 +6,66 @@ namespace clu.active.learning
     {       
         static void Main(string[] args)
         {
-            DataTypes.ShowCommonlyUsedDataTypes();
+            DataTypes.UsingCommonlyUsedDataTypes();
             DataTypes.CastingBetweenDataTypes();
 
-            Variables.DeclareVariables();
+            Variables.UsingVariables();
 
-            Operators.InvokePrimaryOperators();
-            Operators.InvokeUnaryOperators();
-            Operators.InvokeMultiplicativeOperators();
-            Operators.InvokeAdditiveOperators();
-            Operators.InvokeShiftOperators();
-            Operators.InvokeRelationalAndTypeTesingOperators();
-            Operators.InvokeEqualityOperators();
-            Operators.InvokeLogicalANDOperator();
-            Operators.InvokeLogicalXOROperator();
-            Operators.InvokeLogicalOROperator();
-            Operators.InvokeConditionalANDOperator();
-            Operators.InvokeConditionalOROperator();
-            Operators.InvokeNullCoalesingOperator();
-            Operators.InvokeConditionalOperator();
-            Operators.InvokeAssigmentAndLambdaOperators();
+            Operators.UsingPrimaryOperators();
+            Operators.UsingUnaryOperators();
+            Operators.UsingMultiplicativeOperators();
+            Operators.UsingAdditiveOperators();
+            Operators.UsingShiftOperators();
+            Operators.UsingRelationalAndTypeTesingOperators();
+            Operators.UsingEqualityOperators();
+            Operators.UsingLogicalANDOperator();
+            Operators.UsingLogicalXOROperator();
+            Operators.UsingLogicalOROperator();
+            Operators.UsingConditionalANDOperator();
+            Operators.UsingConditionalOROperator();
+            Operators.UsingNullCoalesingOperator();
+            Operators.UsingConditionalOperator();
+            Operators.UsingAssigmentAndLambdaOperators();
 
             Strings.ConcatenateStrings();
             Strings.ValidateStrings();
 
-            Statements.InvokeConditionalStatements();
+            Statements.UsingConditionalStatements();
+            Statements.UsingIterationStatements();
 
-            Arrays.CreateDifferentArrays();
+            Arrays.UsingArrays();
 
             Namespaces.UsingNamespaces();
 
-            Properties.UseProperties();
-            Methods.InvokeMethods();
+            Exceptions.UsingExceptions();
 
-            Exceptions.HandleExceptions();
+            Diagnostics.UsingEventLog();
+            Diagnostics.UsingDebugging();
+            Diagnostics.UsingTracing();
 
-            Console.ReadKey();
+            Enums.UsingEnums();
+
+            Structs.UsingStructs();
+            Properties.UsingProperties();
+            Methods.UsingMethods();
+
+            Collections.UsingArrayList();
+            Collections.UsingBitArray();
+            Collections.UsingHashTable();
+            Collections.UsingQueue();
+            Collections.UsingSortedList();
+            Collections.UsingStack();
+            Collections.UsingListDictionary();
+            Collections.UsingHybridDictionary();
+            Collections.UsingOrderedDictionary();
+            Collections.UsingNameValueCollection();
+            Collections.UsingStringCollection();
+            Collections.UsingStringDictionary();
+            Collections.UsingBitVector32();
+
+            Thread.Sleep(5000);
+
+            //Console.ReadKey();
         }
     }
 }

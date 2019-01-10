@@ -16,14 +16,14 @@ namespace clu.active.learning
 
         public string ApplicationUser { get; set; } // property
 
-        public bool LoadConfiguration() // method, return type = bool
+        public bool LoadConfiguration() // method
         {
-            return true;
+            return true; // return a boolean value from method
         }
 
-        public void SaveConfiguation() // method, no return type
+        public void SaveConfiguation() // method
         {
-
+            // no return value
         }
 
         public void StartService(int uptime, bool shutdownAutomatically) // method with parameters
@@ -55,9 +55,14 @@ namespace clu.active.learning
 
         public void StartAllServices(bool forceStart = true) { } // method with optional parameter (default value = true)
 
-        public void StartService(string serviceName, bool forceStart)
+        public void StartService(int serviceId)
         {
 
+        }
+
+        public void StartService(string serviceName, bool forceStart) // overloaded, same method name, unique signature
+        {
+            //The return type of a method does not form part of a methods signature.
         }
 
         public void StartService1(in string serviceName)

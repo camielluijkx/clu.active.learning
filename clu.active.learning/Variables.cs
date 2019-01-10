@@ -6,37 +6,37 @@ namespace clu.active.learning
     {
         #region Public Methods
 
-        public static void DeclareVariables()
+        public static void UsingVariables()
         {
-            Console.WriteLine("* Declaring Variables");
-
+            Console.WriteLine("* Using Variables");
             {
-                int price; // unassigned
-            }
+                Console.WriteLine("** Assigning Variables");
+                {
+                    int price; // unassigned
+                }
+                {
+                    int price, tax; // unassigned
+                }
 
-            {
-                int price = 5;
-                int tax = 10;
-            }
+                Console.WriteLine("** Declaring Variables");
+                {
+                    int price = 5;
+                    int tax = 10;
+                }
+                {
+                    int price = 5, tax = 10;
+                }
 
-            {
-                int price, tax; // unassigned
-            }
-
-            {
-                int price = 5, tax = 10;
-                Console.WriteLine($"price: {price}, tax: {tax}");
-            }
-
-            {
                 Console.WriteLine("** Implicity Types Variables");
-                var price = 5; // implicty typed integer
-                int tax = 10; // explicitly typed integer
-            }
+                {
+                    var price = 5; // implicty typed integer
+                    int tax = 10; // explicitly typed integer
+                }
 
-            {
                 Console.WriteLine("** Object Variables");
-                ServiceConfiguration config = new ServiceConfiguration(); // initialize
+                {
+                    ServiceConfiguration config = new ServiceConfiguration(); // initialize
+                }
             }
         }
 
