@@ -62,7 +62,7 @@ namespace clu.active.learning
 
         public void StartService(string serviceName, bool forceStart) // overloaded, same method name, unique signature
         {
-            //The return type of a method does not form part of a methods signature.
+            // The return type of a method does not form part of a methods signature.
         }
 
         public void StartService1(in string serviceName)

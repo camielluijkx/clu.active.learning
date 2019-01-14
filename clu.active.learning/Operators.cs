@@ -3,6 +3,8 @@
 namespace clu.active.learning
 {
     /*
+    
+    Type                                                    Operators
     Order of operations                                     ()
     Arithmetic                                              +, -, *, /, %
     Increment, decrement                                    ++, --
@@ -18,6 +20,7 @@ namespace clu.active.learning
     Overflow exception control                              checked, unchecked
     Indirection and Address (unsafe code only)              *, ->, [], &
     Conditional (ternary operator)                          ?:
+    
     */
     public static class Operators
     {
@@ -88,9 +91,12 @@ namespace clu.active.learning
                     uint b = 0b_1001_1111;
                     uint c = a & b;
                     Console.WriteLine(Convert.ToString(c, toBase: 2));
+
                     /*
+                    
                     Output:
                     10011000
+                    
                     */
                 }
 
@@ -98,10 +104,13 @@ namespace clu.active.learning
                 {
                     bool test = false & secondOperandReturnsTrue();
                     Console.WriteLine(test);
+
                     /*
+                    
                     Output:
                     Second operand is evaluated.
                     False
+                    
                     */
                 }
             }
@@ -113,20 +122,23 @@ namespace clu.active.learning
             {
                 Console.WriteLine("** Logical exclusive-OR");
                 {
-                    // When one operand is true and the other is false, exclusive-OR 
-                    // returns True.
+                    // When one operand is true and the other is false, 
+                    // exclusive -OR returns True.
                     Console.WriteLine(true ^ false);
                     Console.WriteLine(false ^ true);
                     // When both operands are false, exclusive-OR returns False.
                     Console.WriteLine(false ^ false);
                     // When both operands are true, exclusive-OR returns False.
                     Console.WriteLine(true ^ true);
+
                     /*
+                    
                     Output:
                     True
                     True
                     False
                     False
+                    
                     */
                 }
 
@@ -160,6 +172,7 @@ namespace clu.active.learning
                     Console.WriteLine("Bitwise result: {0}", Convert.ToString(0xf8 ^ 0x3f, 2));
 
                     /*
+                    
                     Output:
                     Bitwise result: 1
                     Bitwise result: 0
@@ -168,6 +181,7 @@ namespace clu.active.learning
                     Bitwise result: 110
                     Bitwise result: 1010
                     Bitwise result: 11000111
+                    
                     */
                 }
             }
@@ -181,19 +195,25 @@ namespace clu.active.learning
                 {
                     Console.WriteLine(true | false);
                     Console.WriteLine(false | false);
+
                     /*
+                    
                     Output:
                     True
                     False
+                    
                     */
                 }
 
                 Console.WriteLine("** Bitwise OR");
                 {
                     Console.WriteLine("0x{0:x}", 0xf8 | 0x3f);
+
                     /*
+                    
                     Output:
                     0xff
+                    
                     */
                 }
             }
@@ -205,17 +225,23 @@ namespace clu.active.learning
             {
                 bool a = false && secondOperandReturnsTrue();
                 Console.WriteLine(a);
+
                 /* 
+                
                 Output:
                 False
+                
                 */
 
                 bool b = true && secondOperandReturnsTrue();
                 Console.WriteLine(b);
+
                 /*
+                
                 Output:
                 Second operand is evaluated.
                 True
+                
                 */
             }
         }
@@ -226,17 +252,23 @@ namespace clu.active.learning
             {
                 bool a = true || secondOperandReturnsTrue();
                 Console.WriteLine(a);
+
                 /*
+                
                 Output:
                 True
+                
                 */
 
                 bool b = false || secondOperandReturnsTrue();
                 Console.WriteLine(b);
+
                 /*
+                
                 Output:
                 Second operand is evaluated.
                 True
+                
                 */
             }
         }
@@ -267,15 +299,16 @@ namespace clu.active.learning
         {
             Console.WriteLine("* Using Conditional Operator"); // aka Ternary Conditional Operator
             {
-                //The syntax for the conditional operator is as follows:
-                //condition? consequence : alternative
+                // The syntax for the conditional operator is as follows:
+                // condition? consequence : alternative
 
-                //The conditional operator is right-associative, that is, an expression of the form
-                //a ? b : c ? d : e
-                //is evaluated as
-                //a ? b : (c ? d : e)
+                // The conditional operator is right-associative, that is, an expression of the form
+                // a ? b : c ? d : e
+                // is evaluated as
+                // a ? b : (c ? d : e)
 
-                //Use of the conditional operator over an if-else statement might result in more concise code in cases when you need conditionally to compute a value. 
+                // Use of the conditional operator over an if-else statement might result in more concise 
+                // code in cases when you need conditionally to compute a value. 
                 int input = new Random().Next(-5, 5);
                 string classify;
                 if (input >= 0)
@@ -293,16 +326,19 @@ namespace clu.active.learning
                 double sinc(double x) => x != 0.0 ? Math.Sin(x) / x : 1;
                 Console.WriteLine(sinc(0.1));
                 Console.WriteLine(sinc(0.0));
+
                 /*
+                
                 Output:
                 0.998334166468282
                 1
+                
                 */
 
                 Console.WriteLine("** Conditional ref expression (C# 7.2)");
                 {
-                    //The syntax for the conditional ref expression is as follows:
-                    //condition ? ref consequence : ref alternative
+                    // The syntax for the conditional ref expression is as follows:
+                    // condition ? ref consequence : ref alternative
 
                     var smallArray = new int[] { 1, 2, 3, 4, 5 };
                     var largeArray = new int[] { 10, 20, 30, 40, 50 };
@@ -316,10 +352,13 @@ namespace clu.active.learning
 
                     Console.WriteLine(string.Join(" ", smallArray));
                     Console.WriteLine(string.Join(" ", largeArray));
+
                     /*
+                    
                     Output:
                     1 2 100 4 5
                     10 20 0 40 50
+                    
                     */
                 }
             }

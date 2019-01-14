@@ -26,8 +26,9 @@ namespace clu.active.learning
                 set { _strength = value; }
             }
 
-            //Compiler will implicitly create a private field and map it to your property. These are known as auto-implemented properties
-            public string Bean { get; private set; } 
+            // Compiler will implicitly create a private field and map it to your property. 
+            // These are known as auto-implemented properties.
+            public string Bean { get; private set; }
             public string CountryOfOrigin { get; set; }
             public bool SpecialEdition { private get; set; }
 
@@ -45,7 +46,7 @@ namespace clu.active.learning
                 //set; //CS8051: Auto-implemented properties must have get accessors.
             }
 
-            //Validation logic.
+            // Validation logic.
             public int Size
             {
                 get { return _size; }
@@ -60,7 +61,7 @@ namespace clu.active.learning
                 }
             }
 
-            //Const property.
+            // Const property.
             public string Brand
             {
                 get
@@ -76,13 +77,13 @@ namespace clu.active.learning
         
         public class DataBinding
         {
-            public int Strength { get; set; } //Create a property that reads and writes to a private field.
+            public int Strength { get; set; } // Create a property that reads and writes to a private field.
 
-            public int Strength { get; private set; } //Create a property that can be publicly read, but set only by its containing class.  
+            public int Strength { get; private set; } // Create a property that can be publicly read, but set only by its containing class.  
             
-            public int Strength { get; } //Create a readonly property where only the constructor can set the value to this property.
+            public int Strength { get; } // Create a readonly property where only the constructor can set the value to this property.
 
-            public int Strength { private get; set; } //Create a property that writes to a private field.
+            public int Strength { private get; set; } // Create a property that writes to a private field.
         }
 
         */
@@ -97,6 +98,7 @@ namespace clu.active.learning
                 get { return this.beverages[index]; }
                 set { this.beverages[index] = value; }
             }
+
             // Enable client code to determine the size of the collection.
             public int Length
             {

@@ -5,8 +5,11 @@ using System.Linq;
 namespace clu.active.learning
 {
     /*
-    Language-Integrated Query (LINQ) is the name for a set of technologies based on the integration of query capabilities directly into the C# language. 
-    '*/
+    
+    Language-Integrated Query (LINQ) is the name for a set of technologies based on the integration 
+    of query capabilities directly into the C# language. 
+    
+    */
     public static class LINQ
     {
         #region Public Methods
@@ -61,19 +64,19 @@ namespace clu.active.learning
             {
                 List<int> numbers = new List<int>() { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
 
-                // Using a query expression with method syntax
+                // Using a query expression with method syntax.
                 int numCount1 =
                     (from num in numbers
                      where num < 3 || num > 7
                      select num).Count(); // returns single value, it is executed immediatly
 
-                // Create a new variable to store the method call result
+                // Create a new variable to store the method call result.
                 IEnumerable<int> numbersQuery =
                     from num in numbers
                     where num < 3 || num > 7
                     select num; // returns collection, needs to be materialized
 
-                int numCount2 = numbersQuery.Count(); // materialized here
+                int numCount2 = numbersQuery.Count(); // result is materialized here
             }
         }
 

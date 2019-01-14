@@ -12,7 +12,9 @@ namespace clu.active.learning
         {
             Console.WriteLine("* Concatenate Strings");
             {
-                //Bad coding practice because strings are immutable. This means that every time you concatenate a string, you create a new string in memory and the old string is discarded.
+                // Bad coding practice because strings are immutable. 
+                // This means that every time you concatenate a string, you create a new string.
+                // in memory and the old string is discarded.
                 string address = "23";
                 address = address + ", Main Street";
                 address = address + ", Buffalo";
@@ -34,7 +36,7 @@ namespace clu.active.learning
             {
                 Console.WriteLine("** Regex");
                 {
-                    //https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=netframework-4.7.2
+                    // https://docs.microsoft.com/en-us/dotnet/api/system.text.regularexpressions.regex?view=netframework-4.7.2
                     var textToTest = "hell0 w0rld";
                     var regularExpression = "\\d";
                     var result = Regex.IsMatch(textToTest, regularExpression, RegexOptions.None);

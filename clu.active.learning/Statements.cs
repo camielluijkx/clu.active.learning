@@ -66,7 +66,7 @@ namespace clu.active.learning
                 Console.WriteLine("** Switch");
                 {
                     string response = "….";
-                    switch (response) //A switch case must end with a jump statement, such as break, return or goto.
+                    switch (response) // A switch case must end with a jump statement, such as break, return or goto.
                     {
                         case "connection_failed":
                             // Block of code executes if the value of response is "connection_failed".
@@ -122,7 +122,8 @@ namespace clu.active.learning
                     bool dataToEnter = checkIfUserWantsToEnterData();
                     if (dataToEnter)
                     {
-                        do //A do loop is very similar to a while loop, with the exception that a do loop will always execute at least once. Whereas if the condition is not initially met, a while loop will never execute.
+                        do // A do loop is very similar to a while loop, with the exception that a do loop will always execute at least once.
+                           // Whereas if the condition is not initially met, a while loop will never execute.
                         {
                             // Process the data.
                             dataToEnter = checkIfUserHasMoreData();

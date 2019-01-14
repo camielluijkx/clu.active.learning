@@ -3,6 +3,7 @@
 namespace clu.active.learning
 {
     /*
+    
     Delegates:
         • Delegates are references to methods.
         • They can be saved as fields and passed as parameters.
@@ -13,6 +14,7 @@ namespace clu.active.learning
         • An event wraps a delegate like a property wraps a field.
         • Events allow the class to notify other consumers of actions performed within it.
         • An event may only be raised by it's containing class.
+    
     */
     public static class Events
     {
@@ -27,9 +29,9 @@ namespace clu.active.learning
 
         public class Counter
         {
-            public event ThresholdReachedEventHandler ThresholdReached; 
+            public event ThresholdReachedEventHandler ThresholdReached;
 
-            protected void OnThresholdReached(ThresholdReachedEventArgs e) 
+            protected void OnThresholdReached(ThresholdReachedEventArgs e)
             {
                 ThresholdReached?.Invoke(this, e);
             }

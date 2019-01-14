@@ -4,14 +4,45 @@ using System.Text;
 
 namespace clu.active.learning
 {
+    public struct TypeSizeProxy<T>
+    {
+        public T PublicField;
+    }
+
+    public static class SizeCalculator
+    {
+        public static int SizeOf<T>()
+        {
+            try
+            {
+                return Marshal.SizeOf(typeof(T));
+            }
+            catch (ArgumentException)
+            {
+                return Marshal.SizeOf(new TypeSizeProxy<T>());
+            }
+        }
+
+        public static int GetSize(this object obj)
+        {
+            return Marshal.SizeOf(obj);
+        }
+    }
+
     public static class DataTypes
     {
         #region Constants
 
-        /* Numeral literal syntax improvements (introduced in C# 7.0, enhanced in C# 7.2) */
+        /* 
+        
+        Numeral literal syntax improvements (introduced in C# 7.0, enhanced in C# 7.2).
 
-        //The 0b at the beginning indicates that the number is written as a binary number.
-        //Binary numbers can get very long, so it's often easier to see the bit patterns by introducing the _ as a digit separator.
+        The 0b at the beginning indicates that the number is written as a binary number.
+        
+        Binary numbers can get very long, so it's often easier to see the bit patterns by 
+        introducing the _ as a digit separator.
+        
+        */
         public const int One = 0b0001;
         public const int Two = 0b0010;
         public const int Four = 0b0100;
@@ -21,10 +52,11 @@ namespace clu.active.learning
         public const int SixtyFour = 0b0100_0000;
         public const int OneHundredTwentyEight = 0b1000_0000;
 
-        //The digit separator can appear anywhere in the constatnt. For base 10 numbers, it would be common to use it as a thousands separator.
+        // The digit separator can appear anywhere in the constant. For base 10 numbers, 
+        // it would be common to use it as a thousands separator.
         public const long BillionsAndBillions = 100_000_000_000;
 
-        //The digit separator can be used with decimal, float and double types as well.
+        // The digit separator can be used with decimal, float and double types as well.
         public const double AvogadroConstant = 6.022_140_857_747_474e23;
         public const decimal GoldenRatio = 1.618_033_988_749_894_848_204_586_834_365_638_117_720_309_179M;
 
@@ -60,7 +92,6 @@ namespace clu.active.learning
                 double doubleMaxValue = double.MaxValue;
                 Console.WriteLine($"double max value: {doubleMaxValue} (size: {Marshal.SizeOf(doubleMaxValue)} bytes)");
 
-
                 // decimal - monetary values
                 decimal decimalMinValue = decimal.MinValue;
                 Console.WriteLine($"decimal min value: {decimalMinValue} (size: {Marshal.SizeOf(decimalMinValue)} bytes)");
@@ -81,15 +112,18 @@ namespace clu.active.learning
 
                 // datetime - moments in time
                 DateTime datetimeMinValue = DateTime.MinValue;
-                //Console.WriteLine($"datetime min value: {datetimeMinValue} (size: {Marshal.SizeOf(datetimeMinValue)} bytes)"); System.ArgumentException: 'Type 'System.DateTime' cannot be marshaled as an unmanaged structure; no meaningful size or offset can be computed.'
+                //Console.WriteLine($"datetime min value: {datetimeMinValue} (size: {Marshal.SizeOf(datetimeMinValue)} bytes)");
+                //System.ArgumentException: 'Type 'System.DateTime' cannot be marshaled as an unmanaged structure; no meaningful size or offset can be computed.'
                 Console.WriteLine($"datetime min value: {datetimeMinValue} (size: {SizeCalculator.SizeOf<DateTime>()} bytes)");
                 DateTime datetimeMaxValue = DateTime.MaxValue;
-                //Console.WriteLine($"datetime max value: {datetimeMaxValue} (size: {Marshal.SizeOf(datetimeMaxValue)} bytes)"); System.ArgumentException: 'Type 'System.DateTime' cannot be marshaled as an unmanaged structure; no meaningful size or offset can be computed.'
+                //Console.WriteLine($"datetime max value: {datetimeMaxValue} (size: {Marshal.SizeOf(datetimeMaxValue)} bytes)");
+                //System.ArgumentException: 'Type 'System.DateTime' cannot be marshaled as an unmanaged structure; no meaningful size or offset can be computed.'
                 Console.WriteLine($"datetime max value: {datetimeMaxValue} (size: {SizeCalculator.SizeOf<DateTime>()} bytes)");
 
                 // string - sequence of characters
                 string stringValue = "some string";
-                //Console.WriteLine($"string value: {stringValue}, characters: {string.Join(",", stringValue.ToCharArray())}, (size: {Marshal.SizeOf(stringValue)} bytes)"); System.ArgumentException: 'Type 'System.String' cannot be marshaled as an unmanaged structure; no meaningful size or offset can be computed.'
+                //Console.WriteLine($"string value: {stringValue}, characters: {string.Join(",", stringValue.ToCharArray())}, (size: {Marshal.SizeOf(stringValue)} bytes)");
+                //System.ArgumentException: 'Type 'System.String' cannot be marshaled as an unmanaged structure; no meaningful size or offset can be computed.'
                 Console.WriteLine($"string value: {stringValue}, characters: {string.Join(",", stringValue.ToCharArray())}, (size: {ASCIIEncoding.ASCII.GetByteCount(stringValue)} bytes in ASCII)"); // 1 per character
                 Console.WriteLine($"string value: {stringValue}, characters: {string.Join(",", stringValue.ToCharArray())}, (size: {ASCIIEncoding.Unicode.GetByteCount(stringValue)} bytes in Unicode)"); // 2 per character
             }
@@ -99,14 +133,26 @@ namespace clu.active.learning
         {
             Console.WriteLine("* Casting Between Data Types"); // aka Type Conversion
             {
-                //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing
-                //Boxing is the process of converting a value type to the type object or to any interface type implemented by this value type. 
-                //When the CLR boxes a value type, it wraps the value inside a System.Object and stores it on the managed heap. 
-                //Unboxing extracts the value type from the object. Boxing is implicit; unboxing is explicit. 
-                //The concept of boxing and unboxing underlies the C# unified view of the type system in which a value of any type can be treated as an object.
+                /* 
+                
+                https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing
+                
+                Boxing is the process of converting a value type to the type object or to any interface type 
+                implemented by this value type. 
+                
+                When the CLR boxes a value type, it wraps the value inside a System.Object and stores it on 
+                the managed heap. 
+                
+                Unboxing extracts the value type from the object. Boxing is implicit; unboxing is explicit. 
+                
+                The concept of boxing and unboxing underlies the C# unified view of the type system in which 
+                a value of any type can be treated as an object.
+                
+                */
                 Console.WriteLine("** Implicit Conversion"); // without losing information
                 {
                     /*
+                    
                     From            To
                     sbyte           short, int, long, float, double, decimal
                     byte            short, ushort, int, uint, long, ulong, float, double, decimal
@@ -117,7 +163,9 @@ namespace clu.active.learning
                     long, ulong     float, double, decimal
                     float           double
                     char            ushort, int, uint, long, ulong, float, double, decimal
+                    
                     */
+
                     int a = 4;
                     long b = 5;
                     b = a; // widening of an integer
