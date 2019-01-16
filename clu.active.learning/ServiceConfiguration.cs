@@ -42,7 +42,7 @@ namespace clu.active.learning
         }
 
         //CS0663: Cannot define overloaded methods that differ only on ref and out.
-        //public void StopAllServices(in int servicesCount) { } // C# 7.2
+        //public void StopAllServices(in int servicesCount) { } // Visual C# 7.2
         //public void StopAllServices(out int servicesCount) { }
 
         public void StopAllServices(int servicesCount, bool forceStop = true) // method with optional parameter (default value = true)

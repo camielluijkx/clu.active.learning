@@ -335,7 +335,7 @@ namespace clu.active.learning
                 
                 */
 
-                Console.WriteLine("** Conditional ref expression (C# 7.2)");
+                Console.WriteLine("** Conditional ref expression (Visual C# 7.2)");
                 {
                     // The syntax for the conditional ref expression is as follows:
                     // condition ? ref consequence : ref alternative

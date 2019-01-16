@@ -7,7 +7,7 @@ namespace clu.active.learning
     /*
     
     Language-Integrated Query (LINQ) is the name for a set of technologies based on the integration 
-    of query capabilities directly into the C# language. 
+    of query capabilities directly into the Visual C# language. 
     
     */
     public static class LINQ

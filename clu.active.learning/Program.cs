@@ -2,6 +2,11 @@
 
 namespace clu.active.learning
 {
+    /*
+     
+     https://www.microsoft.com/en-us/learning/exam-70-483.aspx
+
+     */
     class Program
     {       
         static void Main(string[] args)
@@ -76,7 +81,14 @@ namespace clu.active.learning
 
             Classes.UsingClasses();
             Interfaces.UsingInterfaces();
-            Interfaces.UsingCompareTo();
+            Interfaces.UsingIComparable();
+            Interfaces.UsingIComparer();
+
+            Generics.UsingGenerics();
+
+            Inheritance.UsingInheritance();
+
+            Extensions.UsingExtensions();
 
             Thread.Sleep(5000);
 

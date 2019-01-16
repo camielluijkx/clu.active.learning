@@ -4,7 +4,7 @@ namespace clu.active.learning
 {
     /*
      
-    A class is a programming construct that you can use to define your own custom types.
+    A class is a programming construct that can be used to define custom types.
 
     Classes can be used to create new types, which are effectively creating a blueprint for the instance.
 
@@ -64,7 +64,8 @@ namespace clu.active.learning
             public DrinksMachine()
             {
                 // This is a default constructor (it has no parameters).
-                // Empty public default constructor is automatically added by the C# compiler if not included in class.
+                // Empty public default constructor is automatically added by the Visual C# compiler 
+                // if not included in class.
                 this.Age = 0;
             }
 
@@ -160,10 +161,10 @@ namespace clu.active.learning
                      
                     Type Inference:
 
-                    Allow the C# compiler to deduce the type of the object at compile time.
+                    Allow the Visual C# compiler to deduce the type of the object at compile time.
 
-                    In some circumstances, type inference can make your code easier to read,
-                    while in other circumstances it may make your code more confusing.
+                    In some circumstances, type inference can make code easier to read,
+                    while in other circumstances it may make code more confusing.
 
                     As a general rule, consider using type inference when the type of variable
                     is absolutely clear. It also clearly helps when applying TDD!

@@ -37,8 +37,8 @@ namespace clu.active.learning
      
     A class or struct can also have a static constructor, which initializes static members of the type. 
     Static constructors are parameterless. If you don't provide a static constructor to initialize static 
-    fields, the C# compiler will supply a default static constructor that initializes static fields to 
-    their default value. 
+    fields, the Visual C# compiler will supply a default static constructor that initializes static fields 
+    to their default value. 
 
     */
     public class Adult : Person

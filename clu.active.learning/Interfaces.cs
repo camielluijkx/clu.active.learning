@@ -124,8 +124,8 @@ namespace clu.active.learning
         The only scenario in which you must use explicit interface implementation is if you are implementing 
         two interfaces that share a member name. For example, if you implement interfaces named IBeverage and 
         IInventoryItem, and both interfaces declare a Boolean property named IsAvailable, you would need to 
-        implement at least one of the IsAvailable members explicitly. In this scenario, the C# compiler would 
-        be unable to resolve the IsAvailable reference without an explicit implementation. 
+        implement at least one of the IsAvailable members explicitly. In this scenario, the Visual C# compiler 
+        would be unable to resolve the IsAvailable reference without an explicit implementation. 
 
         There is a difference in the usage of the class, however. When implementing an interface implicitly 
         the members can be used as normal public members of the class and can be referenced without any 
@@ -191,6 +191,7 @@ namespace clu.active.learning
             int IComparable.CompareTo(object obj)
             {
                 ComparableCoffee coffee2 = obj as ComparableCoffee;
+
                 return String.Compare(this.Variety, coffee2.Variety);
             }
         }
@@ -219,8 +220,10 @@ namespace clu.active.learning
             {
                 ComparableCoffee coffee1 = x as ComparableCoffee;
                 ComparableCoffee coffee2 = y as ComparableCoffee;
+
                 double rating1 = coffee1.AverageRating;
                 double rating2 = coffee2.AverageRating;
+
                 return rating1.CompareTo(rating2);
             }
         }
@@ -269,14 +272,37 @@ namespace clu.active.learning
             }
         }
 
-        public static void UsingCompareTo()
+        public static void UsingIComparable()
         {
-            Console.WriteLine("* Using CompareTo");
+            Console.WriteLine("* Using IComparable");
             {
                 int number1 = 5;
                 int number2 = 100;
                 int result = number1.CompareTo(number2);
                 // The value of result is -1, indicating that number1 should precede number2 in the sort order.
+            }
+        }
+
+        public static void UsingIComparer()
+        {
+            Console.WriteLine("* Using IComparer");
+            {
+                // Create some instances of the Coffee class.
+                ComparableCoffee coffee1 = new ComparableCoffee();
+                coffee1.AverageRating = 4.5;
+                ComparableCoffee coffee2 = new ComparableCoffee();
+                coffee2.AverageRating = 8.1;
+                ComparableCoffee coffee3 = new ComparableCoffee();
+                coffee3.AverageRating = 7.1;
+
+                // Add the Coffee instances to an ArrayList.
+                ArrayList coffeeList = new ArrayList();
+                coffeeList.Add(coffee1);
+                coffeeList.Add(coffee2);
+                coffeeList.Add(coffee3);
+
+                // Sort the ArrayList by average rating.
+                coffeeList.Sort(new CoffeeRatingComparer());
             }
         }
 

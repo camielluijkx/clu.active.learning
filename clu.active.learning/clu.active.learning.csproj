@@ -48,7 +48,10 @@
     <Compile Include="DataTypes.cs" />
     <Compile Include="Collections.cs" />
     <Compile Include="Events.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="Framework.cs" />
+    <Compile Include="Generics.cs" />
+    <Compile Include="Inheritance.cs" />
     <Compile Include="Interfaces.cs" />
     <Compile Include="LINQ.cs" />
     <Compile Include="Memory.cs" />

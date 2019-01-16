@@ -35,7 +35,7 @@ namespace clu.active.learning
 
         /* 
         
-        Numeral literal syntax improvements (introduced in C# 7.0, enhanced in C# 7.2).
+        Numeral literal syntax improvements (introduced in Visual C# 7.0, enhanced in C# 7.2).
 
         The 0b at the beginning indicates that the number is written as a binary number.
         
@@ -145,8 +145,8 @@ namespace clu.active.learning
                 
                 Unboxing extracts the value type from the object. Boxing is implicit; unboxing is explicit. 
                 
-                The concept of boxing and unboxing underlies the C# unified view of the type system in which 
-                a value of any type can be treated as an object.
+                The concept of boxing and unboxing underlies the Visual C# unified view of the type system 
+                in which a value of any type can be treated as an object.
                 
                 */
                 Console.WriteLine("** Implicit Conversion"); // without losing information

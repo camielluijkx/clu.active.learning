@@ -62,9 +62,9 @@ namespace clu.active.learning
          This also means any change made to a referenced type passed as a parameter to a method will be 
          present when the method exits. Reference types are only saved on the heap. 
 
-         In Visual C#, classes and delegates, are always reference types. To create a new reference type yourself, 
-         you only need to define a new class. This applies to built-in types as well, you can see if a certain 
-         type is a reference type by looking up its definition.
+         In Visual C#, classes and delegates, are always reference types. To create a new reference type 
+         yourself, you only need to define a new class. This applies to built-in types as well, you can see 
+         if a certain type is a reference type by looking up its definition.
 
         Value Types 
 
@@ -109,7 +109,7 @@ namespace clu.active.learning
             int i = 100;
             object o = i;
 
-        The boxing process is implicit. When you assign an object reference to a value type, the C# compiler 
+        The boxing process is implicit. When you assign an object reference to a value type, the Visual C# compiler 
         automatically creates an object to wrap the value and stores it in memory. If you copy the object reference, 
         the copy will point to the same object wrapper in memory. 
 
