@@ -44,10 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arrays.cs" />
+    <Compile Include="Classes.cs" />
     <Compile Include="DataTypes.cs" />
     <Compile Include="Collections.cs" />
     <Compile Include="Events.cs" />
+    <Compile Include="Framework.cs" />
+    <Compile Include="Interfaces.cs" />
     <Compile Include="LINQ.cs" />
+    <Compile Include="Memory.cs" />
     <Compile Include="Modifiers.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Constructors.cs" />
@@ -63,6 +67,7 @@
     <Compile Include="ServiceConfiguration.cs" />
     <Compile Include="Statements.cs" />
     <Compile Include="Strings.cs" />
+    <Compile Include="Testing.cs" />
     <Compile Include="Variables.cs" />
   </ItemGroup>
   <ItemGroup>

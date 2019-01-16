@@ -21,7 +21,7 @@ namespace clu.active.learning
     public static class Structs
     {
         // Declaring a Struct.
-        public struct Coffee // public, internal, private
+        public struct Coffee // public, internal (default), private
         {
             // This is the custom constructor.
             public Coffee(int strength, string bean, string countryOfOrigin)

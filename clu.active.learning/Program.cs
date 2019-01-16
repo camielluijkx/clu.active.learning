@@ -39,9 +39,9 @@ namespace clu.active.learning
 
             Exceptions.UsingExceptions();
 
-            Diagnostics.UsingEventLog();
-            Diagnostics.UsingDebugging();
-            Diagnostics.UsingTracing();
+            //Diagnostics.UsingEventLog();
+            //Diagnostics.UsingDebugging();
+            //Diagnostics.UsingTracing();
 
             Enums.UsingEnums();
 
@@ -73,6 +73,10 @@ namespace clu.active.learning
             LINQ.UsingLINQToObjects();
             LINQ.UsingQueryOperators();
             LINQ.LazyVsEagerEvaluation();
+
+            Classes.UsingClasses();
+            Interfaces.UsingInterfaces();
+            Interfaces.UsingCompareTo();
 
             Thread.Sleep(5000);
 
