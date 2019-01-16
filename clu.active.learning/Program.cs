@@ -90,6 +90,14 @@ namespace clu.active.learning
 
             Extensions.UsingExtensions();
 
+            FileSystem.ReadingFiles();
+            FileSystem.WritingFiles();
+            FileSystem.FileManipulation();
+            FileSystem.FileInformation();
+            FileSystem.DirectoryManipulation();
+            FileSystem.DirectoryInformation();
+            FileSystem.FileAndDirectoryPaths();
+
             Thread.Sleep(5000);
 
             //Console.ReadKey();

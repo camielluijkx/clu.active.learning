@@ -49,6 +49,7 @@
     <Compile Include="Collections.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="Extensions.cs" />
+    <Compile Include="FileSystem.cs" />
     <Compile Include="Framework.cs" />
     <Compile Include="Generics.cs" />
     <Compile Include="Inheritance.cs" />
@@ -58,6 +59,8 @@
     <Compile Include="Modifiers.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Constructors.cs" />
+    <Compile Include="Serialization.cs" />
+    <Compile Include="Streams.cs" />
     <Compile Include="Structs.cs" />
     <Compile Include="Diagnostics.cs" />
     <Compile Include="Exceptions.cs" />

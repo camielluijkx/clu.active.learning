@@ -219,7 +219,8 @@ namespace clu.active.learning
                 Console.WriteLine("** Using Extension Methods");
                 {
                     Console.WriteLine("Please type some text that contains numbers and then press Enter");
-                    string text = Console.ReadLine();
+                    //string text = Console.ReadLine();
+                    string text = "123";
                     if (text.ContainsNumbers())
                     {
                         Console.WriteLine("Your text contains numbers. Well done!");
