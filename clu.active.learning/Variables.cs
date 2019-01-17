@@ -4,6 +4,15 @@ namespace clu.active.learning
 {
     public static class Variables
     {
+        #region Implementation
+
+        public class ServiceConfiguration
+        {
+
+        }
+
+        #endregion
+
         #region Public Methods
 
         public static void UsingVariables()
@@ -35,7 +44,7 @@ namespace clu.active.learning
 
                 Console.WriteLine("** Object Variables");
                 {
-                    ServiceConfiguration config = new ServiceConfiguration(); // initialize
+                    ServiceConfiguration config = new ServiceConfiguration();  // initialize
                 }
             }
         }

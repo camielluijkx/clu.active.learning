@@ -13,7 +13,8 @@ namespace clu.active.learning
     Logical/bitwise operations                              &, !, ^, !, ~, &&, ||
     Indexing (counting starts from element 0)               []
     Casting                                                 (), as
-    Assignment                                              =, +=, -=, *=, /=, %=, &=, |=, ^=, <<=, >>=
+    Assignment                                              =, +=, -=, *=, /=, %=, &=, |=, 
+                                                            ^=, <<=, >>=
     Bit shift                                               <<, >>
     Type information                                        sizeof, typeof
     Delegate concatenation and removal                      +, -
@@ -122,8 +123,7 @@ namespace clu.active.learning
             {
                 Console.WriteLine("** Logical exclusive-OR");
                 {
-                    // When one operand is true and the other is false, 
-                    // exclusive -OR returns True.
+                    // When one operand is true and the other is false, exclusive -OR returns True.
                     Console.WriteLine(true ^ false);
                     Console.WriteLine(false ^ true);
                     // When both operands are false, exclusive-OR returns False.
@@ -162,13 +162,13 @@ namespace clu.active.learning
                     // Bitwise exclusive-OR of 101 (5) and 011 (3) returns 110 (6).
                     Console.WriteLine("Bitwise result: {0}", Convert.ToString(0x5 ^ 0x3, 2));
 
-                    // Bitwise exclusive-OR of 1111 (decimal 15, hexadecimal F) and 0101 (5)
+                    // Bitwise exclusive-OR of 1111 (decimal 15, hexadecimal F) and 0101 (5) 
                     // returns 1010 (decimal 10, hexadecimal A).
                     Console.WriteLine("Bitwise result: {0}", Convert.ToString(0xf ^ 0x5, 2));
 
-                    // Finally, bitwise exclusive-OR of 11111000 (decimal 248, hexadecimal F8)
-                    // and 00111111 (decimal 63, hexadecimal 3F) returns 11000111, which is 
-                    // 199 in decimal, C7 in hexadecimal.
+                    // Finally, bitwise exclusive-OR of 11111000 (decimal 248, hexadecimal F8) and 
+                    // 00111111 (decimal 63, hexadecimal 3F) returns 11000111, which is 199 in 
+                    // decimal, C7 in hexadecimal.
                     Console.WriteLine("Bitwise result: {0}", Convert.ToString(0xf8 ^ 0x3f, 2));
 
                     /*
@@ -221,7 +221,8 @@ namespace clu.active.learning
 
         public static void UsingConditionalANDOperator()
         {
-            Console.WriteLine("* Using Conditional AND Operator"); // aka Short-Circuiting Logical AND Operator
+            Console.WriteLine("* Using Conditional AND Operator"); 
+                // aka Short-Circuiting Logical AND Operator
             {
                 bool a = false && secondOperandReturnsTrue();
                 Console.WriteLine(a);
@@ -248,7 +249,8 @@ namespace clu.active.learning
 
         public static void UsingConditionalOROperator()
         {
-            Console.WriteLine("* Using Conditional OR Operator"); // aka Short-Circuiting Logical OR Operator
+            Console.WriteLine("* Using Conditional OR Operator"); 
+                // aka Short-Circuiting Logical OR Operator
             {
                 bool a = true || secondOperandReturnsTrue();
                 Console.WriteLine(a);
@@ -279,36 +281,33 @@ namespace clu.active.learning
             {
                 int? x = null;
 
-                // Set y to the value of x if x is NOT null; otherwise,
-                // if x == null, set y to -1.
+                // Set y to the value of x if x is NOT null; otherwise, if x == null, set y to -1.
                 int y = x ?? -1;
 
-                // Assign i to return value of the method if the method's result
-                // is NOT null; otherwise, if the result is null, set i to the
-                // default value of int.
+                // Assign i to return value of the method if the method's result is NOT null; 
+                // otherwise, if the result is null, set i to the default value of int.
                 int i = getNullableIntReturnsNull() ?? default(int);
 
                 string s = getStringReturnsNull();
-                // Display the value of s if s is NOT null; otherwise, 
-                // display the string "Unspecified".
+                // Display the value of s if s is NOT null; otherwise, display the string 
+                // "Unspecified".
                 Console.WriteLine(s ?? "Unspecified");
             }
         }
 
         public static void UsingConditionalOperator()
         {
-            Console.WriteLine("* Using Conditional Operator"); // aka Ternary Conditional Operator
+            Console.WriteLine("* Using Conditional Operator"); 
+                // aka Ternary Conditional Operator
             {
                 // The syntax for the conditional operator is as follows:
                 // condition? consequence : alternative
 
-                // The conditional operator is right-associative, that is, an expression of the form
-                // a ? b : c ? d : e
-                // is evaluated as
-                // a ? b : (c ? d : e)
+                // The conditional operator is right-associative, that is, an expression of the 
+                // form a ? b : c ? d : e is evaluated as a ? b : (c ? d : e)
 
-                // Use of the conditional operator over an if-else statement might result in more concise 
-                // code in cases when you need conditionally to compute a value. 
+                // Use of the conditional operator over an if-else statement might result in more 
+                // concise code in cases when you need conditionally to compute a value. 
                 int input = new Random().Next(-5, 5);
                 string classify;
                 if (input >= 0)
@@ -344,7 +343,8 @@ namespace clu.active.learning
                     var largeArray = new int[] { 10, 20, 30, 40, 50 };
 
                     int index = 7;
-                    ref int refValue = ref ((index < 5) ? ref smallArray[index] : ref largeArray[index - 5]);
+                    ref int refValue = ref ((index < 5) ? ref smallArray[index] 
+                        : ref largeArray[index - 5]);
                     refValue = 0;
 
                     index = 2;

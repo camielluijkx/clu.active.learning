@@ -4,9 +4,9 @@ namespace clu.active.learning
 {
     /*
      
-     https://www.microsoft.com/en-us/learning/exam-70-483.aspx
+    https://www.microsoft.com/en-us/learning/exam-70-483.aspx
 
-     */
+    */
     class Program
     {       
         static void Main(string[] args)
@@ -90,13 +90,17 @@ namespace clu.active.learning
 
             Extensions.UsingExtensions();
 
-            FileSystem.ReadingFiles();
-            FileSystem.WritingFiles();
-            FileSystem.FileManipulation();
-            FileSystem.FileInformation();
-            FileSystem.DirectoryManipulation();
-            FileSystem.DirectoryInformation();
-            FileSystem.FileAndDirectoryPaths();
+            //FileSystem.ReadingFiles();
+            //FileSystem.WritingFiles();
+            //FileSystem.FileManipulation();
+            //FileSystem.FileInformation();
+            //FileSystem.DirectoryManipulation();
+            //FileSystem.DirectoryInformation();
+            //FileSystem.FileAndDirectoryPaths();
+
+            //Serialization.UsingSerialization();
+
+            Streams.UsingStreams();
 
             Thread.Sleep(5000);
 

@@ -29,7 +29,8 @@ namespace clu.active.learning
                     string response = "….";
                     if (response == "connection_failed")
                     {
-                        // Block of code to execute if the value of the response variable is "connection_failed".
+                        // Block of code to execute if the value of the response variable is 
+                        // "connection_failed".
                     }
                 }
 
@@ -38,11 +39,13 @@ namespace clu.active.learning
                     string response = "….";
                     if (response == "connection_failed")
                     {
-                        // Block of code executes if the value of the response variable is "connection_failed".
+                        // Block of code executes if the value of the response variable is 
+                        // "connection_failed".
                     }
                     else
                     {
-                        // Block of code executes if the value of the response variable is not "connection_failed".
+                        // Block of code executes if the value of the response variable is not 
+                        // "connection_failed".
                     }
                 }
 
@@ -51,31 +54,38 @@ namespace clu.active.learning
                     string response = "….";
                     if (response == "connection_failed")
                     {
-                        // Block of code executes if the value of the response variable is "connection_failed".
+                        // Block of code executes if the value of the response variable is 
+                        // "connection_failed".
                     }
                     else if (response == "connection_error")
                     {
-                        // Block of code executes if the value of the response variable is "connection_error".
+                        // Block of code executes if the value of the response variable is 
+                        // "connection_error".
                     }
                     else
                     {
-                        // Block of code executes if the value of the response variable is not "connection_failed" or "connection_error".
+                        // Block of code executes if the value of the response variable is not 
+                        // "connection_failed" or "connection_error".
                     }
                 }
 
                 Console.WriteLine("** Switch");
                 {
                     string response = "….";
-                    switch (response) // A switch case must end with a jump statement, such as break, return or goto.
+                    switch (response) // A switch case must end with a jump statement, such as 
+                                      // break, return or goto.
                     {
                         case "connection_failed":
-                            // Block of code executes if the value of response is "connection_failed".
+                            // Block of code executes if the value of response is 
+                            // "connection_failed".
                             break;
                         case "connection_success":
-                            // Block of code executes if the value of response is "connection_success".
+                            // Block of code executes if the value of response is 
+                            // "connection_success".
                             break;
                         case "connection_error":
-                            // Block of code executes if the value of response is "connection_error".
+                            // Block of code executes if the value of response is 
+                            // "connection_error".
                             break;
                         default:
                             // Block executes if none of the above conditions are met.
@@ -100,6 +110,7 @@ namespace clu.active.learning
                 Console.WriteLine("Foreach");
                 {
                     string[] names = new string[10];
+
                     // Process each name in the array.
                     foreach (string name in names)
                     {
@@ -122,8 +133,9 @@ namespace clu.active.learning
                     bool dataToEnter = checkIfUserWantsToEnterData();
                     if (dataToEnter)
                     {
-                        do // A do loop is very similar to a while loop, with the exception that a do loop will always execute at least once.
-                           // Whereas if the condition is not initially met, a while loop will never execute.
+                        do // A do loop is very similar to a while loop, with the exception that a 
+                           // do loop will always execute at least once. Whereas if the condition 
+                           // is not initially met, a while loop will never execute.
                         {
                             // Process the data.
                             dataToEnter = checkIfUserHasMoreData();

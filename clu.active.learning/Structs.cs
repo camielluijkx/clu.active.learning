@@ -6,12 +6,16 @@ namespace clu.active.learning
      
     A struct is a programming construct that you can use to define custom types. 
 
-    Structs are essentially lightweight data structures that represent related pieces of information as a single item. 
+    Structs are essentially lightweight data structures that represent related pieces of 
+    information as a single item. 
     
     For example:
-        • A struct named Point might consist of fields to represent an x-coordinate and a y-coordinate.
-        • A struct named Circle might consist of fields to represent an x-coordinate, a y-coordinate, and a radius.
-        • A struct named Color might consist of fields to represent a red component, a green component, and a blue component.
+        • A struct named Point might consist of fields to represent an x-coordinate and a 
+          y-coordinate.
+        • A struct named Circle might consist of fields to represent an x-coordinate, a 
+          y-coordinate, and a radius.
+        • A struct named Color might consist of fields to represent a red component, a green 
+          component, and a blue component.
        
     Most of the built-in types, such as int, bool, and char, are defined by structs. 
     
@@ -20,6 +24,8 @@ namespace clu.active.learning
     */
     public static class Structs
     {
+        #region Implementation
+
         // Declaring a Struct.
         public struct Coffee // public, internal (default), private
         {
@@ -39,6 +45,8 @@ namespace clu.active.learning
             // Other methods, fields, properties, and events.
         }
 
+        #endregion
+
         #region Public Methods
 
         public static void UsingStructs()
@@ -55,7 +63,8 @@ namespace clu.active.learning
 
                 Console.WriteLine("Initializing Structs");
                 {
-                    // Call the custom constructor by providing arguments for the three required parameters.
+                    // Call the custom constructor by providing arguments for the three required 
+                    // parameters.
                     Coffee coffee1 = new Coffee(4, "Arabica", "Columbia");
                     Coffee coffee2 = new Coffee(); // struct always has a default constructor
                 }

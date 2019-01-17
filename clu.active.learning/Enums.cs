@@ -16,6 +16,8 @@ namespace clu.active.learning
     */
     public static class Enums
     {
+        #region Implementation
+
         // Declaring an enum.
         // Each member of an enum has a name and a value.
         public enum Day : int // By default the underlying type of each element in the enum is int. 
@@ -47,8 +49,8 @@ namespace clu.active.learning
             Min = 255L
         };
 
-        [Flags] // Using bit flags to arrange AND, OR, NOT and XOR bitwise operations can be performed 
-                // on them.
+        [Flags] // Using bit flags to arrange AND, OR, NOT and XOR bitwise operations can be 
+                // performed on them.
         enum Days
         {
             None = 0x0,
@@ -60,6 +62,8 @@ namespace clu.active.learning
             Friday = 0x20,
             Saturday = 0x40
         }
+
+        #endregion
 
         #region Public Methods
 
@@ -78,7 +82,8 @@ namespace clu.active.learning
 
             Console.WriteLine("** Set Enum by Value");
             {
-                Day favoriteDay = (Day)7; // It's possible to assign any arbitrary integer value to favoriteDay.
+                Day favoriteDay = (Day)7; // It's possible to assign any arbitrary integer value to 
+                                          // favoriteDay.
                 Console.WriteLine($"({(int)favoriteDay}) {favoriteDay}"); // Output: (7) 7
             }
 

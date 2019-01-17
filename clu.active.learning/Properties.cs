@@ -4,6 +4,8 @@ namespace clu.active.learning
 {
     public static class Properties
     {
+        #region Implementation
+
         public class Coffee
         {
             #region Fields
@@ -26,8 +28,8 @@ namespace clu.active.learning
                 set { _strength = value; }
             }
 
-            // Compiler will implicitly create a private field and map it to your property. 
-            // These are known as auto-implemented properties.
+            // Compiler will implicitly create a private field and map it to your property. These 
+            // are known as auto-implemented properties.
             public string Bean { get; private set; }
             public string CountryOfOrigin { get; set; }
             public bool SpecialEdition { private get; set; }
@@ -77,13 +79,18 @@ namespace clu.active.learning
         
         public class DataBinding
         {
-            public int Strength { get; set; } // Create a property that reads and writes to a private field.
+            // Create a property that reads and writes to a private field.
+            public int Strength { get; set; }
 
-            public int Strength { get; private set; } // Create a property that can be publicly read, but set only by its containing class.  
+            // Create a property that can be publicly read, but set only by its containing class.
+            public int Strength { get; private set; }   
             
-            public int Strength { get; } // Create a readonly property where only the constructor can set the value to this property.
+            // Create a readonly property where only the constructor can set the value to this 
+            // property.
+            public int Strength { get; }
 
-            public int Strength { private get; set; } // Create a property that writes to a private field.
+            // Create a property that writes to a private field.
+            public int Strength { private get; set; }
         }
 
         */
@@ -107,9 +114,21 @@ namespace clu.active.learning
 
             public CoffeeMenu()
             {
-                beverages = new string[] { "Americano", "Café au Lait", "Café Macchiato", "Cappuccino", "Espresso" };
+                beverages = new string[] 
+                {
+                    "Americano", "Café au Lait", "Café Macchiato", "Cappuccino", "Espresso"
+                };
             }
         }
+
+        public class ServiceConfiguration
+        {
+            public string ApplicationName { get; set; } // property
+
+            public string ApplicationUser { get; set; } // property
+        }
+
+        #endregion
 
         #region Public Methods
 

@@ -12,9 +12,9 @@ namespace clu.active.learning
         {
             Console.WriteLine("* Concatenate Strings");
             {
-                // Bad coding practice because strings are immutable. 
-                // This means that every time you concatenate a string, you create a new string.
-                // in memory and the old string is discarded.
+                // Bad coding practice because strings are immutable. This means that every time 
+                // you concatenate a string, you create a new string in memory and the old string 
+                // is discarded.
                 string address = "23";
                 address = address + ", Main Street";
                 address = address + ", Buffalo";

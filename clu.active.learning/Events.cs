@@ -18,6 +18,8 @@ namespace clu.active.learning
     */
     public static class Events
     {
+        #region Implementation
+
         public class ThresholdReachedEventArgs : EventArgs
         {
             public int Threshold { get; set; }
@@ -25,7 +27,8 @@ namespace clu.active.learning
             public DateTime TimeReached { get; set; }
         }
 
-        public delegate void ThresholdReachedEventHandler(object sender, ThresholdReachedEventArgs e);
+        public delegate void ThresholdReachedEventHandler(
+            object sender, ThresholdReachedEventArgs e);
 
         public class Counter
         {
@@ -55,6 +58,8 @@ namespace clu.active.learning
         {
             Console.WriteLine("The threshold was reached: {0}.", e.Threshold);
         }
+
+        #endregion
 
         #region Public Methods
 

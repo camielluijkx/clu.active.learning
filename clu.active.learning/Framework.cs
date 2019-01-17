@@ -15,7 +15,8 @@ namespace clu.active.learning
         The CLR is responsible for - among other things: the execution of .Net code, Memory 
         management and garbage collection for the application, exception handling, etc. 
 
-        Above the CLR is the Base Class Library (BCL), that includes all the built-in types in the .Net Framework. 
+        Above the CLR is the Base Class Library (BCL), that includes all the built-in types in the 
+        .Net Framework. 
 
         Above that are the specific implementation of the different languages .Net supports.
 
