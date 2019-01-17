@@ -5,12 +5,14 @@ namespace clu.active.learning
     /*
     
     Delegates:
+
         • Delegates are references to methods.
         • They can be saved as fields and passed as parameters.
         • They allow one to execute code that is provided from extrenal sources.
         • Delegates can be executed exactly like methods.
 
     Events:
+
         • An event wraps a delegate like a property wraps a field.
         • Events allow the class to notify other consumers of actions performed within it.
         • An event may only be raised by it's containing class.
@@ -27,8 +29,7 @@ namespace clu.active.learning
             public DateTime TimeReached { get; set; }
         }
 
-        public delegate void ThresholdReachedEventHandler(
-            object sender, ThresholdReachedEventArgs e);
+        public delegate void ThresholdReachedEventHandler(object sender, ThresholdReachedEventArgs e);
 
         public class Counter
         {
@@ -77,7 +78,7 @@ namespace clu.active.learning
                 Console.WriteLine("** Raise");
                 {
                     c.Add(4);
-                    c.Add(5); // raise
+                    c.Add(5); // raises event
                     c.Add(6);
                 }
 

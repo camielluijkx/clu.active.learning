@@ -43,8 +43,8 @@ namespace clu.active.learning
 
         The 0b at the beginning indicates that the number is written as a binary number.
         
-        Binary numbers can get very long, so it's often easier to see the bit patterns by 
-        introducing the _ as a digit separator.
+        Binary numbers can get very long, so it's often easier to see the bit patterns by introducing the _ as a digit 
+        separator.
         
         */
         public const int One = 0b0001;
@@ -56,14 +56,13 @@ namespace clu.active.learning
         public const int SixtyFour = 0b0100_0000;
         public const int OneHundredTwentyEight = 0b1000_0000;
 
-        // The digit separator can appear anywhere in the constant. For base 10 numbers, it would 
-        // be common to use it as a thousands separator.
+        // The digit separator can appear anywhere in the constant. For base 10 numbers, it would be common to use it 
+        // as a thousands separator.
         public const long BillionsAndBillions = 100_000_000_000;
 
         // The digit separator can be used with decimal, float and double types as well.
         public const double AvogadroConstant = 6.022_140_857_747_474e23;
-        public const decimal GoldenRatio = 
-            1.618_033_988_749_894_848_204_586_834_365_638_117_720_309_179M;
+        public const decimal GoldenRatio = 1.618_033_988_749_894_848_204_586_834_365_638_117_720_309_179M;
 
         #endregion
 
@@ -75,91 +74,75 @@ namespace clu.active.learning
             {
                 // int - whole numbers
                 int intMinValue = int.MinValue;
-                Console.WriteLine($"int min value: {intMinValue} (size: " +
-                    $"{Marshal.SizeOf(intMinValue)} bytes)");
+                Console.WriteLine($"int min value: {intMinValue} (size: {Marshal.SizeOf(intMinValue)})");
                 int intMaxValue = int.MaxValue;
-                Console.WriteLine($"int max value: {intMaxValue} (size: " +
-                    $"{Marshal.SizeOf(intMaxValue)} bytes)");
+                Console.WriteLine($"int max value: {intMaxValue} (size: {Marshal.SizeOf(intMaxValue)})");
 
                 // long - whole numbers (bigger range)
                 long longMinValue = long.MinValue;
-                Console.WriteLine($"long min value: {longMinValue} (size: " +
-                    $"{Marshal.SizeOf(longMinValue)} bytes)");
+                Console.WriteLine($"long min value: {longMinValue} (size: {Marshal.SizeOf(longMinValue)})");
                 long longMaxValue = long.MaxValue;
-                Console.WriteLine($"long max value: {longMaxValue} (size: " +
-                    $"{Marshal.SizeOf(longMaxValue)} bytes)");
+                Console.WriteLine($"long max value: {longMaxValue} (size: {Marshal.SizeOf(longMaxValue)})");
 
                 // float - floating-point numbers
                 float floatMinValue = float.MinValue;
-                Console.WriteLine($"float min value: {floatMinValue} (size: " +
-                    $"{Marshal.SizeOf(floatMinValue)} bytes)");
+                Console.WriteLine($"float min value: {floatMinValue} (size: {Marshal.SizeOf(floatMinValue)})");
                 float floatMaxValue = float.MaxValue;
-                Console.WriteLine($"float max value: {floatMaxValue} (size: " +
-                    $"{Marshal.SizeOf(floatMaxValue)} bytes)");
+                Console.WriteLine($"float max value: {floatMaxValue} (size: {Marshal.SizeOf(floatMaxValue)})");
 
                 // double - double precision
                 double doubleMinValue = double.MinValue;
-                Console.WriteLine($"double min value: {doubleMinValue} (size: " +
-                    $"{Marshal.SizeOf(doubleMinValue)} bytes)");
+                Console.WriteLine($"double min value: {doubleMinValue} (size: {Marshal.SizeOf(doubleMinValue)})");
                 double doubleMaxValue = double.MaxValue;
-                Console.WriteLine($"double max value: {doubleMaxValue} (size: " +
-                    $"{Marshal.SizeOf(doubleMaxValue)} bytes)");
+                Console.WriteLine($"double max value: {doubleMaxValue} (size: {Marshal.SizeOf(doubleMaxValue)})");
 
                 // decimal - monetary values
                 decimal decimalMinValue = decimal.MinValue;
-                Console.WriteLine($"decimal min value: {decimalMinValue} (size: " +
-                    $"{Marshal.SizeOf(decimalMinValue)} bytes)");
+                Console.WriteLine($"decimal min value: {decimalMinValue} (size: {Marshal.SizeOf(decimalMinValue)})");
                 decimal decimalMaxValue = decimal.MaxValue;
-                Console.WriteLine($"decimal max value: {decimalMaxValue} (size: " +
-                    $"{Marshal.SizeOf(decimalMaxValue)} bytes)");
+                Console.WriteLine($"decimal max value: {decimalMaxValue} (size: {Marshal.SizeOf(decimalMaxValue)})");
 
                 // char - single character
                 char charMinValue = char.MinValue;
-                Console.WriteLine($"char min value: {charMinValue} (size: " +
-                    $"{Marshal.SizeOf(charMinValue)} bytes)");
+                Console.WriteLine($"char min value: {charMinValue} (size: {Marshal.SizeOf(charMinValue)})");
                 char charMaxValue = char.MaxValue;
-                Console.WriteLine($"char max value: {charMaxValue} (size: " +
-                    $"{Marshal.SizeOf(charMaxValue)} bytes)");
+                Console.WriteLine($"char max value: {charMaxValue} (size: {Marshal.SizeOf(charMaxValue)})");
 
                 // bool - boolean
                 bool boolFalseValue = false;
-                Console.WriteLine($"bool false value: {boolFalseValue} (size: " +
-                    $"{Marshal.SizeOf(boolFalseValue)} bytes)");
+                Console.WriteLine($"bool false value: {boolFalseValue} (size: {Marshal.SizeOf(boolFalseValue)})");
                 bool boolTrueValue = true;
-                Console.WriteLine($"bool true value: {boolTrueValue} (size: " +
-                    $"{Marshal.SizeOf(boolTrueValue)} bytes)");
+                Console.WriteLine($"bool true value: {boolTrueValue} (size: {Marshal.SizeOf(boolTrueValue)})");
 
                 // datetime - moments in time
                 DateTime datetimeMinValue = DateTime.MinValue;
-                //Console.WriteLine($"datetime min value: {datetimeMinValue} (size: 
-                //{ Marshal.SizeOf(datetimeMinValue)} bytes)");
-                //System.ArgumentException: 'Type 'System.DateTime' cannot be marshaled as an 
-                //unmanaged structure; no meaningful size or offset can be computed.'
+                //Console.WriteLine($"datetime min value: {datetimeMinValue} (size: " +
+                //$"{Marshal.SizeOf(datetimeMinValue)})");
+                //System.ArgumentException: 'Type 'System.DateTime' cannot be marshaled as an unmanaged structure; no 
+                //meaningful size or offset can be computed.'
                 Console.WriteLine($"datetime min value: {datetimeMinValue} (size: " +
-                    $"{SizeCalculator.SizeOf<DateTime>()} bytes)");
+                    $"{SizeCalculator.SizeOf<DateTime>()})");
                 DateTime datetimeMaxValue = DateTime.MaxValue;
-                //Console.WriteLine($"datetime max value: {datetimeMaxValue} 
-                //(size: {Marshal.SizeOf(datetimeMaxValue)} bytes)");
-                //System.ArgumentException: 'Type 'System.DateTime' cannot be marshaled as an 
-                //unmanaged structure; no meaningful size or offset can be computed.'
+                //Console.WriteLine($"datetime max value: {datetimeMaxValue} (size: " +
+                    //$"{Marshal.SizeOf(datetimeMaxValue)})");
+                //System.ArgumentException: 'Type 'System.DateTime' cannot be marshaled as an unmanaged structure; no 
+                //meaningful size or offset can be computed.'
                 Console.WriteLine($"datetime max value: {datetimeMaxValue} (size: " +
-                    $"{SizeCalculator.SizeOf<DateTime>()} bytes)");
+                    $"{SizeCalculator.SizeOf<DateTime>()})");
 
                 // string - sequence of characters
                 string stringValue = "some string";
-                //Console.WriteLine($"string value: {stringValue}, characters: 
-                //{ string.Join(",", stringValue.ToCharArray())}, (size: 
-                //{ Marshal.SizeOf(stringValue)} bytes)");
-                //System.ArgumentException: 'Type 'System.String' cannot be marshaled as an 
-                //unmanaged structure; no meaningful size or offset can be computed.'
+                //Console.WriteLine($"string value: {stringValue}, characters: " +
+                    //$"{string.Join(",", stringValue.ToCharArray())}, (size: " +
+                    //$"{Marshal.SizeOf(stringValue)})");
+                //System.ArgumentException: 'Type 'System.String' cannot be marshaled as an unmanaged structure; no 
+                //meaningful size or offset can be computed.'
                 Console.WriteLine($"string value: {stringValue}, characters: " +
                     $"{string.Join(",", stringValue.ToCharArray())}, (size: " +
-                    $"{ASCIIEncoding.ASCII.GetByteCount(stringValue)} bytes in ASCII)"); 
-                        // 1 per character
+                    $"{ASCIIEncoding.ASCII.GetByteCount(stringValue)} in ASCII)"); // 1 byte per character
                 Console.WriteLine($"string value: {stringValue}, characters: " +
                     $"{string.Join(",", stringValue.ToCharArray())}, (size: " +
-                    $"{ASCIIEncoding.Unicode.GetByteCount(stringValue)} bytes in Unicode)"); 
-                        // 2 per character
+                    $"{ASCIIEncoding.Unicode.GetByteCount(stringValue)} in Unicode)"); // 2 bytes per character
             }
         }
 
@@ -167,23 +150,6 @@ namespace clu.active.learning
         {
             Console.WriteLine("* Casting Between Data Types"); // aka Type Conversion
             {
-                /* 
-                
-                https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/types/boxing-and-unboxing
-                
-                Boxing is the process of converting a value type to the type object or to any 
-                interface type implemented by this value type. 
-                
-                When the CLR boxes a value type, it wraps the value inside a System.Object and 
-                stores it on the managed heap. 
-                
-                Unboxing extracts the value type from the object. Boxing is implicit; unboxing is 
-                explicit. 
-                
-                The concept of boxing and unboxing underlies the Visual C# unified view of the type 
-                system in which a value of any type can be treated as an object.
-                
-                */
                 Console.WriteLine("** Implicit Conversion"); // without losing information
                 {
                     /*
@@ -210,8 +176,8 @@ namespace clu.active.learning
                 {
                     int a = 4;
                     long b = 5;
-                    b = a; // boxing of a
-                    a = (int)b; // unboxing of b
+                    b = a;
+                    a = (int)b;
                 }
 
                 Console.WriteLine("** Using System.Convert");

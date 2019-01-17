@@ -9,7 +9,6 @@ namespace clu.active.learning
     System.IO           Provides classes for reading and writing data to files.
     System.Data         Provides classes for data access.
     System.Web          Provides classes that are useful for building web applications.
-    etc.
 
     */
     public static class Namespaces
@@ -20,14 +19,8 @@ namespace clu.active.learning
         {
             Console.WriteLine("* Using Namespaces");
             {
-                Tasks.Task.Factory.StartNew(() => 
-                {
-                    Console.WriteLine("do something");
-                });
-                System.Threading.Tasks.Task.Factory.StartNew(() => 
-                {
-                    Console.WriteLine("do something else");
-                });
+                Tasks.Task.Factory.StartNew(() => { Console.WriteLine("do something"); });
+                System.Threading.Tasks.Task.Factory.StartNew(() => { Console.WriteLine("do something else"); });
             }
         }
 

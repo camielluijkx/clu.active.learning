@@ -28,8 +28,8 @@ namespace clu.active.learning
                 set { _strength = value; }
             }
 
-            // Compiler will implicitly create a private field and map it to your property. These 
-            // are known as auto-implemented properties.
+            // Compiler will implicitly create a private field and map it to your property. These are known as 
+            // auto-implemented properties.
             public string Bean { get; private set; }
             public string CountryOfOrigin { get; set; }
             public bool SpecialEdition { private get; set; }

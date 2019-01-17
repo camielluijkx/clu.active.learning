@@ -5,10 +5,9 @@ namespace clu.active.learning
 {
     /*
      
-    The File class in the System.IO namespace exposes several static methods that you can use to 
-    perform transactional operations for direct reading and writing of files. These methods are 
-    transactional because they wrap several underlying functions into a single method call. 
-    Typically, to read data from a file, you: 
+    The File class in the System.IO namespace exposes several static methods that you can use to perform transactional 
+    operations for direct reading and writing of files. These methods are transactional because they wrap several 
+    underlying functions into a single method call. Typically, to read data from a file, you: 
 
         1. Acquire the file handle.
         2. Open a stream to the file.
@@ -28,11 +27,12 @@ namespace clu.active.learning
                 {
                     /*
                      
-                    The ReadAllText method enables you to read the contents of a file into a single 
-                    string variable. The following code example shows how to read the contents of 
-                    the settings.txt file into a string named settings. 
+                    The ReadAllText method enables you to read the contents of a file into a single string variable. 
+                    The following code example shows how to read the contents of the settings.txt file into a string 
+                    named settings. 
 
                     */
+
                     string filePath = @"C:\fourthCoffee\settings.txt";
                     string settings = File.ReadAllText(filePath);
                 }
@@ -41,10 +41,9 @@ namespace clu.active.learning
                 {
                     /*
                      
-                    The ReadAllLines method enables you to read the contents of a file and store 
-                    each line at a new index in a string array. The following code example shows 
-                    how to read the contents of the settings.txt file and store each line in the 
-                    string array named settingsLineByLine.
+                    The ReadAllLines method enables you to read the contents of a file and store each line at a new 
+                    index in a string array. The following code example shows how to read the contents of the 
+                    settings.txt file and store each line in the string array named settingsLineByLine.
 
                     */
 
@@ -56,10 +55,9 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The ReadAllBytes method enables you to read the contents of a file as binary 
-                    data and store the data in a byte array. The following code example shows how 
-                    to read the contents of the settings.txt file into a byte array named 
-                    rawSettings.
+                    The ReadAllBytes method enables you to read the contents of a file as binary data and store the 
+                    data in a byte array. The following code example shows how to read the contents of the 
+                    settings.txt file into a byte array named rawSettings.
                     
                     */
 
@@ -77,10 +75,9 @@ namespace clu.active.learning
                 {
                     /*
                      
-                    The WriteAllText method enables you to write the contents of a string variable 
-                    to a file. If the file exists, its contents will be overwritten. The following 
-                    code example shows how to write the contents of a string named settings to a 
-                    new file named settings.txt. 
+                    The WriteAllText method enables you to write the contents of a string variable to a file. If the 
+                    file exists, its contents will be overwritten. The following code example shows how to write the 
+                    contents of a string named settings to a new file named settings.txt. 
 
                     */
 
@@ -93,10 +90,9 @@ namespace clu.active.learning
                 {
                     /* 
                     
-                    The WriteAllLines method enables you to write the contents of a string array to 
-                    a file. Each entry in the string array represents a new line in the file. The 
-                    following code example shows how to write the contents of a string array named 
-                    hosts to a new file named hosts.txt.
+                    The WriteAllLines method enables you to write the contents of a string array to a file. Each entry 
+                    in the string array represents a new line in the file. The following code example shows how to 
+                    write the contents of a string array named hosts to a new file named hosts.txt.
 
                     */
 
@@ -109,9 +105,9 @@ namespace clu.active.learning
                 {
                     /*
                      
-                    The WriteAllBytes method enables you to write the contents of a byte array to a 
-                    binary file. The following code example shows how to write the contents of a 
-                    byte array named rawSettings to a new file named settings.txt. 
+                    The WriteAllBytes method enables you to write the contents of a byte array to a binary file. The 
+                    following code example shows how to write the contents of a byte array named rawSettings to a new 
+                    file named settings.txt. 
 
                     */
 
@@ -125,10 +121,9 @@ namespace clu.active.learning
                 {
                     /*
                      
-                    The AppendAllText method enables you to write the contents of a string variable 
-                    to the end of an existing file. The following code example shows how to write 
-                    the contents of a string variable named settings to the end of the existing 
-                    settings.txt file. 
+                    The AppendAllText method enables you to write the contents of a string variable to the end of an 
+                    existing file. The following code example shows how to write the contents of a string variable 
+                    named settings to the end of the existing settings.txt file. 
 
                     */
 
@@ -141,9 +136,9 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The AppendAllLines method enables you to write the contents of a string array 
-                    to the end of an existing file. The following code example shows how to write 
-                    the contents of a string array named newHosts to the existing hosts.txt file. 
+                    The AppendAllLines method enables you to write the contents of a string array to the end of an 
+                    existing file. The following code example shows how to write the contents of a string array named 
+                    newHosts to the existing hosts.txt file. 
 
                     */
 
@@ -162,10 +157,9 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The Copy method enables you to copy an existing file to a different directory 
-                    on the file system. The following code example shows how to copy the 
-                    settings.txt file from the C:\fourthCoffee\ directory to the C:\temp\ 
-                    directory. 
+                    The Copy method enables you to copy an existing file to a different directory on the file system. 
+                    The following code example shows how to copy the settings.txt file from the C:\fourthCoffee\ 
+                    directory to the C:\temp\ directory. 
 
                     */
 
@@ -179,8 +173,8 @@ namespace clu.active.learning
                 {
                     /*
                      
-                    The Delete method enables you to delete an existing file from the file system. 
-                    The following code example shows how to delete the existing settings.txt file. 
+                    The Delete method enables you to delete an existing file from the file system. The following code 
+                    example shows how to delete the existing settings.txt file. 
 
                     */
 
@@ -192,9 +186,8 @@ namespace clu.active.learning
                 {
                     /*
                      
-                    The Exists method enables you to check whether a file exists on the file 
-                    system. The following code example shows how to check whether the settings.txt 
-                    file exists.
+                    The Exists method enables you to check whether a file exists on the file system. The following code 
+                    example shows how to check whether the settings file exists.
 
                     */
 
@@ -206,10 +199,9 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The GetCreationTime method enables you to read the date time stamp that 
-                    describes when a file was created, from the metadata associated with the file. 
-                    The following code example shows how you can determine when the settings.txt 
-                    file was created. 
+                    The GetCreationTime method enables you to read the date time stamp that describes when a file was 
+                    created, from the metadata associated with the file. The following code example shows how you can 
+                    determine when the settings.txt file was created. 
 
                     */
 
@@ -227,10 +219,9 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The CopyTo method enables you to copy an existing file to a different directory 
-                    on the file system. The following code example shows how to copy the 
-                    settings.txt file from the C:\fourthCoffee\ directory to the C:\temp\ 
-                    directory. 
+                    The CopyTo method enables you to copy an existing file to a different directory on the file system. 
+                    The following code example shows how to copy the settings.txt file from the C:\fourthCoffee\ 
+                    directory to the C:\temp\ directory. 
                     
                     */
 
@@ -245,8 +236,8 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The Delete method enables you to delete a file. The following code example 
-                    shows how to delete the settings.txt file. 
+                    The Delete method enables you to delete a file. The following code example shows how to delete the 
+                    settings.txt file. 
 
                     */
 
@@ -259,8 +250,8 @@ namespace clu.active.learning
                 {
                     /*
                      
-                    The DirectoryName property enables you to get the directory path to the file. 
-                    The following code example shows how to get the path to the settings.txt file. 
+                    The DirectoryName property enables you to get the directory path to the file. The following code 
+                    example shows how to get the path to the settings.txt file. 
 
                     */
 
@@ -273,9 +264,8 @@ namespace clu.active.learning
                 {
                     /* 
                     
-                    The Exists method enables you to determine if the file exists within the file 
-                    system. The following code example shows how to check whether the settings.txt 
-                    file exists. 
+                    The Exists method enables you to determine if the file exists within the file system. The following 
+                    code example shows how to check whether the settings.txt file exists. 
 
                     */
 
@@ -288,9 +278,8 @@ namespace clu.active.learning
                 {
                     /*
                                      
-                    The Extension property enables you to get the file extension of a file. The 
-                    following code example shows how to get the extension of a path returned from a 
-                    method call. 
+                    The Extension property enables you to get the file extension of a file. The following code example 
+                    shows how to get the extension of a path returned from a method call. 
 
                     */
 
@@ -303,8 +292,8 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The Length property enables you to get the length of the file in bytes. The 
-                    following code example shows how to get the length of the settings.txt file. 
+                    The Length property enables you to get the length of the file in bytes. The following code example 
+                    shows how to get the length of the settings.txt file. 
 
                     */
 
@@ -323,9 +312,8 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The CreateDirectory method enables you to create a new directory on the file 
-                    system. The following example shows how to create the C:\fourthCoffee\tempData 
-                    directory.
+                    The CreateDirectory method enables you to create a new directory on the file system. The following 
+                    example shows how to create the C:\fourthCoffee\tempData directory.
 
                     */
 
@@ -337,9 +325,8 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The Delete method enables you to delete a directory at a specific path. The 
-                    following code example shows how to delete the C:\fourthCoffee\tempData 
-                    directory, and all its contents.
+                    The Delete method enables you to delete a directory at a specific path. The following code example 
+                    shows how to delete the C:\fourthCoffee\tempData directory, and all its contents.
 
                     */
 
@@ -352,9 +339,8 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The Exists method enables you to determine if a directory exists on the file 
-                    system. The following code example shows how to determine if the 
-                    C:\fourthCoffee\tempData directory exists.
+                    The Exists method enables you to determine if a directory exists on the file system. The following 
+                    code example shows how to determine if the C:\fourthCoffee\tempData directory exists.
                     
                     */
 
@@ -366,10 +352,9 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The GetDirectories method enables you to get a list of all subdirectories 
-                    within a specific directory on the file system. The following code example 
-                    shows how to get a list of all the sub directories in the 
-                    C:\fourthCoffee\tempData directory.
+                    The GetDirectories method enables you to get a list of all subdirectories within a specific 
+                    directory on the file system. The following code example shows how to get a list of all the sub 
+                    directories in the C:\fourthCoffee\tempData directory.
                     
                     */
 
@@ -381,9 +366,9 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The GetFiles method enables you to get a list of all the files within a 
-                    specific directory on the file system. The following example shows how to get a 
-                    list of all the files in the C:\fourthCoffee\tempData directory.
+                    The GetFiles method enables you to get a list of all the files within a specific directory on the 
+                    file system. The following example shows how to get a list of all the files in the 
+                    C:\fourthCoffee\tempData directory.
 
                     */
 
@@ -401,8 +386,8 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The Create method enables you to create a new directory on the file system. The 
-                    following example shows how to create the C:\fourthCoffee\tempData directory.
+                    The Create method enables you to create a new directory on the file system. The following example 
+                    shows how to create the C:\fourthCoffee\tempData directory.
 
                     */
 
@@ -415,9 +400,9 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    Console.WriteLine("** The Delete method enables you to delete a directory at a 
-                    specific path. The following code example shows how to delete the 
-                    C:\fourthCoffee\tempData directory, and all its contents.");
+                    Console.WriteLine("** The Delete method enables you to delete a directory at a specific path. The 
+                    following code example shows how to delete the C:\fourthCoffee\tempData directory, and all its 
+                    contents.");
 
                     */
 
@@ -431,9 +416,8 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The Exists property enables you to determine if a directory exists on the file 
-                    system. The following code example shows how to determine if the 
-                    C:\fourthCoffee\tempData directory exists.
+                    The Exists property enables you to determine if a directory exists on the file system. The 
+                    following code example shows how to determine if the C:\fourthCoffee\tempData directory exists.
                      
                     */
 
@@ -446,8 +430,8 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The FullName property enables you to get the full path to the directory. The 
-                    following example shows how to get the full path to the tempData directory.
+                    The FullName property enables you to get the full path to the directory. The following example 
+                    shows how to get the full path to the tempData directory.
                     
                     */
 
@@ -460,11 +444,10 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The GetDirectories method enables you to get a list of all subdirectories 
-                    within a specific directory on the file system. In contrast to the static 
-                    File.GetDirectories method, this instance method returns an array of type 
-                    DirectoryInfo, which enables you to use each of the instance properties for 
-                    each subdirectory. The following code example shows how to get all of the sub 
+                    The GetDirectories method enables you to get a list of all subdirectories within a specific 
+                    directory on the file system. In contrast to the static File.GetDirectories method, this instance 
+                    method returns an array of type DirectoryInfo, which enables you to use each of the instance 
+                    properties for each subdirectory. The following code example shows how to get all of the sub 
                     directories in the C:\fourthCoffee\tempData directory.
                     
                     */
@@ -478,11 +461,10 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The GetFiles method enables you to get a list of all the files within a 
-                    specific directory on the file system. In contrast to the static File.GetFiles 
-                    method, this instance method returns an array of type FileInfo, which enables 
-                    you to use each of the instance properties for each file. The following example 
-                    shows how to get all of the files in the C:\fourthCoffee\tempData directory.
+                    The GetFiles method enables you to get a list of all the files within a specific directory on the 
+                    file system. In contrast to the static File.GetFiles method, this instance method returns an array 
+                    of type FileInfo, which enables you to use each of the instance properties for each file. The 
+                    following example shows how to get all of the files in the C:\fourthCoffee\tempData directory.
                     
                     */
 
@@ -513,10 +495,9 @@ namespace clu.active.learning
                 {
                     /*
                     	
-                    The HasExtension method enables you to determine if the path your application 
-                    is processing has an extension. This provides a convenient way for you to 
-                    determine if you are processing a file or a directory. The following example 
-                    shows how check whether the path has an extension.
+                    The HasExtension method enables you to determine if the path your application is processing has an 
+                    extension. This provides a convenient way for you to determine if you are processing a file or a 
+                    directory. The following example shows how check whether the path has an extension.
                     
                     */
 
@@ -528,11 +509,10 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The GetExtension method enables you to get the extension from a file name. This 
-                    method is particularly useful when you want to ascertain what type of file your 
-                    application is processing. The following code example shows how to check 
-                    whether the settingsPath variable contains a path that ends with the .txt 
-                    extension.
+                    The GetExtension method enables you to get the extension from a file name. This method is 
+                    particularly useful when you want to ascertain what type of file your application is processing. 
+                    The following code example shows how to check whether the settingsPath variable contains a path 
+                    that ends with the .txt extension.
 
                     */
 
@@ -548,10 +528,10 @@ namespace clu.active.learning
                 {
                     /*
                     
-                    The GetTempFileName enables you to create a new temp file in your local Windows 
-                    temporary directory in a single transactional operation folder. This method 
-                    then returns the absolute path to that file, ready for further processing. The 
-                    following code shows how to invoke the GetTempFileName method.
+                    The GetTempFileName enables you to create a new temp file in your local Windows temporary directory 
+                    in a single transactional operation folder. This method then returns the absolute path to that 
+                    file, ready for further processing. The following code shows how to invoke the GetTempFileName 
+                    method.
 
                     */
 

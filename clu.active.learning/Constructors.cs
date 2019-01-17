@@ -24,10 +24,9 @@ namespace clu.active.learning
         {
             private string locationName;
 
-            // Expression body definition can be used if a constructor can be implemented as a 
-            // single statement. The following example defines a Location class whose constructor 
-            // has a single string parameter named name. The expression body definition assigns the 
-            // argument to the locationName field.
+            // Expression body definition can be used if a constructor can be implemented as a single statement. The 
+            // following example defines a Location class whose constructor has a single string parameter named name. 
+            // The expression body definition assigns the argument to the locationName field.
             public Location(string name) => Name = name;
 
             public string Name
@@ -39,10 +38,10 @@ namespace clu.active.learning
 
         /*
 
-        A class or struct can also have a static constructor, which initializes static members of 
-        the type. Static constructors are parameterless. If you don't provide a static constructor 
-        to initialize static fields, the Visual C# compiler will supply a default static 
-        constructor that initializes static fields to their default value. 
+        A class or struct can also have a static constructor, which initializes static members of the type. Static 
+        constructors are parameterless. If you don't provide a static constructor to initialize static fields, the 
+        Visual C# compiler will supply a default static constructor that initializes static fields to their default 
+        value. 
 
         */
         public class Adult : Person

@@ -5,11 +5,10 @@ namespace clu.active.learning
 {
     /*
      
-     It specifies a set of characteristics and behaviors by defining signatures for methods, 
-     properties, events, and indexers, without specifying how any of these members are implemented. 
-     When a class implements an interface, the class provides an implementation for each member of 
-     the interface. By implementing the interface, the class is thereby guaranteeing that it will 
-     provide the functionality specified by the interface.
+    It specifies a set of characteristics and behaviors by defining signatures for methods, properties, events, and 
+    indexers, without specifying how any of these members are implemented. When a class implements an interface, the 
+    class provides an implementation for each member of the interface. By implementing the interface, the class is 
+    thereby guaranteeing that it will provide the functionality specified by the interface.
 
     */
     public static class Interfaces
@@ -97,11 +96,9 @@ namespace clu.active.learning
         
         Implementing Multiple Interfaces: 
 
-        • Implement the IDisposable interface to enable the .NET runtime to dispose of your class 
-          correctly. 
-        • Implement the IComparable interface to enable collection classes to sort instances of 
-          your class. 
-        • Implement custom interface to define the functionality of a custom class.
+            • Implement the IDisposable interface to enable the .NET runtime to dispose of your class correctly. 
+            • Implement the IComparable interface to enable collection classes to sort instances of your class. 
+            • Implement custom interface to define the functionality of a custom class.
 
         */
         public class SpecialCoffee : IBeverage, IInventoryItem
@@ -122,21 +119,19 @@ namespace clu.active.learning
         
         Implementing an Interface Explicitly.
 
-        Some developers prefer explicit interface implementation because doing so can make the code 
-        easier to understand. 
+        Some developers prefer explicit interface implementation because doing so can make the code easier to 
+        understand. 
 
-        The only scenario in which you must use explicit interface implementation is if you are 
-        implementing two interfaces that share a member name. For example, if you implement 
-        interfaces named IBeverage and IInventoryItem, and both interfaces declare a Boolean 
-        property named IsAvailable, you would need to implement at least one of the IsAvailable 
-        members explicitly. In this scenario, the Visual C# compiler would be unable to resolve the 
-        IsAvailable reference without an explicit implementation. 
+        The only scenario in which you must use explicit interface implementation is if you are implementing two 
+        interfaces that share a member name. For example, if you implement interfaces named IBeverage and 
+        IInventoryItem, and both interfaces declare a Boolean property named IsAvailable, you would need to implement 
+        at least one of the IsAvailable members explicitly. In this scenario, the Visual C# compiler would be unable to 
+        resolve the IsAvailable reference without an explicit implementation. 
 
-        There is a difference in the usage of the class, however. When implementing an interface 
-        implicitly the members can be used as normal public members of the class and can be 
-        referenced without any special designation. When an interface is implemented explicitly, 
-        though, the members are made only available by casting the instance to the corresponding 
-        interface. Otherwise, they’ll remain hidden, and the code calling them will not compile.
+        There is a difference in the usage of the class, however. When implementing an interface implicitly the members 
+        can be used as normal public members of the class and can be referenced without any special designation. When 
+        an interface is implemented explicitly, though, the members are made only available by casting the instance to 
+        the corresponding interface. Otherwise, they’ll remain hidden, and the code calling them will not compile.
 
         */
         public class ExplicitCoffee : IBeverage
@@ -174,19 +169,18 @@ namespace clu.active.learning
         
         Implementations of this method must: 
         
-            • Compare the current object instance with another object of the same type (the 
-              argument).
-            • Return an integer value that indicates whether the current object instance should be 
-              placed before, in the same position, or after the passed-in object instance. 
+            • Compare the current object instance with another object of the same type (the argument).
+            • Return an integer value that indicates whether the current object instance should be placed before, in 
+              the same position, or after the passed-in object instance. 
         
         The integer values returned by the CompareTo method are interpreted as follows: 
 
-            • Less than zero indicates that the current object instance precedes the supplied 
-              instance in the sort order. 
-            • Zero indicates that the current object instance occurs at the same position as the 
-              supplied instance in the sort order. 
-            • More than zero indicates that the current object instance follows the supplied 
-              instance in the sort order.
+            • Less than zero indicates that the current object instance precedes the supplied instance in the sort 
+              order. 
+            • Zero indicates that the current object instance occurs at the same position as the supplied instance in 
+              the sort order. 
+            • More than zero indicates that the current object instance follows the supplied instance in the sort 
+              order.
 
         */
         public class ComparableCoffee : IComparable
@@ -212,12 +206,12 @@ namespace clu.active.learning
             }
 
         
-        As you can see, the IComparer interface declares a single method named Compare. 
-        Implementations of this method must: 
+        As you can see, the IComparer interface declares a single method named Compare. Implementations of this method 
+        must: 
 
             • Compare two objects of the same type.
-            • Return an integer value that indicates whether the current object instance should be 
-              placed before, in the same position, or after the passed-in object instance. 
+            • Return an integer value that indicates whether the current object instance should be placed before, in 
+              the same position, or after the passed-in object instance. 
 
         */
         public class CoffeeRatingComparer : IComparer
@@ -238,24 +232,22 @@ namespace clu.active.learning
 
         #region Public Methods
 
+        /*
+                 
+        Interface Polymorphism 
+
+        As it relates to interfaces, polymorphism states that you can represent an instance of a class as an instance 
+        of any interface that the class implements. Interface polymorphism can help to increase the flexibility and 
+        modularity of your code. Suppose you have several classes that implement the IBeverage interface, such as 
+        Coffee, Tea, Juice, and so on. You can write code that works with any of these classes as instances of 
+        IBeverage, without knowing any details of the implementing class. For example, you can build a collection of 
+        IBeverage instances without needing to know the details of every class that implements IBeverage. 
+
+        */
         public static void UsingInterfaces()
         {
             Console.WriteLine("** Using Interfaces");
             {
-                /*
-                 
-                Interface Polymorphism 
-
-                As it relates to interfaces, polymorphism states that you can represent an instance 
-                of a class as an instance of any interface that the class implements. Interface 
-                polymorphism can help to increase the flexibility and modularity of your code. 
-                Suppose you have several classes that implement the IBeverage interface, such as 
-                Coffee, Tea, Juice, and so on. You can write code that works with any of these 
-                classes as instances of IBeverage, without knowing any details of the implementing 
-                class. For example, you can build a collection of IBeverage instances without 
-                needing to know the details of every class that implements IBeverage. 
-
-                */
                 Console.WriteLine("** Representing an Object as an Interface Type");
                 {
                     Coffee coffee1 = new Coffee();
@@ -287,8 +279,7 @@ namespace clu.active.learning
                 int number1 = 5;
                 int number2 = 100;
                 int result = number1.CompareTo(number2);
-                // The value of result is -1, indicating that number1 should precede number2 in the 
-                // sort order.
+                // The value of result is -1, indicating that number1 should precede number2 in the sort order.
             }
         }
 

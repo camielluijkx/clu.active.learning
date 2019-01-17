@@ -4,25 +4,25 @@ namespace clu.active.learning
 {
     /*
      
-    In Visual C#, a class can inherit from another class. When you create a class that inherits 
-    from another class, your class is known as the derived class and the class that you inherit 
-    from is known as the base class. The derived class inherits all the members of the base class, 
-    including constructors, methods, properties, fields, and events. 
+    In Visual C#, a class can inherit from another class. When you create a class that inherits from another class, 
+    your class is known as the derived class and the class that you inherit from is known as the base class. The 
+    derived class inherits all the members of the base class, including constructors, methods, properties, fields, and 
+    events. 
 
     Access Modifier     Details 
     public              The member is available to code running in any assembly.
-    protected           The member is available only within the containing class or in classes 
-                        derived from the containing class. 
+    protected           The member is available only within the containing class or in classes derived from the 
+                        containing class. 
     internal            The member is available only to code within the current assembly.
-    protected internal  The member is available to any code within the current assembly, and to 
-                        types derived from the containing class in any assembly. 
+    protected internal  The member is available to any code within the current assembly, and to types derived from the 
+                        containing class in any assembly. 
     private             The member is available only within the containing class.
-    private protected   The member is available to types derived from the containing class, but 
-                        only within its containing assembly (only available since Visual C# 7.2). 
+    private protected   The member is available to types derived from the containing class, but only within its 
+                        containing assembly (only available since Visual C# 7.2). 
 
-    Members of a class are private by default. Private members are not inherited by derived 
-    classes. If you want members that would otherwise be private to be accessible to derived 
-    classes, you must prefix the member with the protected keyword. 
+    Members of a class are private by default. Private members are not inherited by derived classes. If you want 
+    members that would otherwise be private to be accessible to derived classes, you must prefix the member with the 
+    protected keyword. 
 
     */
     public static class Inheritance
@@ -42,9 +42,9 @@ namespace clu.active.learning
             }
         }
 
-        // In object-oriented programming, the terms derives and inherits are used interchangeably. 
-        // Saying that the Coffee class derives from the Beverage class means the same as saying 
-        // the Coffee class inherits from the Beverage class. 
+        // In object-oriented programming, the terms derives and inherits are used interchangeably. Saying that the 
+        // Coffee class derives from the Beverage class means the same as saying the Coffee class inherits from the 
+        // Beverage class. 
         public class Coffee : Beverage
         {
             public string Bean { get; set; }
@@ -78,8 +78,7 @@ namespace clu.active.learning
 
         }
         //class InheritFromSealedBeverage : SealedBeverage 
-            //CS0509: 'Inheritance.InheritFromSealedBeverage': cannot derive from sealed type 
-            //'Inheritance.SealedBeverage'
+        //CS0509: 'Inheritance.InheritFromSealedBeverage': cannot derive from sealed type 'Inheritance.SealedBeverage'
 
         // Virtual Members.
         public class BeverageWithVirtualMember
@@ -89,9 +88,8 @@ namespace clu.active.learning
             public bool IsFairTrade { get; set; }
             public virtual int GetServingTemperature()
             {
-                // This is the default implementation of the GetServingTemperature method. Because 
-                // the method is declared virtual, you can override the implementation in derived 
-                // classes.
+                // This is the default implementation of the GetServingTemperature method. Because the method is 
+                // declared virtual, you can override the implementation in derived classes.
                 return servingTemperature;
             }
         }
@@ -216,10 +214,9 @@ namespace clu.active.learning
 
                 /*
                  
-                Override can be used for both virtual and abstract members. The difference is that 
-                overriding virtual members is optional, while overriding abstract members is 
-                mandatory. Only an abstract class must implement every abstract member defined by 
-                its ancestors. 
+                Override can be used for both virtual and abstract members. The difference is that overriding virtual 
+                members is optional, while overriding abstract members is mandatory. Only an abstract class must 
+                implement every abstract member defined by its ancestors. 
 
                 */
                 Console.WriteLine("** Abstract vs Virtual");

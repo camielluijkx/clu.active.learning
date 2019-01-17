@@ -100,7 +100,8 @@ namespace clu.active.learning
 
             //Serialization.UsingSerialization();
 
-            Streams.UsingStreams();
+            //Streams.UsingBinaryReaderAndWriter();
+            //Streams.UsingStreamReaderAndWriter();
 
             Thread.Sleep(5000);
 

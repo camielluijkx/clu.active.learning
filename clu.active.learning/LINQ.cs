@@ -6,8 +6,8 @@ namespace clu.active.learning
 {
     /*
     
-    Language-Integrated Query (LINQ) is the name for a set of technologies based on the integration 
-    of query capabilities directly into the Visual C# language. 
+    Language-Integrated Query (LINQ) is the name for a set of technologies based on the integration of query 
+    capabilities directly into the Visual C# language. 
     
     */
     public static class LINQ
@@ -31,8 +31,7 @@ namespace clu.active.learning
                     where num < 3 || num > 7
                     orderby num ascending // order returned results
                     select num;
-
-                
+ 
                 IEnumerable<IGrouping<char, string>> queryFoodGroups =
                     from item in vegetables
                     group item by item[0]; // group by first character

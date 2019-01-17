@@ -17,13 +17,13 @@ namespace clu.active.learning
 
                 Console.WriteLine("** Multidimensional arrays");
                 {
-                    int[,,] arrayName = new int[10, 10, 10]; // rank = 3 (number of dimensions)
+                    int[,,] arrayName = new int[10, 10, 10]; // rank = 3 (number of array dimensions)
                 }
 
                 Console.WriteLine("** Jagged arrays"); // array of arrays
                 {
                     int[][] jaggedArray = new int[10][]; // size of first array must be specified
-                    jaggedArray[0] = new int[5]; // size of array may vary 
+                    jaggedArray[0] = new int[5]; // size of array in jagged array may vary 
                     jaggedArray[1] = new int[7];
                 }
 

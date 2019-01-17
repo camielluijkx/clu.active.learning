@@ -25,7 +25,7 @@ namespace clu.active.learning
 
             }
 
-            public void StopAllServices(ref int servicesCount) // method with reference params
+            public void StopAllServices(ref int servicesCount) // method with reference param
             {
                 servicesCount = NumberOfServices;
             }
@@ -39,8 +39,7 @@ namespace clu.active.learning
             //public void StopAllServices(in int servicesCount) { } // introduced in Visual C# 7.2
             //public void StopAllServices(out int servicesCount) { }
 
-            public void StopAllServices(int servicesCount, bool forceStop = true) 
-                // method with optional parameter (default value = true)
+            public void StopAllServices(int servicesCount, bool forceStop = true) // optional param with default value
             {
                 servicesCount = NumberOfServices;
             }
@@ -48,8 +47,7 @@ namespace clu.active.learning
             //CS1737: Optional parameters must appear after all required parameters.
             //public void StopAllServices(bool forceStop = true, int servicesCount) { }
 
-            public void StartAllServices(bool forceStart = true)
-            // method with optional parameter (default value = true)
+            public void StartAllServices(bool forceStart = true) // optional param with default value
             {
             } 
 
@@ -58,8 +56,7 @@ namespace clu.active.learning
 
             }
 
-            public void StartService(string serviceName, bool forceStart)
-            // overloaded, same method name, unique signature
+            public void StartService(string serviceName, bool forceStart) // overload (same name, different signature)
             {
                 // The return type of a method does not form part of a methods signature.
             }
@@ -82,8 +79,7 @@ namespace clu.active.learning
             public void StartService3(out string serviceName)
             {
                 //serviceName += " OUT"; 
-                //CS0177: The out parameter 'serviceName' must be assigned to before control leaves 
-                //the current method.
+                //CS0177: The out parameter 'serviceName' must be assigned to before control leaves the current method.
                 serviceName = "Service 3";
                 serviceName += " OUT";
                 var serviceToStart = serviceName;
@@ -138,8 +134,10 @@ namespace clu.active.learning
 
                 Console.WriteLine("** Output Parameters");
                 {
-                    config.StartService3(out var anotherService); // define parameter inline
+                    config.StartService3(out var anotherService); // define param inline
                 }
+
+                // TODO: params argument
             }
         }
 

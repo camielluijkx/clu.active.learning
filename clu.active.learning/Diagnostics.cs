@@ -6,16 +6,15 @@ namespace clu.active.learning
 {
     /*
     
-    The Debug and Trace classes include methods to write format strings to the Output window in 
-    Visual Studio, as well as to any other listeners that you configure. You can also write to the 
-    Output window only when certain conditions are met, and you can adjust the indentation of your 
-    trace messages.
+    The Debug and Trace classes include methods to write format strings to the Output window in Visual Studio, as well 
+    as to any other listeners that you configure. You can also write to the Output window only when certain conditions 
+    are met, and you can adjust the indentation of your trace messages.
     
-    If the condition evaluates to false, the Assert method interrupts the execution of the program 
-    and displays a dialog box with the message you specify. 
+    If the condition evaluates to false, the Assert method interrupts the execution of the program and displays a 
+    dialog box with the message you specify. 
     
-    Debug statements are only active if you build your solution in Debug mode. Trace statements are 
-    active in both Debug and Release mode builds.
+    Debug statements are only active if you build your solution in Debug mode. Trace statements are active in both 
+    Debug and Release mode builds.
     
     */
     public static class Diagnostics
@@ -72,8 +71,7 @@ namespace clu.active.learning
                 TextWriterTraceListener tr1 = new TextWriterTraceListener(Console.Out);
                 Debug.Listeners.Add(tr1);
 
-                TextWriterTraceListener tr2 = new TextWriterTraceListener(
-                    File.CreateText("Output.txt"));
+                TextWriterTraceListener tr2 = new TextWriterTraceListener(File.CreateText("Output.txt"));
                 Debug.Listeners.Add(tr2);
 
                 Debug.WriteLine("The product name is " + sProdName);

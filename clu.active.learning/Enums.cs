@@ -7,10 +7,11 @@ namespace clu.active.learning
     Efficient way to define a set of named integral constants that may be assigned to a variable.
 
     Using enums has several advantages over using text or numerical types:
-        • Improved manageability. By constraining a variable to a fixed set of valid values, you 
-          are less likely to experience invalid arguments and spelling mistakes.
-        • Improved developer experience. In Visual Studio, the IntelliSense feature will prompt 
-          you with the available values when you use an enum.
+
+        • Improved manageability. By constraining a variable to a fixed set of valid values, you are less likely to 
+          experience invalid arguments and spelling mistakes.
+        • Improved developer experience. In Visual Studio, the IntelliSense feature will prompt you with the available 
+          values when you use an enum.
         • Improved code readability. The enum syntax makes your code easier to read and understand. 
     
     */
@@ -22,18 +23,24 @@ namespace clu.active.learning
         // Each member of an enum has a name and a value.
         public enum Day : int // By default the underlying type of each element in the enum is int. 
         {
-            Sunday = 0, // If you do not specify a value for each member, the members are assigned 
-                        // incremental values starting with 0.
-            Monday, // Monday will be 1.
+            // If you do not specify a value for each member, members are assigned incremental values starting with 0.
+            Sunday = 0,
+
+            // Monday will be 1.
+            Monday,
+
+            // Tuesday will be 2.
             Tuesday,
+
             Wednesday,
             Thursday,
             Friday,
-            Saturday // Saturday will be 6.
+
+            // Saturday will be 6.
+            Saturday
         };
 
-        public enum MachineState // The approved types for an enum are byte, sbyte, short, ushort, 
-                                 // int, uint, long, or ulong.
+        public enum MachineState // Approved types for enum are byte, sbyte, short, ushort, int, uint, long, or ulong.
         {
             PowerOff = 0,
             Running = 5, // Continues with 5.
@@ -49,8 +56,7 @@ namespace clu.active.learning
             Min = 255L
         };
 
-        [Flags] // Using bit flags to arrange AND, OR, NOT and XOR bitwise operations can be 
-                // performed on them.
+        [Flags] // Using bit flags to arrange AND, OR, NOT and XOR bitwise operations can be performed on them.
         enum Days
         {
             None = 0x0,
@@ -82,8 +88,7 @@ namespace clu.active.learning
 
             Console.WriteLine("** Set Enum by Value");
             {
-                Day favoriteDay = (Day)7; // It's possible to assign any arbitrary integer value to 
-                                          // favoriteDay.
+                Day favoriteDay = (Day)7; // It's possible to assign any arbitrary integer value to favoriteDay.
                 Console.WriteLine($"({(int)favoriteDay}) {favoriteDay}"); // Output: (7) 7
             }
 
@@ -134,11 +139,15 @@ namespace clu.active.learning
 
                 Console.WriteLine("The values of the Day Enum are:");
                 foreach (int i in Enum.GetValues(typeof(Day)))
+                {
                     Console.WriteLine(i);
+                }
 
                 Console.WriteLine("The names of the Day Enum are:");
                 foreach (string str in Enum.GetNames(typeof(Day)))
+                {
                     Console.WriteLine(str);
+                }
             }
         }
 
