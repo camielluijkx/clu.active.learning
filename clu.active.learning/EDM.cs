@@ -71,7 +71,7 @@ namespace clu.active.learning
     */
     public static class EDM
     {
-        static FourthCoffeeEntities dbContext = new FourthCoffeeEntities();
+        static FourthCoffeeDBEntities dbContext = new FourthCoffeeDBEntities();
 
         private class FullName
         {

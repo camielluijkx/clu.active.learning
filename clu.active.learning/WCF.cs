@@ -374,7 +374,97 @@ namespace clu.active.learning
         public static void UsingDataService()
         {
             /*
-             
+            
+            https://docs.microsoft.com/en-us/dotnet/framework/data/wcf/index
+
+            WCF Data Services follows the Representational State Transfer (REST) architectural model and 
+            uses open web standards such as the Open Data Protocol (OData) to expose and consume data over 
+            the web. By following these standards, you can build solutions based on WCF Data Services that 
+            a wide variety of client applications can easily access, regardless of the technology that is 
+            used to implement the client application. 
+
+            WCF Data Services enables you to create and access data services over the web. You expose your 
+            data as resources that applications can access by using a URI. These resources are exposed as 
+            sets of entities that are related by associations, the same concepts as in an EDM. However, you 
+            can expose data from many types of storage, including databases and Common Language Runtime 
+            (CLR) classes. 
+
+            WCF Data Services uses URIs to address data and simple, well-known formats to represent that 
+            data, such as XML and Atom. This results in data being served as a REST-style resource 
+            collection. 
+
+            REST has become a popular model for implementing web services that need to access data (other 
+            models, such as those based on the WebRequest/WebResponse model described in the previous
+            lesson, are more suited to invoking remote methods). REST describes a stateless, 
+            hierarchical scheme for representing resources and business objects over a network. 
+            Resources are accessed through URIs that identify the data to retrieve. For example, Fourth 
+            Coffee might choose to make the data for all of its sales people available through the 
+            following URI: 
+            
+                http://FourthCoffee.com/SalesService.svc/SalesPersons
+
+            The data for a specific sales person could be fetched by specifying the identifier (such as a 
+            sales person number) for that sales person, like this: 
+
+                http://FourthCoffee.com/SalesService.svc/SalesPersons/99
+
+            Similarly, the details of products that it sells might be available through the following URI: 
+
+                http://FourthCoffee.com/SalesService.svc/Products
+
+            The details for a specific product could be retrieved by including the product ID in the URI: 
+
+                http://FourthCoffee.com/SalesService.svc/Products/25
+            
+            The REST model performs HTTP GET queries to retrieve data, but the REST model also supports 
+            insert, update, and delete operations by using HTTP PUT, POST, and DELETE requests.
+
+            The REST model enables a web service to extend URIs to support filtering, sorting, and paging 
+            of data. For example, the following URI sends a request that fetches the first 10 sales people 
+            only: 
+            
+                http://FourthCoffee.com/SalesService.svc/SalesPersons?top=10
+
+            The list of filters and other functionality depends on how the web service is implemented, but 
+            features such as these are available with WCF Data Services. Additionally, WCF Data Services 
+            enables you to extend your web services by writing service operations as methods that perform 
+            business logic at the server. These methods are then accessible as URIs in a similar manner to 
+            resources. You can also define interceptors, which are called when you query, insert, update,
+            or delete data and can validate or modify the data, enforce security, or reject the change. 
+
+            By using WCF Data Services, you can expose data from relational data sources such as Microsoft 
+            SQL Server® through an EDM conceptual schema that is created by using the ADO.NET Entity 
+            Framework, and you can enable a client application to query and maintain data by using this 
+            schema. 
+
+            A WCF Data Service is based on the System.Data.Services.DataService generic class. This class
+            expects a type parameter that is a collection containing at least one property that implements 
+            the IQueryable interface, such as the DbContext class for an entity set that is defined by 
+            using the Entity Framework. The DataService type implements the basic functionality to expose 
+            the entities in this collection as a series of REST resources. 
+
+            You can implement methods in a WCF Data Service that specify the entities to expose from the 
+            underlying EDM and that configure the size of datasets that the data service presents. You can
+            also override methods that are inherited from the DataService class to customize the way in 
+            which the service operates. 
+
+            By default, WCF Data Services uses a simple addressing scheme that exposes the entity sets 
+            that are defined within the specified EDM. When you consume a WCF Data Service, you address 
+            these entity resources as an entity set that contains instances of an entity type. For 
+            example, suppose that the following URI (shown in the previous topic) returns all of the 
+            SalesPerson entities that were defined in the EDM that was used to construct a WCF Data 
+            Service: 
+
+                http://FourthCoffee.com/SalesService.svc/SalesPersons
+
+            The "/SalesPersons" element of the URI points to the SalesPersons entity set, which is the 
+            container for SalesPerson instances.
+
+            For security reasons, WCF Data Services does not automatically expose any resources, such as 
+            entity collections, that the EDM implements. You specify a policy that enables or disables 
+            access to resources in the InitializeService method of your data service. This method takes 
+            a DataServiceConfiguration object, which has a SetEntitySetAccessRule property that you use 
+            to define the access policy. 
 
             */
             Console.WriteLine("* Using DataService");
@@ -396,6 +486,11 @@ namespace clu.active.learning
                     Console.WriteLine(result.Area);
                     Console.WriteLine(result.EmailAddress);
                 }
+            }
+
+            Console.WriteLine("* Using REST");
+            {
+                // TODO
             }
         }
 

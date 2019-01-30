@@ -13,10 +13,10 @@ namespace clu.active.learning.Resources
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class FourthCoffeeEntities : DbContext
+    public partial class FourthCoffeeDBEntities : DbContext
     {
-        public FourthCoffeeEntities()
-            : base("name=FourthCoffeeEntities")
+        public FourthCoffeeDBEntities()
+            : base("name=FourthCoffeeDBEntities")
         {
         }
     

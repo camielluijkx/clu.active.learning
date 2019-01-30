@@ -57,31 +57,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arrays.cs" />
-    <Compile Include="Resources\Branch.cs">
-      <DependentUpon>EntityModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Classes.cs" />
     <Compile Include="DataTypes.cs" />
     <Compile Include="Collections.cs" />
     <Compile Include="EDM.cs" />
-    <Compile Include="Resources\Employee.cs">
-      <DependentUpon>EntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Resources\EntityModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntityModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Resources\EntityModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Resources\EntityModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntityModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Events.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="FileSystem.cs" />
@@ -89,14 +68,35 @@
     <Compile Include="Generics.cs" />
     <Compile Include="Inheritance.cs" />
     <Compile Include="Interfaces.cs" />
-    <Compile Include="Resources\JobTitle.cs">
-      <DependentUpon>EntityModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="LINQ.cs" />
     <Compile Include="Memory.cs" />
     <Compile Include="Modifiers.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Constructors.cs" />
+    <Compile Include="Resources\Branch.cs">
+      <DependentUpon>CoffeeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CoffeeModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeeModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CoffeeModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\CoffeeModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CoffeeModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Employee.cs">
+      <DependentUpon>CoffeeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\JobTitle.cs">
+      <DependentUpon>CoffeeModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Resources\SalesPerson.cs" />
     <Compile Include="Serialization.cs" />
     <Compile Include="SqlClient.cs" />
@@ -118,28 +118,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="Resources\EntityModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EntityModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Resources\EntityModel.edmx.diagram">
-      <DependentUpon>EntityModel.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
+    <EntityDeploy Include="Resources\CoffeeModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CoffeeModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Resources\CoffeeModel.edmx.diagram">
+      <DependentUpon>CoffeeModel.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\EntityModel.Context.tt">
+    <Content Include="Resources\CoffeeModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntityModel.edmx</DependentUpon>
-      <LastGenOutput>EntityModel.Context.cs</LastGenOutput>
+      <DependentUpon>CoffeeModel.edmx</DependentUpon>
+      <LastGenOutput>CoffeeModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Resources\EntityModel.tt">
+    <Content Include="Resources\CoffeeModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntityModel.edmx</DependentUpon>
-      <LastGenOutput>EntityModel.cs</LastGenOutput>
+      <DependentUpon>CoffeeModel.edmx</DependentUpon>
+      <LastGenOutput>CoffeeModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

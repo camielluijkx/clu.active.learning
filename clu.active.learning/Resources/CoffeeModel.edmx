@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="FourthCoffeeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="FourthCoffeeDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Branches">
           <Key>
             <PropertyRef Name="BranchID" />
@@ -54,7 +54,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="FourthCoffeeModelStoreContainer">
+        <EntityContainer Name="FourthCoffeeDBModelStoreContainer">
           <EntitySet Name="Branches" EntityType="Self.Branches" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Employees" EntityType="Self.Employees" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="JobTitles" EntityType="Self.JobTitles" Schema="dbo" store:Type="Tables" />
@@ -71,7 +71,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="FourthCoffeeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="FourthCoffeeDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Branch">
           <Key>
             <PropertyRef Name="BranchID" />
@@ -125,7 +125,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="FourthCoffeeEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="FourthCoffeeDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Branches" EntityType="Self.Branch" />
           <EntitySet Name="Employees" EntityType="Self.Employee" />
           <EntitySet Name="JobTitles" EntityType="Self.JobTitle" />
@@ -143,9 +143,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="FourthCoffeeModelStoreContainer" CdmEntityContainer="FourthCoffeeEntities">
+        <EntityContainerMapping StorageEntityContainer="FourthCoffeeDBModelStoreContainer" CdmEntityContainer="FourthCoffeeDBEntities">
           <EntitySetMapping Name="Branches">
-            <EntityTypeMapping TypeName="FourthCoffeeModel.Branch">
+            <EntityTypeMapping TypeName="FourthCoffeeDBModel.Branch">
               <MappingFragment StoreEntitySet="Branches">
                 <ScalarProperty Name="BranchID" ColumnName="BranchID" />
                 <ScalarProperty Name="BranchName" ColumnName="BranchName" />
@@ -153,7 +153,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Employees">
-            <EntityTypeMapping TypeName="FourthCoffeeModel.Employee">
+            <EntityTypeMapping TypeName="FourthCoffeeDBModel.Employee">
               <MappingFragment StoreEntitySet="Employees">
                 <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
@@ -165,7 +165,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="JobTitles">
-            <EntityTypeMapping TypeName="FourthCoffeeModel.JobTitle">
+            <EntityTypeMapping TypeName="FourthCoffeeDBModel.JobTitle">
               <MappingFragment StoreEntitySet="JobTitles">
                 <ScalarProperty Name="JobTitleId" ColumnName="JobTitleId" />
                 <ScalarProperty Name="Job" ColumnName="Job" />
