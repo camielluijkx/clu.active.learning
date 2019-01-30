@@ -14,3 +14,7 @@
 /packages/Microsoft.Net.Compilers.2.6.1
 /.vs
 /packages
+/scripts/SchoolGradesDB_log.ldf
+/scripts/SchoolGradesDB.mdf
+/scripts/FourthCoffeeDB_log.ldf
+/scripts/FourthCoffeeDB.mdf
