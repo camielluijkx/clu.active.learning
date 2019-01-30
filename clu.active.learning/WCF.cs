@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SchoolGradesDBModel;
+using System;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Runtime.Serialization;
 using System.Text;
@@ -490,7 +492,24 @@ namespace clu.active.learning
 
             Console.WriteLine("* Using REST");
             {
-                // TODO
+                /*
+                
+                The specified OData API cannot be added because OData APIs are now only supported with Connected Services.
+
+                For more information, please see: https://aka.ms/odatavsclientguidance
+
+                "%windir%\Microsoft.NET\Framework\v4.0.30319\DataSvcUtil.exe" /dataservicecollection /version:2.0 /language:CSharp /out:"d:\Workspace\clu.active.learning\clu.active.learning\Service References\ServiceReference.cs" /uri:http://localhost:51432/GradesService.svc
+
+                */
+
+                SchoolGradesDBEntities dbContext = new SchoolGradesDBEntities(new Uri("http://localhost:51432/GradesService.svc"));
+
+                IQueryable<Student> students = from student in dbContext.Students
+                                               select student;
+                foreach (var student in students)
+                {
+                    Console.WriteLine("{0} {1}", student.FirstName, student.LastName);
+                }
             }
         }
 
