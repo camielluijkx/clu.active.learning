@@ -11,84 +11,84 @@ namespace clu.active.learning
     {       
         static void Main(string[] args)
         {
-            DataTypes.UsingCommonlyUsedDataTypes();
-            DataTypes.CastingBetweenDataTypes();
+            //DataTypes.UsingCommonlyUsedDataTypes();
+            //DataTypes.CastingBetweenDataTypes();
 
-            Variables.UsingVariables();
+            //Variables.UsingVariables();
 
-            Operators.UsingPrimaryOperators();
-            Operators.UsingUnaryOperators();
-            Operators.UsingMultiplicativeOperators();
-            Operators.UsingAdditiveOperators();
-            Operators.UsingShiftOperators();
-            Operators.UsingRelationalAndTypeTesingOperators();
-            Operators.UsingEqualityOperators();
-            Operators.UsingLogicalANDOperator();
-            Operators.UsingLogicalXOROperator();
-            Operators.UsingLogicalOROperator();
-            Operators.UsingConditionalANDOperator();
-            Operators.UsingConditionalOROperator();
-            Operators.UsingNullCoalesingOperator();
-            Operators.UsingConditionalOperator();
-            Operators.UsingAssigmentAndLambdaOperators();
+            //Operators.UsingPrimaryOperators();
+            //Operators.UsingUnaryOperators();
+            //Operators.UsingMultiplicativeOperators();
+            //Operators.UsingAdditiveOperators();
+            //Operators.UsingShiftOperators();
+            //Operators.UsingRelationalAndTypeTesingOperators();
+            //Operators.UsingEqualityOperators();
+            //Operators.UsingLogicalANDOperator();
+            //Operators.UsingLogicalXOROperator();
+            //Operators.UsingLogicalOROperator();
+            //Operators.UsingConditionalANDOperator();
+            //Operators.UsingConditionalOROperator();
+            //Operators.UsingNullCoalesingOperator();
+            //Operators.UsingConditionalOperator();
+            //Operators.UsingAssigmentAndLambdaOperators();
 
-            Strings.ConcatenateStrings();
-            Strings.ValidateStrings();
+            //Strings.ConcatenateStrings();
+            //Strings.ValidateStrings();
 
-            Statements.UsingConditionalStatements();
-            Statements.UsingIterationStatements();
+            //Statements.UsingConditionalStatements();
+            //Statements.UsingIterationStatements();
 
-            Arrays.UsingArrays();
+            //Arrays.UsingArrays();
 
-            Namespaces.UsingNamespaces();
+            //Namespaces.UsingNamespaces();
 
-            Exceptions.UsingExceptions();
+            //Exceptions.UsingExceptions();
 
             //Diagnostics.UsingEventLog();
             //Diagnostics.UsingDebugging();
             //Diagnostics.UsingTracing();
 
-            Enums.UsingEnums();
+            //Enums.UsingEnums();
 
-            Structs.UsingStructs();
-            Properties.UsingProperties();
-            Methods.UsingMethods();
+            //Structs.UsingStructs();
+            //Properties.UsingProperties();
+            //Methods.UsingMethods();
 
-            Collections.UsingArrayList();
-            Collections.UsingBitArray();
-            Collections.UsingHashTable();
-            Collections.UsingQueue();
-            Collections.UsingSortedList();
-            Collections.UsingStack();
-            Collections.UsingListDictionary();
-            Collections.UsingHybridDictionary();
-            Collections.UsingOrderedDictionary();
-            Collections.UsingNameValueCollection();
-            Collections.UsingStringCollection();
-            Collections.UsingStringDictionary();
-            Collections.UsingBitVector32();
+            //Collections.UsingArrayList();
+            //Collections.UsingBitArray();
+            //Collections.UsingHashTable();
+            //Collections.UsingQueue();
+            //Collections.UsingSortedList();
+            //Collections.UsingStack();
+            //Collections.UsingListDictionary();
+            //Collections.UsingHybridDictionary();
+            //Collections.UsingOrderedDictionary();
+            //Collections.UsingNameValueCollection();
+            //Collections.UsingStringCollection();
+            //Collections.UsingStringDictionary();
+            //Collections.UsingBitVector32();
 
-            Events.UsingEventHandlers();
+            //Events.UsingEventHandlers();
 
-            LINQ.UsingQuerySyntax();
-            LINQ.UsingMethodSyntax();
-            LINQ.UsingMixedSyntax();
-            LINQ.UsingLINQToXML();
-            LINQ.UsingLINQToEntities();
-            LINQ.UsingLINQToObjects();
-            LINQ.UsingQueryOperators();
-            LINQ.LazyVsEagerEvaluation();
+            //LINQ.UsingQuerySyntax();
+            //LINQ.UsingMethodSyntax();
+            //LINQ.UsingMixedSyntax();
+            //LINQ.UsingLINQToXML();
+            //LINQ.UsingLINQToEntities();
+            //LINQ.UsingLINQToObjects();
+            //LINQ.UsingQueryOperators();
+            //LINQ.LazyVsEagerEvaluation();
 
-            Classes.UsingClasses();
-            Interfaces.UsingInterfaces();
-            Interfaces.UsingIComparable();
-            Interfaces.UsingIComparer();
+            //Classes.UsingClasses();
+            //Interfaces.UsingInterfaces();
+            //Interfaces.UsingIComparable();
+            //Interfaces.UsingIComparer();
 
-            Generics.UsingGenerics();
+            //Generics.UsingGenerics();
 
-            Inheritance.UsingInheritance();
+            //Inheritance.UsingInheritance();
 
-            Extensions.UsingExtensions();
+            //Extensions.UsingExtensions();
 
             //FileSystem.ReadingFiles();
             //FileSystem.WritingFiles();
@@ -102,6 +102,12 @@ namespace clu.active.learning
 
             //Streams.UsingBinaryReaderAndWriter();
             //Streams.UsingStreamReaderAndWriter();
+
+            EDM.UsingPartialClasses();
+            EDM.UsingPartialMethods();
+            EDM.UsingEntityFramework();
+            EDM.UsingAnonymousTypes();
+            EDM.UsingQueryExecution();
 
             Thread.Sleep(5000);
 
