@@ -7,21 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace clu.active.learning
+namespace clu.active.learning.Resources
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Branch
+    public partial class JobTitle
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Branch()
+        public JobTitle()
         {
             this.Employees = new HashSet<Employee>();
         }
     
-        public int BranchID { get; set; }
-        public string BranchName { get; set; }
+        public int JobTitleId { get; set; }
+        public string Job { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Employee> Employees { get; set; }

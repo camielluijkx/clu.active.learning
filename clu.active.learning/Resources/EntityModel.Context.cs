@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace clu.active.learning
+namespace clu.active.learning.Resources
 {
     using System;
     using System.Data.Entity;

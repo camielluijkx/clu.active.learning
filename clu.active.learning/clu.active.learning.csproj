@@ -57,27 +57,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arrays.cs" />
-    <Compile Include="Branch.cs">
+    <Compile Include="Resources\Branch.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Classes.cs" />
     <Compile Include="DataTypes.cs" />
     <Compile Include="Collections.cs" />
     <Compile Include="EDM.cs" />
-    <Compile Include="Employee.cs">
+    <Compile Include="Resources\Employee.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityModel.Context.cs">
+    <Compile Include="Resources\EntityModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityModel.cs">
+    <Compile Include="Resources\EntityModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="EntityModel.Designer.cs">
+    <Compile Include="Resources\EntityModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityModel.edmx</DependentUpon>
@@ -89,7 +89,7 @@
     <Compile Include="Generics.cs" />
     <Compile Include="Inheritance.cs" />
     <Compile Include="Interfaces.cs" />
-    <Compile Include="JobTitle.cs">
+    <Compile Include="Resources\JobTitle.cs">
       <DependentUpon>EntityModel.tt</DependentUpon>
     </Compile>
     <Compile Include="LINQ.cs" />
@@ -97,6 +97,7 @@
     <Compile Include="Modifiers.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="Constructors.cs" />
+    <Compile Include="Resources\SalesPerson.cs" />
     <Compile Include="Serialization.cs" />
     <Compile Include="SqlClient.cs" />
     <Compile Include="Streams.cs" />
@@ -113,14 +114,15 @@
     <Compile Include="Strings.cs" />
     <Compile Include="Testing.cs" />
     <Compile Include="Variables.cs" />
+    <Compile Include="WCF.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="EntityModel.edmx">
+    <EntityDeploy Include="Resources\EntityModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EntityModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="EntityModel.edmx.diagram">
+    <None Include="Resources\EntityModel.edmx.diagram">
       <DependentUpon>EntityModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -129,12 +131,12 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="EntityModel.Context.tt">
+    <Content Include="Resources\EntityModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EntityModel.edmx</DependentUpon>
       <LastGenOutput>EntityModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="EntityModel.tt">
+    <Content Include="Resources\EntityModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EntityModel.edmx</DependentUpon>
       <LastGenOutput>EntityModel.cs</LastGenOutput>

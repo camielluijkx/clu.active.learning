@@ -103,11 +103,16 @@ namespace clu.active.learning
             //Streams.UsingBinaryReaderAndWriter();
             //Streams.UsingStreamReaderAndWriter();
 
-            EDM.UsingPartialClasses();
-            EDM.UsingPartialMethods();
-            EDM.UsingEntityFramework();
-            EDM.UsingAnonymousTypes();
-            EDM.UsingQueryExecution();
+            //EDM.UsingPartialClasses();
+            //EDM.UsingPartialMethods();
+            //EDM.UsingEntityFramework();
+            //EDM.UsingAnonymousTypes();
+            //EDM.UsingQueryExecution();
+
+            //WCF.HandlingNetworkExceptions();
+            //WCF.UsingAuthentication();
+            //WCF.UsingWebRequest();
+            WCF.UsingDataService();
 
             Thread.Sleep(5000);
 

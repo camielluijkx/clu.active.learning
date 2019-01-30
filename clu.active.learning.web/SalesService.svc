@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="clu.active.learning.web.SalesService" CodeBehind="SalesService.svc.cs" %>
