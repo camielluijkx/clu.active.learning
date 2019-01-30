@@ -4,12 +4,13 @@ using System;
 using System.Collections.Generic;
 using System.Data.Services;
 using System.Data.Services.Common;
+using System.Data.Services.Providers;
 using System.Linq;
 using System.ServiceModel.Web;
 
 namespace clu.active.learning.web
 {
-    public class GradesService : DataService<SchoolGradesDBEntities>
+    public class GradesService : EntityFrameworkDataService<SchoolGradesDBEntities>
     {
         // This method is called only once to initialize service-wide policies.
         public static void InitializeService(DataServiceConfiguration config)

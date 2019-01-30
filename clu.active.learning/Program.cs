@@ -107,7 +107,7 @@ namespace clu.active.learning
             //EDM.UsingPartialMethods();
             //EDM.UsingEntityFramework();
             //EDM.UsingAnonymousTypes();
-            //EDM.UsingQueryExecution();
+            EDM.UsingQueryExecution();
 
             //WCF.HandlingNetworkExceptions();
             //WCF.UsingAuthentication();

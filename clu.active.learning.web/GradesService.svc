@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="clu.active.learning.web.GradesService" CodeBehind="GradesService.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Factory="System.Data.Services.DataServiceHostFactory, Microsoft.Data.Services, Version=5.8.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Debug="true" Service="clu.active.learning.web.GradesService" CodeBehind="GradesService.svc.cs" %>

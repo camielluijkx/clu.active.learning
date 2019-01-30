@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clu.active.learning", "clu.active.learning\clu.active.learning.csproj", "{6D8B4B99-E9F0-4E57-B87D-1FFAC9C8C5EF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{037F9811-1B57-420C-8E52-135E4B1EFB4F} = {037F9811-1B57-420C-8E52-135E4B1EFB4F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clu.active.learning.web", "clu.active.learning.web\clu.active.learning.web.csproj", "{037F9811-1B57-420C-8E52-135E4B1EFB4F}"
 EndProject
