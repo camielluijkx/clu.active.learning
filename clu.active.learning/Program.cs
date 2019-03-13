@@ -138,7 +138,11 @@ namespace clu.active.learning
             //APM.CreatingAwaitableMethods();
             //APM.CreatingAndInvokingCallbackMethods();
             //APM.WorkingWithAPMOperations();
-            APM.HandlingExceptionsFromAwaitableMethods();
+            //APM.HandlingExceptionsFromAwaitableMethods();
+
+            //Concurrency.UsingLocks();
+            //Concurrency.UsingSynchronizationPrimitives();
+            Concurrency.UsingConcurrentCollections();
 
             Thread.Sleep(5000);
 
