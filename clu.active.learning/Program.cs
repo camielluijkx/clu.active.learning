@@ -131,7 +131,14 @@ namespace clu.active.learning
             //TPL.RunningTasksInParallel();
             //TPL.UsingPLINQ();
             //TPL.LinkingTasks();
-            TPL.HandlingTaskExceptions();
+            //TPL.HandlingTaskExceptions();
+
+            //APM.UsingDispatcher();
+            //APM.UsingAsyncAwait();
+            //APM.CreatingAwaitableMethods();
+            //APM.CreatingAndInvokingCallbackMethods();
+            //APM.WorkingWithAPMOperations();
+            APM.HandlingExceptionsFromAwaitableMethods();
 
             Thread.Sleep(5000);
 
