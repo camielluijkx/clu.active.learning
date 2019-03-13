@@ -426,6 +426,281 @@ namespace clu.active.learning
             }
         }
 
+        /*
+        
+        Data binding is the act of connecting a data source to a UI element in such a way that if one 
+        changes, the other must also change. Conceptually, data binding consists of three components: 
+
+            • The binding source. This is the source of your data, and is typically a property of a 
+            custom .NET object. For example, you might bind a control to the CountryOfOrigin property 
+            of a Coffee object. 
+            • The binding target. This is the XAML element you want to bind to your data source, and 
+            is typically a UI control. You must bind your data source to a property of your target 
+            object, and that property must be a dependency property. For example, you might bind data 
+            to the Content property of a TextBox element. 
+            • The binding object. This is the object that connects the source to the target. The 
+            Binding object can also specify a converter, if the source property and the target property 
+            are of different data types. 
+
+        A dependency property is a special type of wrapper around a regular property. Dependency 
+        properties are registered with the .NET Framework runtime, which enables the runtime to notify 
+        any interested parties when the value of the underlying property changes. This ability to 
+        notify changes is what makes data binding work. Most built-in UI elements implement dependency 
+        properties and will support data binding. 
+        
+        http://go.microsoft.com/fwlink/?LinkID=267829
+            
+        */
+        public static void UsingDataBinding()
+        {
+            Console.WriteLine("* Using Data Binding");
+            {
+                /*
+                
+                In this example, the Text property of a TextBlock is set to a data binding expression. 
+                Note that: 
+                    
+                    • The Binding expression is enclosed in braces. This enables you to set properties 
+                    on the Binding object before it is evaluated by the TextBlock. 
+                    • The Source property of the Binding object is set to {StaticResource coffee1}. This 
+                    is an object instance defined elsewhere in the solution. 
+                    • The Path property of the Binding object is set to Bean. This indicates that you want 
+                    to bind to the Bean property of the coffee1 object. 
+
+                As a result of this expression, the TextBlock will always display the value of the Bean 
+                property of the coffee1 object. If the value of the Bean property changes, the TextBlock 
+                will update automatically. In terms of the concepts described at the start of this topic: 
+
+                    • The binding source is the Bean property of the coffee1 object. 
+                    • The binding target is the Text property of the TextBlock element. 
+                    • The binding object is defined by the expression in braces. 
+
+                */
+                Console.WriteLine("** Simple Data Binding");
+                {
+                    //<TextBlock Text="{Binding Source={StaticResource coffee1}, Path=Bean}" />
+                }
+
+                /*
+                
+                You can also configure the direction of the data binding. For example, you might want to 
+                update the UI when the source data is changed or you might want to update the source data 
+                when the user edits a value in the UI. To specify the direction of the binding, you set the 
+                Mode property of the Binding object. The Mode property can take the following values:
+
+                Mode Value          Details
+                TwoWay              Updates the target property when the source property changes, and 
+                                    updates the source property when the target property changes. 
+                OneWay              Updates the target property when the source property changes.
+                OneTime             Updates the target property only when the application starts or when 
+                                    the DataContext property of the target is changed. 
+                OneWayToSource      Updates the source property when the target property changes.
+                Default             Uses the default Mode value of the target property.
+
+                https://docs.microsoft.com/en-us/dotnet/framework/wpf/data/data-binding-overview
+
+                */
+                Console.WriteLine("** Specify the Binding Direction");
+                {
+                    //<TextBox Text="{Binding Source={StaticResource coffee1}, Path=Bean, Mode=TwoWay}" />
+                }
+
+                /*
+                
+                You can bind controls to data in various ways. If your source data will not change during 
+                the execution of your application, you can create a static resource to represent your data 
+                in XAML. A static resource enables you to create instances of classes. For example, if your 
+                assembly contains a class named Coffee, you can define a static resource to create an 
+                instance of Coffee and set properties on it. To create a static resource, you must: 
+
+                    • Add an element to the Resources property of a container control, such as the top-level 
+                    Window. 
+                    • Set the name of the element to the name of the class you want to instantiate. For 
+                    example, if you want to create an instance of the Coffee class, create an element named 
+                    Coffee. Use a namespace prefix declaration to identify the namespace and assembly that 
+                    contains your class. 
+                    • Add an x:Key attribute to the element. This is the identifier by which you will specify 
+                    the static resource in data binding expressions. You can create multiple instances of a 
+                    resource in a window, but each instance should have a unique x:Key value. 
+
+                */
+                Console.WriteLine("** Creating a Static Resource");
+                {
+                    //<Window x:Class="DataBinding.MainWindow"
+                    //                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    //                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    //                xmlns:loc="clr-namespace:DataBinding"
+                    //                Title="Data Binding Example" Height="350" Width="525">
+                    //   <Window.Resources>
+                    //      <loc:Coffee x:Key="coffee1" Name="Fourth Coffee Quencher" Bean="Arabica" CountryOfOrigin="Brazil" Strength="3" />
+                    //      …
+                    //   </Window.Resources>
+                    //   …
+                    //</Window>
+                }
+
+                /*
+                
+                If you want to bind an individual UI element to this static resource, you can use a binding 
+                statement that specifies both a source and a path. You set the Source property to the static 
+                resource, and set the Path property to the specific property in the source object to which 
+                you want to bind. 
+
+                */
+                Console.WriteLine("** Binding an Individual Item to a Static Resource ");
+                {
+                    //<TextBlock Text="{Binding Source={StaticResource coffee1}, Path=Name}" />
+                }
+
+                /*
+                 
+                More commonly, you will want to bind multiple UI elements to different properties of a data 
+                source. In this case, you can set the DataContext property on a container object, such as a 
+                Grid or a StackPanel. Setting a DataContext property is similar to providing a partial data 
+                binding expression. It specifies the source object, but does not identify specific properties. 
+                Any child controls within the container object will inherit this data context, unless you 
+                override it. This means that when you create data binding expressions for child controls, you 
+                can omit the source and simply specify the path to the property of interest. 
+
+                */
+                Console.WriteLine("** Specifying a Data Context");
+                {
+                    //<StackPanel>
+                    //   <StackPanel.DataContext>
+                    //      <Binding Source="{StaticResource coffee1}" />
+                    //   </StackPanel.DataContext>
+                    //   <TextBlock Text="{Binding Path=Name}" />
+                    //   <TextBlock Text="{Binding Path=}" />
+                    //   <TextBlock Text="{Binding Path=CountryOfOrigin}" />
+                    //   <TextBlock Text="{Binding Path=Strength}" />
+                    //</StackPanel>
+                }
+
+                /*
+                In real-world applications, it is unlikely that your source data will be static. It is far 
+                more likely that you will retrieve data at runtime from a database or a web service. In these 
+                scenarios, you cannot use a static resource to represent your data. Instead, you must use code 
+                to specify the data source for any UI bindings at runtime. 
+
+                In many cases you can use a mixture of XAML binding and code binding. For example, you might 
+                know that your UI elements will be bound to a Coffee instance at design time. In this case, 
+                you can specify the binding paths in XAML, and then set a DataContext property in code. 
+
+                In this example, you have set the binding path for each individual text block in XAML. To 
+                complete the binding, all you need to do is to set the DataContext property of the parent 
+                StackPanel object to the Coffee instance that you want to display.
+
+                */
+                Console.WriteLine("** Specifying Binding Paths in XAML");
+                {
+                    //<StackPanel x:Name="stackCoffee">
+                    //   <TextBlock Text="{Binding Path=Name}" />
+                    //   <TextBlock Text="{Binding Path=}" />
+                    //   <TextBlock Text="{Binding Path=CountryOfOrigin}" />
+                    //   <TextBlock Text="{Binding Path=Strength}" />
+                    //</StackPanel>
+                }
+
+                /*
+                 * 
+                In many scenarios, you will want to data bind a control to a collection of objects. WPF 
+                includes controls that are designed to render collections, such as the ListBox control, the 
+                ListView control, the ComboBox control, and the TreeView control. These controls all inherit 
+                from the ItemsControl class and, as such, support a common approach to data binding. 
+
+                To bind a collection to an ItemsControl instance, you need to: 
+
+                    • Specify the source data collection in the ItemsSource property of the ItemsControl 
+                    instance. 
+                    • Specify the source property you want to display in the DisplayMemberPath property of the 
+                    ItemsControl instance. 
+
+                You can bind an ItemsControl instance to any collection that implements the IEnumerable 
+                interface. You can set the ItemsSource and DisplayMemberPath properties in XAML or in code. 
+                One common approach is to define the DisplayMemberPath property (or a data template) in XAML, 
+                and then to set the ItemsSource programmatically at runtime. 
+
+                */
+                Console.WriteLine("** Setting the DisplayMemberPath Property");
+                {
+                    //<ListBox x:Name="lstCoffees" DisplayMemberPath="Name" />
+                }
+
+                /*
+
+                Having set the DisplayMemberPath property in XAML, you can now set the ItemsSource property 
+                in code to complete the data binding. 
+
+                If you want a control displaying data in a collection to be updated automatically when items 
+                are added or removed, the collection must implement the INotifyPropertyChanged interface. This 
+                interface defines an event called PropertyChanged that the collection can raise after making a 
+                change. The .NET Framework includes a class named ObservableCollection<T> that provides a 
+                generic implementation of INotifyPropertyChanged. 
+
+                The control that binds to the collection receives the event, and can use it to refresh the data 
+                that it is displaying. Many of the WPF container controls catch and handle this event 
+                automatically. 
+
+                https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.7.2
+
+                https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.7.2
+
+                */
+                Console.WriteLine("** Setting the ItemsSource Property");
+                {
+                    //// Create some Coffee instances.
+                    //var coffee1 = new Coffee("Fourth Coffee Quencher");
+                    //var coffee2 = new Coffee("Espresso Number Four");
+                    //var coffee3 = new Coffee("Fourth Refresher");
+                    //var coffee3 = new Coffee("Fourth Frenetic");
+                    //// Add the items to an observable collection.
+                    //var coffees = new ObservableCollection<Coffee>();
+                    //coffees.Add(coffee1);
+                    //coffees.Add(coffee2);
+                    //coffees.Add(coffee3);
+                    //coffees.Add(coffee4);
+                    //// Set the ItemsSource property of the ListBox to the coffees collection.
+                    //lstCoffees.ItemsSource = coffees;
+                }
+
+                /*
+                
+                When you use controls that derive from the ItemsControl or ContentControl control, you can create
+                a data template to specify how your items are rendered. For example, suppose you want to use a
+                ListBox control to display a collection of Coffee instances. Each Coffee instance includes several 
+                properties to represent the name of the coffee, the type of coffee bean, the country of origin, 
+                and the strength of the coffee. The data template specifies how each Coffee instance should be 
+                rendered, by mapping properties of the Coffee instance to child controls within the data template. 
+                Creating a data template gives you precise control over how your items are rendered and styled. 
+
+                https://docs.microsoft.com/en-us/dotnet/framework/wpf/data/data-templating-overview
+
+                */
+                Console.WriteLine("** Creating a Data Template");
+                {
+                    //<ListBox x:Name="lstCoffees" Width="200">
+                    //   <ListBox.ItemTemplate>
+                    //      <DataTemplate>
+                    //         <Grid>
+                    //            <Grid.RowDefinitions>
+                    //               <RowDefinition Height="2*" />
+                    //               <RowDefinition Height="*" />
+                    //               <RowDefinition Height="*" />
+                    //               <RowDefinition Height="*" />
+                    //            </Grid.RowDefinitions>
+                    //            <TextBlock Text="{Binding Path=Name}" Grid.Row="0"
+                    //                    FontSize="22" Background="Black" Foreground="" />
+                    //            <TextBlock Text="{Binding Path=}" Grid.Row="1" />
+                    //            <TextBlock Text="{Binding Path=CountryOfOrigin}" Grid.Row="2" />
+                    //            <TextBlock Text="{Binding Path=Strength}" Grid.Row="3" />
+                    //         </Grid>
+                    //      </DataTemplate>
+                    //   </ListBox.ItemTemplate>
+                    //</ListBox>
+                }
+            }
+        }
+
         #endregion
     }
 }

@@ -118,6 +118,7 @@ namespace clu.active.learning
             WPF.HandlingEvents();
             WPF.UsingLayoutControls();
             WPF.CreatingUserControls();
+            WPF.UsingDataBinding();
 
             Thread.Sleep(5000);
 
