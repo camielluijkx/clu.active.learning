@@ -55,10 +55,6 @@ namespace clu.active.learning
     */
     public static class WPF
     {
-        #region Implementation
-
-        #endregion
-
         #region Public Methods
 
         public static void SettingControlProperties()

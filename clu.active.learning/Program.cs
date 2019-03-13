@@ -123,6 +123,16 @@ namespace clu.active.learning
             //WPF.UsingPropertyTriggers();
             //WPF.CreatingDynamicTransformations();
 
+            //TPL.UsingTasks();
+            //TPL.ControllingTaskExecution();
+            //TPL.WaitingForTasks();
+            //TPL.ReturningTaskValues();
+            //TPL.CancellingTasks();
+            //TPL.RunningTasksInParallel();
+            //TPL.UsingPLINQ();
+            //TPL.LinkingTasks();
+            TPL.HandlingTaskExceptions();
+
             Thread.Sleep(5000);
 
             //Console.ReadKey();

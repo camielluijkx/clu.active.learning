@@ -126,6 +126,7 @@
     <Compile Include="Statements.cs" />
     <Compile Include="Strings.cs" />
     <Compile Include="Testing.cs" />
+    <Compile Include="TPL.cs" />
     <Compile Include="Variables.cs" />
     <Compile Include="WCF.cs" />
     <Compile Include="WPF.cs" />
