@@ -146,6 +146,10 @@ namespace clu.active.learning
 
             //DLR.UsingDynamicObjects();
 
+            OLC.ImplementingDisposePattern();
+            OLC.ImplementingDestructor();
+            OLC.ManagingObjectLifetime();
+
             Thread.Sleep(5000);
 
             //Console.ReadKey();
