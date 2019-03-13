@@ -74,6 +74,7 @@
     <Compile Include="Concurrency.cs" />
     <Compile Include="DataTypes.cs" />
     <Compile Include="Collections.cs" />
+    <Compile Include="DLR.cs" />
     <Compile Include="EDM.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="Extensions.cs" />

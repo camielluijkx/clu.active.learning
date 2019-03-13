@@ -142,7 +142,9 @@ namespace clu.active.learning
 
             //Concurrency.UsingLocks();
             //Concurrency.UsingSynchronizationPrimitives();
-            Concurrency.UsingConcurrentCollections();
+            //Concurrency.UsingConcurrentCollections();
+
+            //DLR.UsingDynamicObjects();
 
             Thread.Sleep(5000);
 
