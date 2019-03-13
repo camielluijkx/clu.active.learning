@@ -391,16 +391,16 @@ namespace clu.active.learning
                 
                 To use your user control in a WPF application, you need to do two things:
 
-                1. Add a namespace prefix for your user control namespace and assembly to the Window 
-                element. This should take the following form:
+                    1. Add a namespace prefix for your user control namespace and assembly to the 
+                    Window element. This should take the following form:
                 
-                    xmlns: [your prefix] ="clr-namespace: [your namespace] , [your assembly name] " 
+                        xmlns: [your prefix] ="clr-namespace: [your namespace] , [your assembly name] " 
                 
-                If your application and your user control are in the same assembly, you can omit the 
-                assembly name from the namespace prefix declaration. 
+                    If your application and your user control are in the same assembly, you can omit 
+                    the assembly name from the namespace prefix declaration. 
                 
-                2. Add the control to your application in the same way that you would add a built-in 
-                control, with the namespace prefix you defined. 
+                    2. Add the control to your application in the same way that you would add a 
+                    built-in control, with the namespace prefix you defined. 
 
                 */
                 Console.WriteLine("** Adding a User Control to a WPF Application");
@@ -697,6 +697,248 @@ namespace clu.active.learning
                     //      </DataTemplate>
                     //   </ListBox.ItemTemplate>
                     //</ListBox>
+                }
+            }
+        }
+
+        /*
+         
+        XAML enables you to create certain elements, such as data templates, styles, and brushes, as 
+        reusable resources. This has various advantages when you are developing a graphical application: 
+
+            • You can define a resource once and use it in multiple places.
+            • You can edit a resource without editing every element that uses the resource.
+            • Your XAML files are shorter and easier to read.
+
+        Every WPF control has a Resources property to which you can add resources. This is because the 
+        Resources property is defined by the FrameworkElement class from which all WPF elements ultimately 
+        derive. In most cases, you define resources on the root element in a file, such as the Window 
+        element or the UserControl element. The resources are then available to the root element and all of 
+        its descendants. You can also create resources for use across the entire application by defining 
+        them in the App.xaml file. 
+
+        Every WPF application has an App.xaml file. It is a XAML file that can contain global resources 
+        used by all windows and controls in a WPF application. It is also the entry point for the 
+        application, and defines which window should appear when an application starts. 
+
+        https://docs.microsoft.com/en-us/dotnet/framework/wpf/controls/styling-and-templating
+
+        */
+        public static void UsingStyling()
+        {
+            Console.WriteLine("* Using Styling");
+            {
+                /*
+         
+                Resources are stored in a dictionary collection of type ResourceDictionary. When you create 
+                a reusable resource, you must give it a unique key by providing a value for the x:Key 
+                attribute. 
+        
+                */
+                Console.WriteLine("** Creating and Using Resources");
+                {
+                    //<Window x:Class="DataBinding.MainWindow"
+                    //                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    //                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    //                Title="Reusable Resources" Height="350" Width="525">
+                    //   <Window.Resources>
+                    //       <SolidColorBrush x:Key="MyBrush" Color="Coral" />
+                    //      …
+                    //   </Window.Resources>
+                    //   …
+                    //</Window>
+                }
+
+                /*
+                
+                To reference a resource, you use the format {StaticResource [resource key]}. You can use the 
+                resource in any property that accepts values of the same type as the resource, provided that 
+                the resource is in scope. For example, if you create a brush as a resource, you can reference 
+                the brush in any property that accepts brush types, such as Foreground, Background, or Fill. 
+
+                */
+                Console.WriteLine("** Referencing a Reusable Resource");
+                {
+                    //<StackPanel>
+                    //   <Button Content="Click Me" Background="{MyBrush}" />
+                    //   <TextBlock Text="Foreground" Foreground="{MyBrush}" />
+                    //   <TextBlock Text="Background" Background="{MyBrush}" />
+                    //   <Ellipse Height="50" Fill="{MyBrush}" />
+                    //</StackPanel>
+                }
+
+                /*
+               
+                If you need to create several reusable resources, it can be useful to create your resources 
+                in a separate resource dictionary file. A resource dictionary is a XAML file with a top-level 
+                element of ResourceDictionary. You can add reusable resources within the ResourceDictionary 
+                element in the same way that you would add them to a Window.Resources element. 
+
+                In most cases, you make a resource dictionary available for use in your application by 
+                referencing it in the application-scoped App.xaml file.
+
+                */
+                Console.WriteLine("** Referencing a Resource Dictionary");
+                {
+                    //<Application x:Class="ReusableResources.App"
+                    //                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    //                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    //                     StartupUri="MainWindow.xaml">
+                    //    <Application.Resources>
+                    //        <ResourceDictionary>
+                    //            <ResourceDictionary.MergedDictionaries>
+                    //                <ResourceDictionary Source="FourthCoffeeResources.xaml" />
+                    //            </ResourceDictionary.MergedDictionaries>
+                    //        </ResourceDictionary>
+                    //    </Application.Resources>
+                    //</Application>
+                }
+
+                /*
+                
+                In many cases, you will want to apply the same property values to multiple controls of the 
+                same type within an application. For example, if a page contains five textboxes, you will 
+                probably want each textbox to have the same foreground color, background color, font size, 
+                and so on. To make this consistency easier to manage, you can create Style elements as 
+                resources in XAML. Style elements enable you to apply a collection of property values to 
+                some or all controls of a particular type. To create a style, perform the following steps: 
+
+                    1. Add a Style element to a resource collection within your application (for example, 
+                    the Window.Resources collection or a resource dictionary). 
+                    2. Use the TargetType attribute of the Style element to specify the type of control you 
+                    want the style to target (for example, TextBox or Button). 
+                    3. Use the x:Key attribute of the Style element to enable controls to specify this style. 
+                    Alternatively, you can omit the x:Key attribute and your style will apply to all controls 
+                    of the specified type. 
+                    4. Within the Style element, use Setter elements to apply specific values to specific 
+                    properties. 
+
+                */
+                Console.WriteLine("** Creating Styles");
+                {
+                    //<Window.Resources>
+                    //    <Style TargetType="TextBlock" x:Key="BlockStyle1">
+                    //        <Setter Property="FontSize" Value="20" />
+                    //        <Setter Property="Background" Value="" />
+                    //        <Setter Property="Foreground">
+                    //            <Setter.Value>
+                    //                <="0.5,0" EndPoint="0.5,1">
+                    //                    <LinearGradientBrush.GradientStops>
+                    //                        <GradientStop Offset="0.0" Color="Orange" />
+                    //                        <GradientStop Offset="1.0" Color="Red" />
+                    //                    </LinearGradientBrush.GradientStops>
+                    //                </LinearGradientBrush>
+                    //            </Setter.Value>
+                    //        </Setter>
+                    //    </Style>
+                    //    …
+                    //</Window.Resources>
+                }
+
+                /*
+                
+                To apply this style to a TextBlock control, you need to set the Style attribute of the 
+                TextBlock to the x:Key value of the style resource. 
+                
+                */
+                Console.WriteLine("** Applying Styles");
+                {
+                    //<TextBlock Text="Drink More Coffee" Style="{StaticResource BlockStyle1}" />
+                }
+            }
+        }
+
+        /*
+        
+        When you create a style in XAML, you can specify property values that are only applied when 
+        certain conditions are true. For example, you might want to change the font style of a button when 
+        the user hovers over it, or you might want to apply a highlighting effect to selected items in a 
+        list box. 
+
+        To apply style properties based on conditions, you add Trigger elements to your styles. The Trigger 
+        element identifies the property of interest and the value that should trigger the change. Within the 
+        Trigger element, you use Setter elements to apply changes to property values. 
+
+        */
+        public static void UsingPropertyTriggers()
+        {
+            Console.WriteLine("* Using Property Triggers");
+            {
+                Console.WriteLine("** Using a Property Trigger");
+                {
+                    //<Window.Resources>
+                    //    <Style TargetType="Button">
+                    //        <Style.Triggers>
+                    //            <Trigger Property="IsMouseOver" Value="True">
+                    //                <Setter Property="FontWeight" Value="Bold" />
+                    //            </Trigger>
+                    //        </Style.Triggers>
+                    //    </Style>
+                    //    …
+                    //</Window.Resources>
+                }
+            }
+        }
+
+        /*
+        
+        Sophisticated graphical applications often use animations to make the user experience more engaging. 
+        Animations are sometimes used to make transitions between states less abrupt. For example, if you 
+        want to enlarge or rotate a picture, increasing the size or changing the orientation progressively 
+        over a short time period can look better than simply switching from one size or orientation to 
+        another. 
+
+        To create and apply an animation effect in XAML, you need to do three things:
+
+            1. Create an animation. WPF includes various classes that you can use to create animations in
+            XAML. The most commonly used animation element is DoubleAnimation. The DoubleAnimation element 
+            specifies how a value should change over time, by specifying the initial value, the final value, 
+            and the duration over which the value should change. 
+            2. Create a storyboard. To apply an animation to an object, you need to wrap your animation in a 
+            Storyboard element. The Storyboard element enables you to specify the object and the property you 
+            want to animate. It does this by providing the TargetName and TargetProperty attached properties, 
+            which you can set on child animation elements. 
+            3. Create a trigger. To trigger your animation in response to a property change, you need to wrap 
+            your storyboard in an EventTrigger element. The EventTrigger element specifies the control event 
+            that will trigger the animation. In the EventTrigger element, you can use a BeginStoryboard element 
+            to launch the animation. 
+
+        You can add an EventTrigger element containing your storyboards and animations to the Triggers 
+        collection of a Style element, or you can add it directly to the Triggers collection of an 
+        individual control.
+
+        https://docs.microsoft.com/en-us/dotnet/framework/wpf/graphics-multimedia/animation-overview
+
+        */
+        public static void CreatingDynamicTransformations()
+        {
+            Console.WriteLine("* Creating Dynamic Transformations");
+            {
+                Console.WriteLine("** Creating an Animation Effect");
+                {
+                    //<Window.Resources>
+                    //    <Style TargetType="Image" x:Key="CoffeeImageStyle">
+                    //        <Setter Property="Height" Value="200" />
+                    //        <Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
+                    //        <Setter Property="RenderTransform">
+                    //            <Setter.Value>
+                    //                <RotateTransform Angle="0" />
+                    //            </Setter.Value>
+                    //        </Setter>
+                    //        <Style.Triggers>
+                    //            <="Image.MouseDown">
+                    //                <BeginStoryboard>
+                    //                    <Storyboard>
+                    //                         <DoubleAnimation Storyboard.TargetProperty="Height"
+                    //                             From="200" To="300" Duration="0:0:2" />
+                    //                         <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Angle"
+                    //                             From="0" To="30" Duration="0:0:2" />
+                    //                    </Storyboard>
+                    //                </BeginStoryboard>
+                    //            </EventTrigger>
+                    //        </Style.Triggers>
+                    //    </Style>
+                    //</Window.Resources>
                 }
             }
         }

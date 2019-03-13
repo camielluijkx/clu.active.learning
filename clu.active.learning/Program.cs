@@ -114,11 +114,14 @@ namespace clu.active.learning
             //WCF.UsingWebRequest();
             //WCF.UsingDataService();
 
-            WPF.SettingControlProperties();
-            WPF.HandlingEvents();
-            WPF.UsingLayoutControls();
-            WPF.CreatingUserControls();
-            WPF.UsingDataBinding();
+            //WPF.SettingControlProperties();
+            //WPF.HandlingEvents();
+            //WPF.UsingLayoutControls();
+            //WPF.CreatingUserControls();
+            //WPF.UsingDataBinding();
+            //WPF.UsingStyling();
+            //WPF.UsingPropertyTriggers();
+            //WPF.CreatingDynamicTransformations();
 
             Thread.Sleep(5000);
 
