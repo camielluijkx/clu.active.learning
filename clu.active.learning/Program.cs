@@ -112,7 +112,12 @@ namespace clu.active.learning
             //WCF.HandlingNetworkExceptions();
             //WCF.UsingAuthentication();
             //WCF.UsingWebRequest();
-            WCF.UsingDataService();
+            //WCF.UsingDataService();
+
+            WPF.SettingControlProperties();
+            WPF.HandlingEvents();
+            WPF.UsingLayoutControls();
+            WPF.CreatingUserControls();
 
             Thread.Sleep(5000);
 

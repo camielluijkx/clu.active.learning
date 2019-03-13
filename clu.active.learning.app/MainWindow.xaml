@@ -1,0 +1,61 @@
+﻿<Window x:Class="clu.active.learning.app.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        
+        xmlns:coffee="clr-namespace:clu.active.learning.app"
+
+        mc:Ignorable="d"
+        Title="Order Your Coffee Here" Height="350" Width="525">
+    <Grid>
+        
+        <!--<Button Content="Get Me a Coffee!" Background="Yellow" Foreground="Blue" />-->
+        
+        <!--<Button Content="Get Me a Coffee!">
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0.5, 0.5" EndPoint="1.5, 1.5">
+                    <GradientStop Color="AliceBlue" Offset="0" />
+                    <GradientStop Color="Aqua" Offset="0.5" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Foreground>
+                <SolidColorBrush Color="Yellow" />
+            </Button.Foreground>
+        </Button>-->
+        
+        <!--<Button >
+            <Image Source="Images/coffee.jpg" Stretch="Fill" />
+        </Button>-->
+        
+        <!--<StackPanel>
+            <Button x:Name="btnMakeCoffee" Content="Make Me a Coffee!" Click="btnMakeCoffee_Click" />
+            <Label x:Name="lblResult" Content="" />
+        </StackPanel>-->
+
+        <!--<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" MaxHeight="200" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="7*" />
+            </Grid.ColumnDefinitions>
+            <Label Content="This is Row 0, Column 0" Grid.Row="0" Grid.Column="0" />
+            <Label Content="This is Row 0, Column 1" Grid.Row="0" Grid.Column="1" />
+            <Label Content="This is Row 1, Column 0" Grid.Row="1" Grid.Column="0" />
+            <Label Content="This is Row 1, Column 1" Grid.Row="1" Grid.Column="1" />
+        </Grid>-->
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="8*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <coffee:CoffeeSelector x:Name="coffeeSelector1" Grid.Row="0" OrderPlaced="coffeeSelector1_OrderPlaced"  />
+            <Label x:Name="lblResult" Margin="5" Grid.Row="1" />
+        </Grid>
+
+    </Grid>
+</Window>

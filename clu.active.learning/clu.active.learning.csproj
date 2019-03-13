@@ -128,6 +128,7 @@
     <Compile Include="Testing.cs" />
     <Compile Include="Variables.cs" />
     <Compile Include="WCF.cs" />
+    <Compile Include="WPF.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

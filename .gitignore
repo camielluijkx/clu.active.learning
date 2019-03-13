@@ -18,3 +18,5 @@
 /scripts/SchoolGradesDB.mdf
 /scripts/FourthCoffeeDB_log.ldf
 /scripts/FourthCoffeeDB.mdf
+/clu.active.learning.app/bin/Debug
+/clu.active.learning.app/obj/Debug
