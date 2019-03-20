@@ -6,19 +6,20 @@ namespace clu.active.learning
 {
     /*
      
-    Generics enable creation and usage of strongly typed collections that are type safe, not 
-    requiring to cast items, and not requiring to box and unbox value types. 
+    Generics enable creation and usage of strongly typed collections that are type safe, not requiring to cast items, 
+    and not requiring to box and unbox value types. 
     
-    Generic classes work by including a type parameter, T, in the class or interface declaration. 
-    It is not needed to specify the type of T until class is instantiated. 
+    Generic classes work by including a type parameter, T, in the class or interface declaration. It is not needed to 
+    specify the type of T until class is instantiated. 
     
     To create a generic class, you need to: 
 
         • Add the type parameter T in angle brackets after the class name. 
         • Use the type parameter T in place of type names in your class members. 
 
-    The use of generic classes, particularly for collections, offers three main advantages over 
-    non-generic approaches: type safety, no casting, and no boxing and unboxing. 
+    The use of generic classes, particularly for collections, offers three main advantages over non-generic approaches: 
+    
+        type safety, no casting, and no boxing and unboxing. 
 
     */
     public static class Generics
@@ -71,12 +72,9 @@ namespace clu.active.learning
         Constraining Type Parameters by Interface 
 
         Constraint                      Description 
-        where T : <name of interface>   The type argument must be, or implement, the specified 
-                                        interface.
-        where T : <name of base class>  The type argument must be, or derive from, the specified 
-                                        class.
-        where T : U                     The type argument must be, or derive from, the supplied
-                                        type argument U.
+        where T : <name of interface>   The type argument must be, or implement, the specified interface.
+        where T : <name of base class>  The type argument must be, or derive from, the specified class.
+        where T : U                     The type argument must be, or derive from, the supplied type argument U.
         where T : new()                 The type argument must have a public default constructor.
         where T : struct                The type argument must be a value type.
         where T : class                 The type argument must be a reference type.
@@ -100,14 +98,13 @@ namespace clu.active.learning
 
         The List<T> Class 
 
-        The List<T> class provides a strongly-typed alternative to the ArrayList class. Like the 
-        ArrayList class, the List<T> class includes methods to: 
+        The List<T> class provides a strongly-typed alternative to the ArrayList class. Like the ArrayList class, the 
+        List<T> class includes methods to: 
 
             • Add an item.
             • Remove an item.
             • Insert an item at a specified index.
-            • Sort the items in the collection by using the default comparer or a specified 
-              comparer.
+            • Sort the items in the collection by using the default comparer or a specified comparer.
             • Reorder all or part of the collection.
         
         Other Generic List Classes
@@ -134,10 +131,8 @@ namespace clu.active.learning
         The SortedList<TKey, TValue> and SortedDictionary<TKey, TValue> classes both provide generic dictionaries in 
         which the entries are sorted by key. The difference between these classes is in the underlying implementation: 
 
-            • The SortedList generic class uses less memory than the SortedDictionary generic 
-              class. 
-            • The SortedDictionary class is faster and more efficient at inserting and removing 
-              unsorted data. 
+            • The SortedList generic class uses less memory than the SortedDictionary generic class. 
+            • The SortedDictionary class is faster and more efficient at inserting and removing unsorted data. 
 
         Using Collection Interfaces 
 

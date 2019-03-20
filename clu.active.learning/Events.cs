@@ -8,7 +8,7 @@ namespace clu.active.learning
 
         • Delegates are references to methods.
         • They can be saved as fields and passed as parameters.
-        • They allow one to execute code that is provided from extrenal sources.
+        • They allow one to execute code that is provided from external sources.
         • Delegates can be executed exactly like methods.
 
     Events:
