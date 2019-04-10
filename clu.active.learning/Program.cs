@@ -158,6 +158,9 @@ namespace clu.active.learning
             //Attributes.ApplyingCustomAttributes();
             //Attributes.UsingReflection();
 
+            CodeDOM.DefiningTypeAndTypeMembers();
+            CodeDOM.CompilingCodeDOMModel();
+
             Thread.Sleep(5000);
 
             //Console.ReadKey();

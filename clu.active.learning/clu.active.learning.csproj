@@ -72,6 +72,7 @@
     <Compile Include="Arrays.cs" />
     <Compile Include="Attributes.cs" />
     <Compile Include="Classes.cs" />
+    <Compile Include="CodeDOM.cs" />
     <Compile Include="Concurrency.cs" />
     <Compile Include="DataTypes.cs" />
     <Compile Include="Collections.cs" />
