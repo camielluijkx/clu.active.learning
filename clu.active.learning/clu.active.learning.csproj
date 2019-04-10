@@ -89,6 +89,7 @@
     <Compile Include="Enums.cs" />
     <Compile Include="Constructors.cs" />
     <Compile Include="OLC.cs" />
+    <Compile Include="Reflection.cs" />
     <Compile Include="Resources\Branch.cs">
       <DependentUpon>CoffeeModel.tt</DependentUpon>
     </Compile>

@@ -150,6 +150,10 @@ namespace clu.active.learning
             //OLC.ImplementingDestructor();
             //OLC.ManagingObjectLifetime();
 
+            //Reflection.LoadingAnAssembly();
+            //Reflection.UsingAssemblyClass();
+            //Reflection.InvokingMembers();
+
             Thread.Sleep(5000);
 
             //Console.ReadKey();
