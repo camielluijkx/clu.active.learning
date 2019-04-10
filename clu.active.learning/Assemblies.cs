@@ -27,7 +27,7 @@ namespace clu.active.learning
     https://docs.microsoft.com/en-us/dotnet/framework/app-domains/assemblies-in-the-common-language-runtime
 
     */
-    public static class Assembly
+    public static class Assemblies
     {
         #region Public Methods
 

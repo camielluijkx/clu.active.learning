@@ -70,7 +70,7 @@
   <ItemGroup>
     <Compile Include="APM.cs" />
     <Compile Include="Arrays.cs" />
-    <Compile Include="Assembly.cs" />
+    <Compile Include="Assemblies.cs" />
     <Compile Include="Attributes.cs" />
     <Compile Include="Classes.cs" />
     <Compile Include="CodeDOM.cs" />
@@ -79,6 +79,7 @@
     <Compile Include="Collections.cs" />
     <Compile Include="DLR.cs" />
     <Compile Include="EDM.cs" />
+    <Compile Include="Encryption.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="FileSystem.cs" />

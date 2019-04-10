@@ -168,6 +168,8 @@ namespace clu.active.learning
             //Assembly.VersioningAssemblies();
             //Assembly.InstallingIntoGAC();
 
+            Encryption.ImplementingSymmetricEncryption();
+
             Thread.Sleep(5000);
 
             //Console.ReadKey();
