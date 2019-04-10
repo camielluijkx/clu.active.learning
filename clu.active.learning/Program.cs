@@ -154,6 +154,10 @@ namespace clu.active.learning
             //Reflection.UsingAssemblyClass();
             //Reflection.InvokingMembers();
 
+            //Attributes.ApplyingAttributes();
+            //Attributes.ApplyingCustomAttributes();
+            //Attributes.UsingReflection();
+
             Thread.Sleep(5000);
 
             //Console.ReadKey();

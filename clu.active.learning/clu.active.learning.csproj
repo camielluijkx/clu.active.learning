@@ -70,6 +70,7 @@
   <ItemGroup>
     <Compile Include="APM.cs" />
     <Compile Include="Arrays.cs" />
+    <Compile Include="Attributes.cs" />
     <Compile Include="Classes.cs" />
     <Compile Include="Concurrency.cs" />
     <Compile Include="DataTypes.cs" />
