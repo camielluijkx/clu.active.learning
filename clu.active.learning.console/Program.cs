@@ -13,6 +13,11 @@
 #if (BETA)
             StringInterpolation.Test();
 #endif
+
+            //DebuggerDisplay.Test();
+            //StringCollection.Test();
+            //LazyInitialization.Test();
+            //EnumFlags.Test();
         }
     }
 }
