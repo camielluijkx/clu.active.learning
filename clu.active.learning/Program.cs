@@ -146,9 +146,32 @@ namespace clu.active.learning
 
             //DLR.UsingDynamicObjects();
 
-            OLC.ImplementingDisposePattern();
-            OLC.ImplementingDestructor();
-            OLC.ManagingObjectLifetime();
+            //OLC.ImplementingDisposePattern();
+            //OLC.ImplementingDestructor();
+            //OLC.ManagingObjectLifetime();
+
+            //Reflection.LoadingAnAssembly();
+            //Reflection.UsingAssemblyClass();
+            //Reflection.InvokingMembers();
+
+            //Attributes.ApplyingAttributes();
+            //Attributes.ApplyingCustomAttributes();
+            //Attributes.UsingReflection();
+
+            //CodeDOM.DefiningTypeAndTypeMembers();
+            //CodeDOM.CompilingCodeDOMModel();
+
+            //Assembly.BoundariesOfAssemblies();
+            //Assembly.BenefitsOfAssemblies();
+            //Assembly.UsingGAC();
+            //Assembly.SigningAssemblies();
+            //Assembly.VersioningAssemblies();
+            //Assembly.InstallingIntoGAC();
+
+            Encryption.UsingSymmetricEncryption();
+            Encryption.HashingData();
+            Encryption.UsingAsymmetricEncryption();
+            Encryption.CreatingAndManagingCertificates();
 
             Thread.Sleep(5000);
 

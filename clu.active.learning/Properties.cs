@@ -85,8 +85,7 @@ namespace clu.active.learning
             // Create a property that can be publicly read, but set only by its containing class.
             public int Strength { get; private set; }   
             
-            // Create a readonly property where only the constructor can set the value to this 
-            // property.
+            // Create a readonly property where only the constructor can set the value to this property.
             public int Strength { get; }
 
             // Create a property that writes to a private field.

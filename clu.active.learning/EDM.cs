@@ -12,62 +12,59 @@ namespace clu.active.learning
 
     Entity Data Model (EDM)
 
-    Data access applications have traditionally been tedious to develop. They often contain queries that are 
-    written as text strings that cannot be type-checked or syntax-checked at compile time, and results are 
-    returned as untyped data records. The ADO.NET Entity Framework solves these problems and simplifies the 
-    process of developing data access applications by using EDMs. 
+    Data access applications have traditionally been tedious to develop. They often contain queries that are written as 
+    text strings that cannot be type-checked or syntax-checked at compile time, and results are returned as untyped 
+    data records. The ADO.NET Entity Framework solves these problems and simplifies the process of developing data 
+    access applications by using EDMs. 
 
-    Historically when you write code to access data that is stored in a database, you have to understand the 
-    structure of the data in the database and how it all interrelates. Often it is stored in a normalized 
-    fashion, where tables do not logically map to the real-life objects that they represent. The ADO.NET 
-    Entity Framework enables you to develop applications that target a conceptual model instead of the 
-    normalized database structure in the storage layer. 
+    Historically when you write code to access data that is stored in a database, you have to understand the structure 
+    of the data in the database and how it all interrelates. Often it is stored in a normalized fashion, where tables 
+    do not logically map to the real-life objects that they represent. The ADO.NET Entity Framework enables you to 
+    develop applications that target a conceptual model instead of the normalized database structure in the storage 
+    layer. 
 
     The ADO.NET Entity Framework provides the following:
 
-        • EDMs. These are models that you can use to map database tables and queries to .NET Framework 
-          objects. 
-        • Entity Structured Query Language (SQL). This is a storage independent query language that enables 
-          you to query and manipulate EDM constructs. 
-        • Object Services. These are services that enable you to work with the Common Language Runtime (CLR) 
-          objects in a conceptual model. 
+        • EDMs. These are models that you can use to map database tables and queries to .NET Framework objects. 
+        • Entity Structured Query Language (SQL). This is a storage independent query language that enables you to 
+          query and manipulate EDM constructs. 
+        • Object Services. These are services that enable you to work with the Common Language Runtime (CLR) objects in 
+          a conceptual model. 
 
     These components enable you to:
 
-        • Write code against a conceptual model that includes types that support inheritance and 
-          relationships. 
-        • Update applications to target a different storage model without rewriting or redistributing all of 
-          your data access code. 
+        • Write code against a conceptual model that includes types that support inheritance and relationships. 
+        • Update applications to target a different storage model without rewriting or redistributing all of your data 
+          access code. 
         • Write standard code that is not dependent on the data storage system.
         • Write data access code that supports compile-time type-checking and syntax-checking.
 
-    The conceptual model that you work with in the Entity Framework describes the semantics of the business 
-    view of the data. It defines entities and relationships in a business sense and is mapped to the logical 
-    model of the underlying data in the data source.
+    The conceptual model that you work with in the Entity Framework describes the semantics of the business view of the 
+    data. It defines entities and relationships in a business sense and is mapped to the logical model of the 
+    underlying data in the data source.
 
-    Visual Studio provides the Entity Data Model Tools that you can use to create and update EDMs in your 
-    applications. It supports both database-first design and code-first design: 
+    Visual Studio provides the Entity Data Model Tools that you can use to create and update EDMs in your applications. 
+    It supports both database-first design and code-first design: 
 
-        • Database-first design. In database-first design, you design and create your database before you 
-          generate your model. This is commonly used when you are developing applications against an existing 
-          data source; however, this can limit the flexibility of the application in the long term. 
-        • Code-first design. In code-first design, you design the entities for your application and then 
-          create the database structure around these entities. Developers prefer this method because it 
-          enables you to design your application around the business functionality that you require. However, 
-          in reality, you often have to work with an existing data source.
+        • Database-first design. In database-first design, you design and create your database before you generate your 
+          model. This is commonly used when you are developing applications against an existing data source; however, 
+          this can limit the flexibility of the application in the long term. 
+        • Code-first design. In code-first design, you design the entities for your application and then create the 
+          database structure around these entities. Developers prefer this method because it enables you to design your 
+          application around the business functionality that you require. However, in reality, you often have to work 
+          with an existing data source.
           
-    Visual Studio provides the ADO.NET Entity Data Model Tools, which include the Entity Data Model Designer 
-    for graphically creating and relating entities in a model and three wizards for working with models and 
-    data sources. The following table describes the wizards. 
+    Visual Studio provides the ADO.NET Entity Data Model Tools, which include the Entity Data Model Designer for 
+    graphically creating and relating entities in a model and three wizards for working with models and data sources. 
+    The following table describes the wizards. 
 
     Wizard                      Description
-    Entity Data Model Wizard    Enables you to generate a new conceptual model from an existing data source 
-                                by using the database-first design method. 
-    Update Model Wizard         Enables you to update an existing conceptual model with changes that are made 
-                                to the data source on which it is based. 
-    Generate Database Wizard    Enables you to generate a database from a conceptual model that you have 
-                                designed in the Entity Data Model Designer by using the code-first design 
-                                method.
+    Entity Data Model Wizard    Enables you to generate a new conceptual model from an existing data source by using 
+                                the database-first design method. 
+    Update Model Wizard         Enables you to update an existing conceptual model with changes that are made to the 
+                                data source on which it is based. 
+    Generate Database Wizard    Enables you to generate a database from a conceptual model that you have designed in 
+                                the Entity Data Model Designer by using the code-first design method.
     */
     public static class EDM
     {
@@ -172,27 +169,25 @@ namespace clu.active.learning
 
             There are several situations when splitting a class definition is desirable:
 
-                • When working on large projects, spreading a class over separate files enables multiple 
-                  programmers to work on it at the same time.
-                • When working with automatically generated source, code can be added to the class 
-                  without having to recreate the source file. Visual Studio uses this approach when it 
-                  creates Windows Forms, Web service wrapper code, and so on. You can create code that 
-                  uses these classes without having to modify the file created by Visual Studio.
+                • When working on large projects, spreading a class over separate files enables multiple programmers to 
+                  work on it at the same time.
+                • When working with automatically generated source, code can be added to the class without having to 
+                  recreate the source file. Visual Studio uses this approach when it creates Windows Forms, Web service 
+                  wrapper code, and so on. You can create code that uses these classes without having to modify the 
+                  file created by Visual Studio.
 
-            The partial keyword indicates that other parts of the class, struct, or interface can be 
-            defined in the namespace. All the parts must use the partial keyword. All the parts must be 
-            available at compile time to form the final type. All the parts must have the same 
-            accessibility, such as public, private, and so on.
+            The partial keyword indicates that other parts of the class, struct, or interface can be defined in the 
+            namespace. All the parts must use the partial keyword. All the parts must be available at compile time to 
+            form the final type. All the parts must have the same accessibility, such as public, private, and so on.
 
-            If any part is declared abstract, then the whole type is considered abstract. If any part 
-            is declared sealed, then the whole type is considered sealed. If any part declares a base 
-            type, then the whole type inherits that class.
+            If any part is declared abstract, then the whole type is considered abstract. If any part is declared 
+            sealed, then the whole type is considered sealed. If any part declares a base type, then the whole type 
+            inherits that class.
 
-            All the parts that specify a base class must agree, but parts that omit a base class still 
-            inherit the base type. Parts can specify different base interfaces, and the final type 
-            implements all the interfaces listed by all the partial declarations. Any class, struct, or 
-            interface members declared in a partial definition are available to all the other parts. The 
-            final type is the combination of all the parts at compile time.
+            All the parts that specify a base class must agree, but parts that omit a base class still inherit the base 
+            type. Parts can specify different base interfaces, and the final type implements all the interfaces listed 
+            by all the partial declarations. Any class, struct, or interface members declared in a partial definition 
+            are available to all the other parts. The final type is the combination of all the parts at compile time.
 
             The following are merged from all the partial-type definitions:
 
@@ -206,21 +201,17 @@ namespace clu.active.learning
 
             There are several rules to follow when you are working with partial class definitions:
             
-                • All partial-type definitions meant to be parts of the same type must be modified with 
-                  partial
-                • The partial modifier can only appear immediately before the keywords class, struct, or 
-                  interface.
-                • Nested partial types are allowed in partial-type definitions as long as parent class 
-                  follows same rules.
-                • All partial-type definitions meant to be parts of the same type must be defined in the 
-                  same assembly and the same module (.exe or .dll file). Partial definitions cannot span 
-                  multiple modules. 
-                • The class name and generic-type parameters must match on all partial-type definitions. 
-                  Generic types can be partial. Each partial declaration must use the same parameter names 
-                  in the same order.
-                • The following keywords on a partial-type definition are optional, but if present on one 
-                  partial-type definition, cannot conflict with the keywords specified on another partial 
-                  definition for the same type:
+                • All partial-type definitions meant to be parts of the same type must be modified with partial
+                • The partial modifier can only appear immediately before the keywords class, struct, or interface.
+                • Nested partial types are allowed in partial-type definitions as long as parent class follows same 
+                  rules.
+                • All partial-type definitions meant to be parts of the same type must be defined in the same assembly 
+                  and the same module (.exe or .dll file). Partial definitions cannot span multiple modules. 
+                • The class name and generic-type parameters must match on all partial-type definitions. Generic types 
+                  can be partial. Each partial declaration must use the same parameter names in the same order.
+                • The following keywords on a partial-type definition are optional, but if present on one partial-type 
+                  definition, cannot conflict with the keywords specified on another partial definition for the same 
+                  type:
                       • public
                       • private
                       • protected
@@ -245,44 +236,39 @@ namespace clu.active.learning
             
             Partial Methods
 
-            A partial class or struct may contain a partial method. One part of the class contains the 
-            signature of the method. An optional implementation may be defined in the same part or 
-            another part. If the implementation is not supplied, then the method and all calls to the 
-            method are removed at compile time.
+            A partial class or struct may contain a partial method. One part of the class contains the signature of the 
+            method. An optional implementation may be defined in the same part or another part. If the implementation 
+            is not supplied, then the method and all calls to the method are removed at compile time.
 
-            Partial methods enable the implementer of one part of a class to define a method, similar 
-            to an event. The implementer of the other part of the class can decide whether to implement 
-            the method or not. If the method is not implemented, then the compiler removes the method 
-            signature and all calls to the method. The calls to the method, including any results that 
-            would occur from evaluation of arguments in the calls, have no effect at run time. Therefore, 
-            any code in the partial class can freely use a partial method, even if the implementation is 
-            not supplied. No compile-time or run-time errors will result if the method is called but not 
-            implemented.
+            Partial methods enable the implementer of one part of a class to define a method, similar to an event. The 
+            implementer of the other part of the class can decide whether to implement the method or not. If the method 
+            is not implemented, then the compiler removes the method signature and all calls to the method. The calls 
+            to the method, including any results that would occur from evaluation of arguments in the calls, have no 
+            effect at run time. Therefore, any code in the partial class can freely use a partial method, even if the 
+            implementation is not supplied. No compile-time or run-time errors will result if the method is called but 
+            not implemented.
 
-            Partial methods are especially useful as a way to customize generated code. They allow for a 
-            method name and signature to be reserved, so that generated code can call the method but the 
-            developer can decide whether to implement the method. Much like partial classes, partial 
-            methods enable code created by a code generator and code created by a human developer to work 
-            together without run-time costs.
+            Partial methods are especially useful as a way to customize generated code. They allow for a method name 
+            and signature to be reserved, so that generated code can call the method but the developer can decide 
+            whether to implement the method. Much like partial classes, methods enable code created by a code generator 
+            and code created by a human developer to work together without run-time costs.
 
-            A partial method declaration consists of two parts: the definition, and the implementation. 
-            These may be in separate parts of a partial class, or in the same part. If there is no 
-            implementation declaration, then the compiler optimizes away both the defining declaration and 
-            all calls to the method.
+            A partial method declaration consists of two parts: the definition, and the implementation. These may be in 
+            separate parts of a partial class, or in the same part. If there is no implementation declaration, then the 
+            compiler optimizes away both the defining declaration and all calls to the method.
 
-                • Partial method declarations must begin with the contextual keyword partial and the method 
-                  must return void.
+                • Partial method declarations must begin with the contextual keyword partial and the method must return 
+                  void.
                 • Partial methods can have in or ref but not out parameters.
                 • Partial methods are implicitly private, and therefore they cannot be virtual.
-                • Partial methods cannot be extern, because the presence of the body determines whether they 
-                  are defining or implementing.
+                • Partial methods cannot be extern, because the presence of the body determines whether they are 
+                  defining or implementing.
                 • Partial methods can have static and unsafe modifiers.
-                • Partial methods can be generic. Constraints are put on the defining partial method 
-                  declaration, and may optionally be repeated on the implementing one. Parameter and type 
-                  parameter names do not have to be the same in the implementing declaration as in the 
-                  defining one.
-                • You can make a delegate to a partial method that has been defined and implemented, but not 
-                  to a partial method that has only been defined.
+                • Partial methods can be generic. Constraints are put on the defining partial method declaration, and 
+                  may optionally be repeated on the implementing one. Parameter and type parameter names do not have to 
+                  be the same in the implementing declaration as in the defining one.
+                • You can make a delegate to a partial method that has been defined and implemented, but not to a 
+                  partial method that has only been defined.
 
             */
             Console.WriteLine("* Using Partial Methods");
@@ -297,17 +283,16 @@ namespace clu.active.learning
             
             https://docs.microsoft.com/en-us/dotnet/api/system.data.entity.dbset?view=entity-framework-6.2.0
 
-            The automatically generated code files for a model also contains a partial class that inherits 
-            from the System.Data.Entity.DbContext class. The DbContext class provides facilities for 
-            querying and working with entity data as objects. It contains a default constructor which 
-            initializes the class by using the connection string that the wizard generates in the 
-            application configuration file. This defines the data connection and model definition to use. 
-            The DbContext class also contains a DbSet property that exposes a DbSet(TEntity) class for each 
-            entity in your model. The DbSet(TEntity) class represents a typed entity set that you can use to 
-            read, create, update, and delete data. 
+            The automatically generated code files for a model also contains a partial class that inherits from the 
+            System.Data.Entity.DbContext class. The DbContext class provides facilities for querying and working with 
+            entity data as objects. It contains a default constructor which initializes the class by using the 
+            connection string that the wizard generates in the application configuration file. This defines the data 
+            connection and model definition to use. The DbContext class also contains a DbSet property that exposes a 
+            DbSet(TEntity) class for each entity in your model. The DbSet(TEntity) class represents a typed entity set 
+            that you can use to read, create, update, and delete data. 
 
-            The DbSet(TEntity) class implements the IEnumerable interface which provides a number of extension 
-            methods that enable you to easily locate specific data in the source.
+            The DbSet(TEntity) class implements the IEnumerable interface which provides a number of extension methods 
+            that enable you to easily locate specific data in the source.
 
             */
             Console.WriteLine("* Using EntityFramework");
@@ -400,15 +385,14 @@ namespace clu.active.learning
         {
             /*
             
-            In the examples in the previous topic and demonstration, the return data was always stored in 
-            a strongly typed IQueryable<Type> variable; however, in the filtering by column scenario, it 
-            is necessary to define the type containing a subset of columns before defining the query. 
-            Although this is a perfectly valid way of working, it can become tedious to explicitly define 
-            multiple classes. 
+            In the examples in the previous topic and demonstration, the return data was always stored in a strongly 
+            typed IQueryable<Type> variable; however, in the filtering by column scenario, it is necessary to define 
+            the type containing a subset of columns before defining the query. Although this is a perfectly valid way 
+            of working, it can become tedious to explicitly define multiple classes. 
         
-            You can use anonymous types to store the returned data by declaring the return type as an 
-            implicitly typed local variable, a var, and by using the new keyword in the select clause to 
-            create the instance of the type. 
+            You can use anonymous types to store the returned data by declaring the return type as an implicitly typed 
+            local variable, a var, and by using the new keyword in the select clause to create the instance of the 
+            type. 
 
             */
             Console.WriteLine("* Using Anonymous Types");
@@ -498,18 +482,17 @@ namespace clu.active.learning
         {
             /*
             
-            By default, when you define a LINQ query that returns a sequence of values, it is not run 
-            until you actually try to use some of the returned data. This feature is known as deferred 
-            query execution and ensures that you can create a query to retrieve data in a multiple-user 
-            scenario and know that whenever it is executed you will receive the latest information.
+            By default, when you define a LINQ query that returns a sequence of values, it is not run until you 
+            actually try to use some of the returned data. This feature is known as deferred query execution and 
+            ensures that you can create a query to retrieve data in a multiple-user scenario and know that whenever it 
+            is executed you will receive the latest information.
 
-            Conversely, when you define a LINQ query that returns a singleton value, for example, an 
-            Average, Count, or Max function, the query is run immediately. This is known as immediate 
-            query execution and is necessary in the singleton result scenario because the query must 
-            produce a sequence to calculate the singleton result.
+            Conversely, when you define a LINQ query that returns a singleton value, for example, an Average, Count, or 
+            Max function, the query is run immediately. This is known as immediate query execution and is necessary in 
+            the singleton result scenario because the query must produce a sequence to calculate the singleton result.
             
-            You can override the default deferred query execution behavior for queries that do not 
-            produce a singleton result by calling one of the following methods on the query: 
+            You can override the default deferred query execution behavior for queries that do not produce a singleton 
+            result by calling one of the following methods on the query: 
 
                 • ToArray 
                 • ToDictionary 
