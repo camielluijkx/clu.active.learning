@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clu.active.learning.web", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clu.active.learning.app", "clu.active.learning.app\clu.active.learning.app.csproj", "{E3A9C635-CAD1-4687-A7BF-F5B7EAA06F5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clu.active.learning.console", "clu.active.learning.console\clu.active.learning.console.csproj", "{EF227D8B-F705-4F60-A119-2FF7ABAADDC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +32,10 @@ Global
 		{E3A9C635-CAD1-4687-A7BF-F5B7EAA06F5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3A9C635-CAD1-4687-A7BF-F5B7EAA06F5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3A9C635-CAD1-4687-A7BF-F5B7EAA06F5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF227D8B-F705-4F60-A119-2FF7ABAADDC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF227D8B-F705-4F60-A119-2FF7ABAADDC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF227D8B-F705-4F60-A119-2FF7ABAADDC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF227D8B-F705-4F60-A119-2FF7ABAADDC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
