@@ -18,6 +18,17 @@
             //StringCollection.Test();
             //LazyInitialization.Test();
             //EnumFlags.Test();
+
+            //WeakReference.Test();
+            //MulticastDelegate.Test();
+            //DataContractSurrogate.Test();
+
+            //Mutex.Test();
+            //Unsafe.Test();
+
+            //PrincipalPermission.Test();
+            //ProtectionScope.Test();
+
         }
     }
 }
