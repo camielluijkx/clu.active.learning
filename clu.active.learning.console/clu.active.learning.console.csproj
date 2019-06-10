@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -46,23 +47,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessModifiers.cs" />
     <Compile Include="DataContractSurrogate.cs" />
     <Compile Include="DebuggerDisplay.cs" />
     <Compile Include="EnumFlags.cs" />
+    <Compile Include="Equatable.cs" />
     <Compile Include="ExplicitlyDisposable.cs" />
     <Compile Include="ExpressionBodyDefinition.cs" />
     <Compile Include="ExplicitImplicitOperator.cs" />
+    <Compile Include="GarbageCollector.cs" />
+    <Compile Include="ReaderWriterLockSlim.cs" />
+    <Compile Include="SafeHandle.cs" />
     <Compile Include="LazyInitialization.cs" />
     <Compile Include="MulticastDelegate.cs" />
     <Compile Include="Mutex.cs" />
+    <Compile Include="PerformanceCounterType.cs" />
     <Compile Include="PrincipalPermission.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProtectionScope.cs" />
+    <Compile Include="ResetEvent.cs" />
+    <Compile Include="Semaphore.cs" />
     <Compile Include="StringCollection.cs" />
     <Compile Include="StringInterpolation.cs" />
     <Compile Include="TaskExecutor.cs" />
     <Compile Include="Unsafe.cs" />
+    <Compile Include="ValidateableObject.cs" />
+    <Compile Include="WaitHandle.cs" />
     <Compile Include="WeakReference.cs" />
   </ItemGroup>
   <ItemGroup>

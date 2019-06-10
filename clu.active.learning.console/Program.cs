@@ -29,6 +29,21 @@
             //PrincipalPermission.Test();
             //ProtectionScope.Test();
 
+            //ResetEvent.Test();
+
+            //Equatable.Test();
+            //ValidateableObject.Test();
+
+            //GarbageCollector.Test();
+            //AccessModifiers.Test();
+
+            //PerformanceCounterType.Test();
+
+            //SafeHandle.Test();
+            //WaitHandle.Test();
+
+            //Semaphore.Test();
+            //ReaderWriterLockSlim.Test();
         }
     }
 }
