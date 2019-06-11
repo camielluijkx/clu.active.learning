@@ -61,6 +61,7 @@
     <Compile Include="ExpressionBodyDefinition.cs" />
     <Compile Include="ExplicitImplicitOperator.cs" />
     <Compile Include="GarbageCollector.cs" />
+    <Compile Include="Line.cs" />
     <Compile Include="LocalFunction.cs" />
     <Compile Include="Predicate.cs" />
     <Compile Include="ReaderWriterLockSlim.cs" />

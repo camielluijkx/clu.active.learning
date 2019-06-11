@@ -56,7 +56,9 @@
             //WhenException.Test();
 
             //Closures.Test();
-            Predicate.Test();
+            //Predicate.Test();
+
+            //Line.Test();
         }
     }
 }
