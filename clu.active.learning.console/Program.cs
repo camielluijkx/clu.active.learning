@@ -44,6 +44,19 @@
 
             //Semaphore.Test();
             //ReaderWriterLockSlim.Test();
+
+            //Action.Test();
+            //LocalFunction.Test();
+
+            //CompoundAssignment.Test();
+            //CoalesceOperator.Test();
+
+            //Switch.Test();
+
+            //WhenException.Test();
+
+            //Closures.Test();
+            Predicate.Test();
         }
     }
 }

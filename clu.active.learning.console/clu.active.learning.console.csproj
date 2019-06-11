@@ -34,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -48,6 +49,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessModifiers.cs" />
+    <Compile Include="Action.cs" />
+    <Compile Include="Closures.cs" />
+    <Compile Include="CoalesceOperator.cs" />
+    <Compile Include="CompoundAssignment.cs" />
     <Compile Include="DataContractSurrogate.cs" />
     <Compile Include="DebuggerDisplay.cs" />
     <Compile Include="EnumFlags.cs" />
@@ -56,6 +61,8 @@
     <Compile Include="ExpressionBodyDefinition.cs" />
     <Compile Include="ExplicitImplicitOperator.cs" />
     <Compile Include="GarbageCollector.cs" />
+    <Compile Include="LocalFunction.cs" />
+    <Compile Include="Predicate.cs" />
     <Compile Include="ReaderWriterLockSlim.cs" />
     <Compile Include="SafeHandle.cs" />
     <Compile Include="LazyInitialization.cs" />
@@ -70,11 +77,13 @@
     <Compile Include="Semaphore.cs" />
     <Compile Include="StringCollection.cs" />
     <Compile Include="StringInterpolation.cs" />
+    <Compile Include="Switch.cs" />
     <Compile Include="TaskExecutor.cs" />
     <Compile Include="Unsafe.cs" />
     <Compile Include="ValidateableObject.cs" />
     <Compile Include="WaitHandle.cs" />
     <Compile Include="WeakReference.cs" />
+    <Compile Include="WhenException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -6,7 +6,7 @@ namespace clu.active.learning.console
 {
     public class TaskExecutor
     {
-        public IEnumerable<Task> Execute(Action[] jobs) // log position of each operation
+        public IEnumerable<Task> Execute(System.Action[] jobs) // log position of each operation
         {
             var tasks = new Task[jobs.Length];
             for (int i = 0; i < jobs.Length; i++)
@@ -24,7 +24,7 @@ namespace clu.active.learning.console
             return tasks;
         }
 
-        public void RunJob(Action job, int index)
+        public void RunJob(System.Action job, int index)
         {
             job.Invoke();
 
@@ -34,11 +34,11 @@ namespace clu.active.learning.console
         public static void Test()
         {
             TaskExecutor taskExecutor = new TaskExecutor();
-            var jobs = new Action[10];
+            var jobs = new System.Action[10];
 
             for (int i = 0; i < jobs.Length; i++)
             {
-                jobs[i] = new Action(() => Console.WriteLine($"Hello from job {i}!"));
+                jobs[i] = new System.Action(() => Console.WriteLine($"Hello from job {i}!"));
             }
 
             taskExecutor.Execute(jobs);
