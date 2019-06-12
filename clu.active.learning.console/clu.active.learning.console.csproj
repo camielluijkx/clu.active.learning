@@ -80,6 +80,7 @@
     <Compile Include="StringInterpolation.cs" />
     <Compile Include="Switch.cs" />
     <Compile Include="TaskExecutor.cs" />
+    <Compile Include="ThreadJoin.cs" />
     <Compile Include="Unsafe.cs" />
     <Compile Include="ValidateableObject.cs" />
     <Compile Include="WaitHandle.cs" />

@@ -59,6 +59,8 @@
             //Predicate.Test();
 
             //Line.Test();
+
+            ThreadJoin.Test();
         }
     }
 }
