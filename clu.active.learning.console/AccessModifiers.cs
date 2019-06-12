@@ -31,21 +31,23 @@ namespace clu.active.learning.console
     {
         public class Person
         {
-            protected string Name { get; private set; }
+            private string name = "John Doe";
+
+            public string Name
+            {
+                get
+                {
+                    return name;
+                }
+                protected set
+                {
+                    name = value;
+                }
+            }
 
             public Person()
             {
-
-            }
-
-            public override string ToString()
-            {
-                if (string.IsNullOrEmpty(this.Name))
-                {
-                    return "John Doe";
-                }
-
-                return null;
+                
             }
         }
 
@@ -65,8 +67,8 @@ namespace clu.active.learning.console
         public static void Test()
         {
             var student = new Student();
-            //student.Name; // inaccessible due to its protection level
-            Console.WriteLine(student.ToString());
+            var name = student.Name;
+            //student.Name = name;
 
             Console.WriteLine();
         }

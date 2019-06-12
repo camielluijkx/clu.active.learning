@@ -1,4 +1,6 @@
-﻿namespace clu.active.learning.console
+﻿using System;
+
+namespace clu.active.learning.console
 {
     class Program
     {
@@ -35,7 +37,7 @@
             //ValidateableObject.Test();
 
             //GarbageCollector.Test();
-            //AccessModifiers.Test();
+            AccessModifiers.Test();
 
             //PerformanceCounterType.Test();
 
@@ -60,7 +62,14 @@
 
             //Line.Test();
 
-            ThreadJoin.Test();
+            //ThreadJoin.Test();
+
+            //var date = new DateTime(2013, 04, 21, 14, 0, 0);
+            //var temp = 19.567;
+            //string output = string.Format("Temperature at {0:t} on {0:MM/dd/yyyy}: {1:N2}", date, temp);
+            //Console.WriteLine(output);
+
+            Console.ReadLine();
         }
     }
 }
